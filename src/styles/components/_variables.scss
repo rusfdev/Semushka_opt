@@ -1,0 +1,11 @@
+$grid-breakpoints: (xs:0, sm:576px, md:768px, lg:1024px, xl:1280px, xxl:1600px);
+$container-max-widths: (sm:540px, md:720px, lg:960px, xl:1200px, xxl:1440px);
+
+$field: calc((100vw - #{var(--content-width)}) / 2);
+
+$trs1: .15s ease-in-out;
+$trs2: .3s ease-in-out;
+$trs3: .5s ease-in-out;
+
+$out: cubic-bezier(.23,.74,.35,1);
+$in: cubic-bezier(.65,.0,.77,.26);

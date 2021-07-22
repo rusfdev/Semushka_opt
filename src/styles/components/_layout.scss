@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 100%;
+}
+
+.section {
+
+}
+
+.container {
+  position: relative;
+  padding: 0 var(--container-gutter-x);
+}

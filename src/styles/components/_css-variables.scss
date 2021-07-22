@@ -1,0 +1,27 @@
+:root {
+  @include media-breakpoint-up(xxl) {
+    --content-width: #{map-get($container-max-widths, xxl)};
+  }
+  @include media-breakpoint-down(xxl) {
+    --content-width: #{map-get($container-max-widths, xl)};
+  }
+  @include media-breakpoint-down(xl) {
+    --content-width: #{map-get($container-max-widths, lg)};
+  }
+  @include media-breakpoint-down(lg) {
+    --content-width: #{map-get($container-max-widths, md)};
+  }
+  @include media-breakpoint-down(sm) {
+    --content-width: #{map-get($container-max-widths, sm)};
+    --container-gutter-x: 16px;
+  }
+}
+
+* {
+  @include media-breakpoint-up(md) {
+    --bs-gutter-x: 24px !important;
+  }
+  @include media-breakpoint-down(sm) {
+    --bs-gutter-x: 16px !important;
+  }
+}
