@@ -23,6 +23,8 @@ button, input, textarea, select {
   padding: 0;
   border-radius: 0;
   color: inherit;
+  text-rendering: inherit;
+  font-weight: inherit;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

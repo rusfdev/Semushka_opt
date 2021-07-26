@@ -1,4 +1,128 @@
 extends layout/layout
+
 block variables
   -var title = sitename+' - Главная'
+  -var has_banner = true
+
 block content
+  include blocks/components
+  
+  section.section.product-slider
+    .container 
+      .section__head.product-slider__head 
+        h3.section__title Специальное предложение
+        p При покупке товара от киллограма и тонны по акции действует скидка. Подробности уточняйте у менеджера. 
+      .swiper
+        .swiper-button.swiper-button-prev(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+        .swiper-button.swiper-button-next(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(3)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)
+
+      .section__banner.row  
+        .col-xl-10.offset-xl-1
+          include blocks/banner1       
+
+  section.section.products-section
+    .container 
+      .section__head.section__head_with-button
+        h4.section__title.section__title_with-button Продукция
+        a(href="./katalog.html").button.button_style-2.button_small.button_arrow
+          span Смотреть все
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+      .products-section__content
+        a(href="#").product-category-block
+          .image.image_contain
+            img(data-src="./img/Nuts 1.png", alt="image").lazyload
+          h6.product-category-block__title Орехи
+        a(href="#").product-category-block
+          .image.image_contain
+            img(data-src="./img/Semena 1.png", alt="image").lazyload
+          h6.product-category-block__title Семена
+        a(href="#").product-category-block
+          .image.image_contain
+            img(data-src="./img/Suxofruct 1.png", alt="image").lazyload
+          h6.product-category-block__title Сухофрукты
+        a(href="#").product-category-block
+          .image.image_contain
+            //img(data-src="/", alt="image").lazyload
+          h6.product-category-block__title Фасовка
+
+  section.section.about-section
+    .container 
+      h3 Компания «Семушка»
+      .row 
+        .col-xl-6 
+          .mb-3 
+            p В 2017 году в целях расширения производственных и складских площадей, а также оптимизации логистических процессов, производство «Семушки» переехало на новую площадку, расположенную в деревне Новосельцево Мытищинского района Подмосковья.
+            p Суммарная площадь производства составляет около 6 тыс. кв. метров. Количество сотрудников составляет 120 человек, автопарк состоит из 20 грузовых и полу-грузовых автомашин. Производственное оборудование включает современные автоматизированные фасовочные линии.
+          a(href="#").button.button_style-1 
+            span Подробнее
+        .col-xl-6.about-section__video
+          a(href="#").video-block.image.image_cover
+            img(data-src="./img/Rectangle 117.jpg", alt="image").lazyload
+            .icon
+              svg
+                use(xlink:href='./img/icons/sprite.svg#play')
+
+  section.section.certificates-section
+    .container 
+      .section__head
+        h3.section__title Наши сертификаты
+      .section__container.certificates-section__container 
+        +certificate('./img/iso-logo 1.png')
+        +certificate('./img/unnamed 1.png')
+        +certificate('./img/haccp-GMN 1.png')
+        +certificate('./img/quality-3_2048x2048 1.png')
+        +certificate('./img/da4250415df2241580c146658cbd6701 1.png')
+
+  section.section.news-grid
+    .container 
+      .section__head.section__head_with-button
+        h3.section__title.section__title_with-button Новости
+        a(href="novosti.html").button.button_style-2.button_small.button_arrow
+          span Смотреть все
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+      .news-grid__container 
+        +news-element('./img/News_pic_588x266 1.jpg', 'Экскурсия в магазин «Семушка»<br> на Мясницкой', 2)
+        +news-element('./img/Mask Group.jpg', 'Открытие магазина «Семушка» в Москве')
+        +news-element('./img/News_pic_282x266_2 1.jpg', 'Открытие сайта для оптовых покупателей')
+        +news-element('./img/News_pic_282x266_3 1.jpg', 'Увеличение цены на чернослив и курагу')
+        +news-element('./img/News_pic_282x266_4 1.jpg', 'Компания «Семушка» прошла сертификацию FSSC 22000 ')
+        +news-element('./img/News_pic_588x266_1 1.jpg', 'Логистический кризис: цены на контейнерные перевозки резко увеличились', 2)
+      .news-grid__contacts-widget
+        .contacts-widget
+          .contacts-widget__section
+            .contacts-widget__text-1 Не нашли что искали?
+            .contacts-widget__text-2 Свяжитесь с нами
+          .contacts-widget__section
+            .contacts-widget__text-3 Горячая линия
+            a(href="tel:74991103044").contacts-widget__phone.link +7 (499) 110 30 44
+          .contacts-widget__section
+            a(href="#").button.button_style-1
+              span Заказать звонок 

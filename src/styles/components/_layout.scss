@@ -3,17 +3,44 @@
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .main {
   flex: 1 1 100%;
+  padding: 65px 0 0 0;
 }
 
 .section {
-
+  margin-bottom: 150px;
+  &__head {
+    margin-bottom: 45px;
+    &_with-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__banner {
+    margin-top: 80px;
+  }
+  &:first-child {
+    margin-top: 75px;
+  }
+  &:last-child {
+    margin-bottom: 80px;
+  }
+  &__title {
+    &_with-button {
+      margin: 0;
+    }
+  }
 }
 
 .container {
   position: relative;
   padding: 0 var(--container-gutter-x);
+  @include media-breakpoint-up(xxl) {
+    max-width: #{map-get($container-max-widths, xl)};
+  }
 }

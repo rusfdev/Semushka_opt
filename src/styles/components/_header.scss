@@ -1,3 +1,93 @@
 .header {
+  --spacer: 34px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  z-index: 100;
+  &_fixed {
+    position: fixed;
+  }
+  &__container {
+    height: 65px;
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: var(--spacer);
+  }
+  &__left, &__right {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+  }
+  &__search-block {
+    flex: 1 1 100%;
+    margin: 0 var(--spacer);
+  }
+  &__phone {
+    flex: 0 0 auto;
+    font-size: 0.75rem;
+    margin-right: var(--spacer);
+  }
+  &__price-button {
+    line-height: 65px;
+    font-size: 12px;
+    padding: 0 12px;
+    border-radius: 0;
+  }
+  &__small-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+  }
+  &__small-buttons-item {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 11px;
+      &::after {
+        display: block;
+        content: '';
+        width: 1px;
+        height: 100%;  
+        position: absolute;
+        top: 0;
+        right: -6px;
+        background-color: var(--color-muted);
+      }
+    }
+  }
+  &__small-button {
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    display: flex;
+    justify-content: center;
+    color: var(--color-muted);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    .icon {
+      width: 17px;
+      height: 17px;
+      margin: auto;
+    }
+  }
+}
+
+.header-nav {
   flex-shrink: 0;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+  &__link {
+    font-size: 0.75rem;
+  }
 }

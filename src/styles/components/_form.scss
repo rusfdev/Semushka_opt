@@ -1,0 +1,215 @@
+.input {
+  border-radius: 4px;
+  border: 1px solid var(--color-input-border);
+  background-color: #fff;
+  input {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  input, textarea {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px 15px;
+    width: 100%;
+    &:-webkit-autofill {
+      -webkit-text-fill-color: var(--color-text);
+      box-shadow: 0 0 0px 1000px transparent inset;
+      transition: background-color 5000s;
+    }
+    &::placeholder {
+      color: var(--color-input-placeholder);
+      transition: opacity $trs1;
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.search-block {
+  &__element {
+    display: flex;
+    position: relative;
+  }
+  &__input {
+    padding-right: 50px;
+    width: 100%;
+    input {
+      padding-left: 12px;
+      font-size: 10px;
+      line-height: 14px;
+
+    }
+  }
+  &__search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    color: var(--color-accent-2);
+    .icon {
+      width: 14px;
+      height: 14px;
+      margin: auto;
+    }
+  }
+}
+
+.checkbox {
+  position: relative;
+  &__input {
+    display: none;
+    &:checked ~ .checkbox__label {
+      &:before {
+        border-color: var(--color-accent-1);
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &__label {
+    display: block;
+    position: relative;
+    padding-left: 1.5em;
+    &:before {
+      content: '';
+      display: block;
+      width: 1em;
+      height: 1em;
+      border: 1px solid var(--color-borders);
+      background-color: #fff;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      top: 0.125em;
+      transition: border-color $trs1;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0.36em;
+      left: 0.22em;
+      width: 0.6em;
+      height: 0.35em;
+      border-width: 0 0 1px 1px;
+      transform: rotate(-45deg);
+      border-style: solid;
+      border-color: #000;
+      opacity: 0;
+      transition: opacity $trs1;
+    }
+    &[data-touch], &[data-hover] {
+      &::before {
+        border-color: var(--color-accent-1_2);
+      }
+    }
+  }
+}
+
+
+.ss-main {
+  position: relative;
+  font-size: 10px;
+  line-height: 14px;
+}
+.ss-single-selected {
+  border-radius: 4px;
+  box-shadow: var(--block-shadow);
+  background-color: #fff;
+  padding: 10px 26px 10px 14px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &[data-touch], &[data-hover] {
+    .arrow-down, .arrow-up {
+      transform: rotate(90deg);
+    }
+  }
+  &.ss-open-below {
+    border-radius: 4px 4px 0 0;
+  }
+}
+.ss-deselect, .ss-search {
+  display: none;
+}
+.ss-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  .arrow-down, .arrow-up {
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    transition: transform $trs1;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-color: var(--color-accent-1);
+      border-style: solid;
+      border-width: 1px 1px 0 0;
+      top: 2px;
+      left: 0px;
+      transform: rotate(45deg);
+    }
+  }
+  .arrow-down {
+    transform: rotate(0);
+  }
+  .arrow-up {
+    transform: rotate(-90deg) !important;
+  }
+}
+
+.ss-content {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: var(--block-shadow);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $trs1, visibility $trs1;
+  border-top: 1px solid var(--color-borders);
+  &.ss-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.ss-option {
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: color $trs1;
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--color-borders);
+  }
+  &.ss-disabled {
+    color: var(--color-muted);
+    pointer-events: none;
+  }
+  &.ss-option-selected {
+    color: var(--color-accent-1);
+    pointer-events: none;
+  }
+  &[data-touch], &[data-hover] {
+    color: var(--color-accent-1);
+  }
+}

@@ -1,8 +1,5 @@
 :root {
-  @include media-breakpoint-up(xxl) {
-    --content-width: #{map-get($container-max-widths, xxl)};
-  }
-  @include media-breakpoint-down(xxl) {
+  @include media-breakpoint-up(xl) {
     --content-width: #{map-get($container-max-widths, xl)};
   }
   @include media-breakpoint-down(xl) {
@@ -15,6 +12,8 @@
     --content-width: #{map-get($container-max-widths, sm)};
     --container-gutter-x: 16px;
   }
+
+  --block-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.05);
 }
 
 * {

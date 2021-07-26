@@ -1,0 +1,215 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'О компании'
+  -var title = sitename + ' - ' + page_title
+
+block content
+  include blocks/components
+
+  -var breadcrumbs_links = ['Главная', page_title]
+  include blocks/breadcrumbs
+
+  section.section.about-company-section
+    .container 
+      .section__head
+        h1.section__title О компании
+      .about-company-section__container 
+        .swiper.image-slider.about-company-section__slider
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide.image.image_cover.about-company-section__slide
+                img(data-src="./img/Rectangle 182.jpg", alt="image").swiper-lazy
+              .swiper-slide.image.image_cover.about-company-section__slide
+                img(data-src="./img/Rectangle 182.jpg", alt="image").swiper-lazy
+              .swiper-slide.image.image_cover.about-company-section__slide
+                img(data-src="./img/Rectangle 182.jpg", alt="image").swiper-lazy
+          .swiper-pagination
+
+        .about-company-section__text 
+          p Компания «Семушка» - крупнейший российский производитель и оптовый поставщик натуральных продуктов - орехов и сухофруктов.  Бренд «Семушка» был основан в 2002 году и стал узнаваемым благодаря широкому ассортименту и уникальной экологичной упаковке.
+          p Вы можете найти нашу продукцию во всех федеральных розничных сетях России, в том числе Х5, Магнит, Азбука Вкуса, Лента, Ашан, Глобус, Окей, Метро, Спар и т.д. Компания «Семушка» признана на мировом рынке, состоит в Международном совете по орехам и сухофруктам INC и сертифицирована FSSC 22000. В 2019 году суммарный оборот компании достиг 3 млрд. руб. Мы предлагаем широкий выбор товарных позиций - более 250 наименований орехов и сухофруктов, которые можно купить оптом по лучшим ценам на рынке. Наша компания импортирует более 5000 тонн продукции в год от проверенных поставщиков по всему миру. Собственное производство позволяет нам перерабатывать 2000 тонн сырья в год.
+          p Более подробно о торговой марке «Семушка» вы можете узнать на нашем сайте 
+            a(href="#") semushka.com 
+
+  section.section.section-benefits
+    .container 
+      .section__head
+        h2.section__title Наши преимущества
+      .section-benefits__container 
+        .section-benefits__block 
+          img(src="./img/icons/freshness.svg", alt="icon").section-benefits__block-icon
+          h6.section-benefits__block-title Свежесть продукта
+          p.section-benefits__block-text Мы храним каждый вид продукции в оптимальных для него условиях, что увеличивает срок хранения и дает гарантию отличного вкуса.
+        .section-benefits__block 
+          img(src="./img/icons/selection.svg", alt="icon").section-benefits__block-icon
+          h6.section-benefits__block-title Тщательный отбор
+          p.section-benefits__block-text Вся продукция проходит несколько ступеней сортировки как до обработки, так и после. Проводится проверка каждой упаковки.
+        .section-benefits__block 
+          img(src="./img/icons/quality.svg", alt="icon").section-benefits__block-icon
+          h6.section-benefits__block-title Качественное сырье
+          p.section-benefits__block-text Качество — это визитная карточка нашей компании. На мировом рынке мы покупаем только сертифицированный товар у проверенных поставщиков.
+
+  section.section.certificates-section
+    .container 
+      .section__head
+        h3.section__title Наши сертификаты
+      .section__container.certificates-section__container 
+        +certificate('./img/iso-logo 1.png')
+        +certificate('./img/unnamed 1.png')
+        +certificate('./img/haccp-GMN 1.png')
+        +certificate('./img/quality-3_2048x2048 1.png')
+        +certificate('./img/da4250415df2241580c146658cbd6701 1.png')
+      .section__banner.row  
+        .col-xl-10.offset-xl-1
+          include blocks/banner1  
+
+
+  section.section.news-grid
+    .container 
+      .section__head.section__head_with-button
+        h3.section__title.section__title_with-button Новости
+        a(href="novosti.html").button.button_style-2.button_small.button_arrow
+          span Смотреть все
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+      .news-grid__container 
+        +news-element('./img/News_pic_588x266 1.jpg', 'Экскурсия в магазин «Семушка»<br> на Мясницкой', 2)
+        +news-element('./img/Mask Group.jpg', 'Открытие магазина «Семушка» в Москве')
+        +news-element('./img/News_pic_282x266_2 1.jpg', 'Открытие сайта для оптовых покупателей')
+        +news-element('./img/News_pic_282x266_3 1.jpg', 'Увеличение цены на чернослив и курагу')
+        +news-element('./img/News_pic_282x266_4 1.jpg', 'Компания «Семушка» прошла сертификацию FSSC 22000 ')
+        +news-element('./img/News_pic_588x266_1 1.jpg', 'Логистический кризис: цены на контейнерные перевозки резко увеличились', 2)
+
+
+  section.section.contacts-section
+    .container 
+      .section__head  
+        h3.section__title Где купить?
+      .contacts-section__container 
+        //box
+        .contact-box 
+          .contact-box__content 
+            h6.contact-box__title Отдел продаж
+            .contact-box__elements 
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#phone')
+                  | Телефон
+                span.contact-box__item-text 
+                  a(href="tel:74991103044") +7 (499) 110 30 44
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#mail')
+                  | Почта
+                span.contact-box__item-text 
+                  a(href="mailto:opt@semushka-m.ru") opt@semushka-m.ru
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#clock')
+                  | Режим работы
+                span.contact-box__item-text 
+                  | <strong>Пн-Пт:</strong> с 10:00 до 19:00
+        //box
+        .contact-box 
+          .contact-box__content 
+            h6.contact-box__title Центральный офис
+            .contact-box__elements 
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#phone')
+                  | Телефон
+                span.contact-box__item-text 
+                  a(href="tel:74954887285") +7 (495) 488 72 85
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#mail')
+                  | Почта
+                span.contact-box__item-text 
+                  a(href="mailto:opt@semushka-m.ru") opt@semushka-m.ru
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#geo')
+                  | Адрес
+                span.contact-box__item-text 
+                  | 127018, Москва, 2-я Ямская улица, дом 9.
+
+        //box
+        .contact-box
+          .contact-box__content 
+            h6.contact-box__title Фуд Сити
+            .contact-box__elements 
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#phone')
+                  | Телефон
+                span.contact-box__item-text 
+                  a(href="tel:74954887285") +7 (495) 488 72 85
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#mail')
+                  | Почта
+                span.contact-box__item-text 
+                  a(href="mailto:opt@semushka-m.ru") opt@semushka-m.ru
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#clock')
+                  | Режим работы
+                span.contact-box__item-text 
+                  | с 10:00 до 19:00
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#geo')
+                  | Адрес
+                span.contact-box__item-text 
+                  | Москва, Калужское шоссе 22-й км.
+
+          .contact-box__map 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577336.7645875042!2d36.82512011568039!3d55.58074803516603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sua!4v1627325316065!5m2!1sru!2sua" loading="lazy"></iframe>
+
+        //box
+        .contact-box
+          .contact-box__content 
+            h6.contact-box__title Склад
+            .contact-box__elements 
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#phone')
+                  | Телефон
+                span.contact-box__item-text 
+                  a(href="tel:74954887285") +7 (495) 488 72 85
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#mail')
+                  | Почта
+                span.contact-box__item-text 
+                  a(href="mailto:opt@semushka-m.ru") opt@semushka-m.ru
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#clock')
+                  | Режим работы
+                span.contact-box__item-text 
+                  | <strong>Пн-Пт:</strong> с 10:00 до 19:00
+              .contact-box__item
+                span.contact-box__item-head
+                  svg.icon
+                    use(xlink:href='./img/icons/sprite.svg#geo')
+                  | Адрес
+                span.contact-box__item-text 
+                  | МО, Мытищи, ул.Центральная, дом 81.
+
+          .contact-box__map 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577336.7645875042!2d36.82512011568039!3d55.58074803516603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sua!4v1627325316065!5m2!1sru!2sua" loading="lazy"></iframe>

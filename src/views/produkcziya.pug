@@ -1,0 +1,41 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Продукция'
+  -var title = sitename + ' - ' + page_title
+
+block content
+  include blocks/components
+
+  -var breadcrumbs_links = ['Главная', page_title]
+  include blocks/breadcrumbs
+
+  section.section.products-section
+    .container 
+      .section__head.section__head_with-button
+        h1.section__title.section__title_with-button Продукция
+        a(href="./katalog.html").button.button_style-2.button_small.button_arrow
+          span Смотреть все
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+      .products-section__content
+        a(href="#").product-category-block
+          .image.image_contain
+            img(data-src="./img/Nuts 1.png", alt="image").lazyload
+          h6.product-category-block__title Орехи
+        a(href="#").product-category-block
+          .image.image_contain
+            img(data-src="./img/Semena 1.png", alt="image").lazyload
+          h6.product-category-block__title Семена
+        a(href="#").product-category-block
+          .image.image_contain
+            img(data-src="./img/Suxofruct 1.png", alt="image").lazyload
+          h6.product-category-block__title Сухофрукты
+        a(href="#").product-category-block
+          .image.image_contain
+            //img(data-src="/", alt="image").lazyload
+          h6.product-category-block__title Фасовка
+      
+      .section__banner.row  
+        .col-xl-10.offset-xl-1
+          include blocks/banner1    

@@ -31,6 +31,7 @@ img {
   }
   &_cover {
     overflow: hidden;
+    background-color: rgba(43, 41, 41, 0.5);
     img {
       object-fit: cover;
     }
@@ -38,6 +39,104 @@ img {
   &_contain {
     img {
       object-fit: contain;
+    }
+  }
+}
+
+
+.logo {
+  width: 70px;
+  display: block;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.link, a:not([class]) {
+  transition: color $trs1;
+  &[data-touch], &[data-hover] {
+    color: var(--color-accent-2_2);
+  }
+}
+
+.accent-link {
+  color: var(--color-accent-2);
+  border-bottom: 1px dashed currentColor;
+  transition: color $trs1;
+  &[data-touch], &[data-hover] {
+    color: var(--color-accent-2_2);
+  }
+}
+
+.swiper {
+  position: relative;
+  * {
+    user-select: none;
+  }
+  &-lazy {
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(43, 41, 41, 0.5);
+    transition: opacity $trs3, visibility $trs3;
+    &-loaded {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &-wrapper {
+    transition-timing-function: ease;
+  }
+  &-slide {
+    height: initial;
+  }
+  &-button {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    color: var(--color-muted);
+    transition: color $trs1, opacity $trs1;
+    cursor: pointer;
+    user-select: none;
+    .icon {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    &-prev {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+    &[data-touch], &[data-hover] {
+      color: var(--color-accent-2);
+    }
+    &-disabled {
+      opacity: 0.35;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+  &-pagination {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    &-bullet {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      transition: background-color $trs1;
+      &[data-touch], &[data-hover] {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+      &-active {
+        pointer-events: none;
+        background-color: #fff;
+      }
     }
   }
 }

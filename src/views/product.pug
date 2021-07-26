@@ -1,0 +1,45 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Арахис жаренный дробленный'
+  -var title = sitename + ' - ' + page_title
+
+block content
+  include blocks/components
+
+  -var breadcrumbs_links = ['Главная', 'Продукция', 'Каталог', 'Орехи', page_title]
+  include blocks/breadcrumbs
+
+  section.section.product-slider
+    .container 
+      .section__head.product-slider__head 
+        h3.section__title Рекомендованные товары
+      .swiper
+        .swiper-button.swiper-button-prev(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+        .swiper-button.swiper-button-next(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(3)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)    

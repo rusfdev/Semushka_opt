@@ -1,0 +1,16 @@
+extends layout/layout
+
+block variables
+  -var title = sitename+' - 404'
+
+block content 
+  .page-404
+    .image.image_cover 
+      img(data-src="./img/404_3 1.jpg", alt="image").lazyload
+    .container.page-404__container
+      .page-404__box 
+        .page-404__box-text
+          h6.page-404__box-title Страница не найдена
+          p Страница удалена, либо никогда не существовала.
+        a(href="./").button.button_style-1 
+          span Перейти на главную 

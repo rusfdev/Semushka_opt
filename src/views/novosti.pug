@@ -1,0 +1,104 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Новости'
+  -var title = sitename + ' - ' + page_title
+
+block content
+  include blocks/components
+
+  -var breadcrumbs_links = ['Главная', page_title]
+  include blocks/breadcrumbs
+
+  section.section.news-grid
+    .container 
+      .section__head
+        h1.section__title Новости
+      .tag-list.news-grid__tags
+        .tag-list__container 
+          a(href="#").tag-element.tag-list__element
+            span Арахис
+          a(href="#").tag-element.tag-list__element
+            span Кризис
+          a(href="#").tag-element.tag-list__element.is-active
+            span Проценты
+          a(href="#").tag-element.tag-list__element
+            span Перевозки
+          a(href="#").tag-element.tag-list__element.is-active
+            span Арахис
+          a(href="#").tag-element.tag-list__element
+            span Кризис
+          a(href="#").tag-element.tag-list__element
+            span Проценты
+          a(href="#").tag-element.tag-list__element
+            span Перевозки
+          a(href="#").tag-element.tag-list__element
+            span Арахис
+          a(href="#").tag-element.tag-list__element
+            span Кризис
+          a(href="#").tag-element.tag-list__element
+            span Проценты
+          a(href="#").tag-element.tag-list__element
+            span Перевозки
+          a(href="#").tag-element.tag-list__element
+            span Арахис
+          a(href="#").tag-element.tag-list__element
+            span Кризис
+          a(href="#").tag-element.tag-list__element.is-active
+            span Проценты
+          a(href="#").tag-element.tag-list__element
+            span Перевозки
+      
+      .news-grid__container 
+        +news-element('./img/News_pic_588x266 1.jpg', 'Экскурсия в магазин «Семушка»<br> на Мясницкой', 2)
+        +news-element('./img/Mask Group.jpg', 'Открытие магазина «Семушка» в Москве')
+        +news-element('./img/News_pic_282x266_2 1.jpg', 'Открытие сайта для оптовых покупателей')
+        +news-element('./img/News_pic_282x266_3 1.jpg', 'Увеличение цены на чернослив и курагу')
+        +news-element('./img/News_pic_282x266_4 1.jpg', 'Компания «Семушка» прошла сертификацию FSSC 22000 ')
+        +news-element('./img/News_pic_588x266_1 1.jpg', 'Логистический кризис: цены на контейнерные перевозки резко увеличились', 2)
+        +news-element('./img/news7.jpg', 'Аномальная погода может привести к гибели 30-80% урожая', 2)
+        +news-element('./img/news8.jpg', 'Открытие магазина «Семушка» в Москве')
+        +news-element('./img/news9.jpg', 'Открытие сайта для оптовых покупателей')
+        +news-element('./img/news10.jpg', 'Почему кешью нельзя чистить руками')
+        +news-element('./img/news11.jpg', 'Какие орехи самые полезные для<br> человека')
+        +news-element('./img/news12.jpg', '«Семушка»: зачем ореховой компании<br> фирменная розница', 2)
+
+      +pagination(1)
+      .load-more 
+        a(href="#").button.button_style-2.button_small
+          span Загрузить еще 
+
+  
+  section.section.product-slider
+    .container 
+      .section__head.product-slider__head 
+        h3.section__title Рекомендованные товары
+      .swiper
+        .swiper-button.swiper-button-prev(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+        .swiper-button.swiper-button-next(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(3)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)    

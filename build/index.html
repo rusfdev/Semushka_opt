@@ -3,35 +3,915 @@
   <head>
     <meta charset="utf-8">
     <title>Семушка — Главная</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Крупнейший российский производитель и оптовый поставщик натуральных продуктов - орехов и сухофруктов.">
     <!--color-->
-    <meta name="theme-color" content="#000">
+    <meta name="theme-color" content="#fff">
     <!--favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ruslanmmr.github.io/Semushka/build/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ruslanmmr.github.io/Semushka/build/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://ruslanmmr.github.io/Semushka/build/img/favicons/favicon-16x16.png">
     <!--open graph-->
     <meta property="og:title" content="Компания «Семушка»">
     <meta property="og:site_name" content="Семушка">
-    <meta property="og:url" content="">
+    <meta property="og:url" content="https://ruslanmmr.github.io/Semushka/build/">
     <meta property="og:description" content="Крупнейший российский производитель и оптовый поставщик натуральных продуктов - орехов и сухофруктов.">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="https://ruslanmmr.github.io/Semushka/build/img/Banners_2 1.jpg">
     <!--fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <!--styles-->
+    <link rel="stylesheet" href="./styles/theme.css">
     <link rel="stylesheet" href="./styles/common.css">
   </head>
   <body>
+    <div class="video-banner">
+      <div class="image image_cover"> <img class="lazyload" data-src="./img/cb.jpg" alt="img"></div>
+    </div>
     <div class="wrapper">
-      <header class="header"></header>
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__left"><a class="logo header__logo" href="./"><img src="./img/logos/logo.svg" alt="logo"></a>
+            <nav class="header-nav">
+              <ul class="header-nav__list">
+                <li class="header-nav__item"> <a class="header-nav__link link" href="#">Продукция</a></li>
+                <li class="header-nav__item"> <a class="header-nav__link link" href="#">Новости</a></li>
+                <li class="header-nav__item"> <a class="header-nav__link link" href="#">О компании</a></li>
+                <li class="header-nav__item"> <a class="header-nav__link link" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="search-block header__search-block">
+            <from class="search-block__element">
+              <div class="input search-block__input">
+                <input type="text" placeholder="Поиск по каталогу">
+              </div>
+              <button class="search-block__search-button link">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/sprite.svg#loupe"></use>
+                </svg>
+              </button>
+            </from>
+          </div>
+          <div class="header__right"><a class="header__phone link" href="tel:74991103044">+7 499 110-30-44</a><a class="button button_style-3 header__price-button" href="#"><span>Запрос прайс-листа</span></a>
+            <ul class="header__small-buttons">
+              <li class="header__small-buttons-item"><a class="header__small-button link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/sprite.svg#user"></use>
+                  </svg></a></li>
+              <li class="header__small-buttons-item"><a class="header__small-button link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                  </svg></a></li>
+              <li class="header__small-buttons-item"><a class="header__small-button link" href="#"><span>en</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
       <main class="main">
+        <section class="section product-slider">
+          <div class="container">
+            <div class="section__head product-slider__head">
+              <h3 class="section__title">Специальное предложение</h3>
+              <p>При покупке товара от киллограма и тонны по акции действует скидка. Подробности уточняйте у менеджера. </p>
+            </div>
+            <div class="swiper">
+              <div class="swiper-button swiper-button-prev" data-custom-interaction>
+                <svg class="icon">
+                  <use xlink:href="./img/icons/sprite.svg#right-arrow"></use>
+                </svg>
+              </div>
+              <div class="swiper-button swiper-button-next" data-custom-interaction>
+                <svg class="icon">
+                  <use xlink:href="./img/icons/sprite.svg#right-arrow"></use>
+                </svg>
+              </div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                            <div class="product-card" data-custom-interaction>
+                              <div class="product-card__image"><a class="image image_contain" href="./product.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                <div class="product-gradation-label product-card__gradation-label">
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                  </svg><span>от</span><span>1 тонны</span>
+                                </div>
+                              </div>
+                              <div class="product-card__content">
+                                <div class="product-card__top">
+                                  <div class="product-card__label-info">
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                    </svg>Срок хранения: 12 мес
+                                  </div><a class="product-card__title link" href="./product.html"> Арахис сушеный очищенный 38/42</a>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <ul class="product-card__info">
+                                    <li> <span>Страна</span><span>Чили</span></li>
+                                    <li> <span>Цена за 1 кг</span><span>163 ₽</span></li>
+                                    <li> <span>Цена за упаковку (10 кг)</span><span>4 075 ₽</span></li>
+                                  </ul>
+                                  <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                    <div class="product-card__packaging-list">
+                                      <label class="product-card__package">
+                                        <input type="radio" name="646590" value="15" checked><span data-custom-interaction>15</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="646590" value="40"><span data-custom-interaction>40</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="646590" value="100"><span data-custom-interaction>100</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="646590" value="150"><span data-custom-interaction>150</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__calculator"> <span class="product-card__calculator-text product-card__calculator-count"><span>15 </span>кг</span>
+                                    <div class="count-calculator" data-custom-interaction>
+                                      <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                      <input class="count-calculator__input" type="number" value="1">
+                                      <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                    </div><span class="product-card__calculator-text">шт</span>
+                                  </div>
+                                  <div class="product-card__button">
+                                    <button class="button button_style-1 button_small">
+                                      <svg class="icon">
+                                        <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                      </svg><span>Купить</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-card" data-custom-interaction>
+                              <div class="product-card__image"><a class="image image_contain" href="./product.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                <div class="product-label product-label_type-1 product-card__label">Акция</div>
+                                <div class="product-gradation-label product-card__gradation-label">
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                  </svg><span>от</span><span>1 тонны</span>
+                                </div>
+                              </div>
+                              <div class="product-card__content">
+                                <div class="product-card__top">
+                                  <div class="product-card__label-info">
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                    </svg>Срок хранения: 12 мес
+                                  </div><a class="product-card__title link" href="./product.html"> Арахис сушеный очищенный 38/42</a>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <ul class="product-card__info">
+                                    <li> <span>Страна</span><span>Чили</span></li>
+                                    <li> <span>Цена за 1 кг</span><span>163 ₽</span></li>
+                                    <li> <span>Цена за упаковку (10 кг)</span><span>4 075 ₽</span></li>
+                                  </ul>
+                                  <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                    <div class="product-card__packaging-list">
+                                      <label class="product-card__package">
+                                        <input type="radio" name="193533" value="15" checked><span data-custom-interaction>15</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="193533" value="40"><span data-custom-interaction>40</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="193533" value="100"><span data-custom-interaction>100</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="193533" value="150"><span data-custom-interaction>150</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__calculator"> <span class="product-card__calculator-text product-card__calculator-count"><span>15 </span>кг</span>
+                                    <div class="count-calculator" data-custom-interaction>
+                                      <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                      <input class="count-calculator__input" type="number" value="1">
+                                      <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                    </div><span class="product-card__calculator-text">шт</span>
+                                  </div>
+                                  <div class="product-card__button">
+                                    <button class="button button_style-1 button_small">
+                                      <svg class="icon">
+                                        <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                      </svg><span>Купить</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-card" data-custom-interaction>
+                              <div class="product-card__image"><a class="image image_contain" href="./product.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 2.png" alt="image"></a>
+                                <div class="product-label product-label_type-2 product-card__label">Новинка</div>
+                                <div class="product-gradation-label product-card__gradation-label">
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                  </svg><span>от</span><span>1 тонны</span>
+                                </div>
+                              </div>
+                              <div class="product-card__content">
+                                <div class="product-card__top">
+                                  <div class="product-card__label-info">
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                    </svg>Срок хранения: 12 мес
+                                  </div><a class="product-card__title link" href="./product.html"> Арахис сушеный очищенный 38/42 и еще какой-то очень длинный текст</a>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <ul class="product-card__info">
+                                    <li> <span>Страна</span><span>Чили</span></li>
+                                    <li> <span>Цена за 1 кг</span><span>163 ₽</span></li>
+                                    <li> <span>Цена за упаковку (10 кг)</span><span>4 075 ₽</span></li>
+                                  </ul>
+                                  <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес одной упаковки, гр</span>
+                                    <div class="product-card__packaging-list">
+                                      <label class="product-card__package">
+                                        <input type="radio" name="98949" value="15" checked><span data-custom-interaction>15</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="98949" value="40"><span data-custom-interaction>40</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="98949" value="100" disabled><span data-custom-interaction>100</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="98949" value="150"><span data-custom-interaction>150</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__calculator">
+                                    <div class="count-calculator" data-custom-interaction>
+                                      <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                      <input class="count-calculator__input" type="number" value="1">
+                                      <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                    </div><span class="product-card__calculator-text">шт</span>
+                                  </div>
+                                  <div class="product-card__button">
+                                    <button class="button button_style-1 button_small">
+                                      <svg class="icon">
+                                        <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                      </svg><span>Купить</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-card" data-custom-interaction>
+                              <div class="product-card__image"><a class="image image_contain" href="./product.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                <div class="product-label product-label_type-1 product-card__label">Акция</div>
+                                <div class="product-gradation-label product-card__gradation-label">
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                  </svg><span>от</span><span>1 тонны</span>
+                                </div>
+                              </div>
+                              <div class="product-card__content">
+                                <div class="product-card__top">
+                                  <div class="product-card__label-info">
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                    </svg>Срок хранения: 12 мес
+                                  </div><a class="product-card__title link" href="./product.html"> Арахис сушеный очищенный 38/42</a>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <ul class="product-card__info">
+                                    <li> <span>Страна</span><span>Чили</span></li>
+                                    <li> <span>Цена за 1 кг</span><span>163 ₽</span></li>
+                                    <li> <span>Цена за упаковку (10 кг)</span><span>4 075 ₽</span></li>
+                                  </ul>
+                                  <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                    <div class="product-card__packaging-list">
+                                      <label class="product-card__package">
+                                        <input type="radio" name="545609" value="15" checked><span data-custom-interaction>15</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="545609" value="40"><span data-custom-interaction>40</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="545609" value="100"><span data-custom-interaction>100</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="545609" value="150"><span data-custom-interaction>150</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__calculator"> <span class="product-card__calculator-text product-card__calculator-count"><span>15 </span>кг</span>
+                                    <div class="count-calculator" data-custom-interaction>
+                                      <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                      <input class="count-calculator__input" type="number" value="1">
+                                      <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                    </div><span class="product-card__calculator-text">шт</span>
+                                  </div>
+                                  <div class="product-card__button">
+                                    <button class="button button_style-1 button_small">
+                                      <svg class="icon">
+                                        <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                      </svg><span>Купить</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-card" data-custom-interaction>
+                              <div class="product-card__image"><a class="image image_contain" href="./product.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                <div class="product-gradation-label product-card__gradation-label">
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                  </svg><span>от</span><span>1 тонны</span>
+                                </div>
+                              </div>
+                              <div class="product-card__content">
+                                <div class="product-card__top">
+                                  <div class="product-card__label-info">
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                    </svg>Срок хранения: 12 мес
+                                  </div><a class="product-card__title link" href="./product.html"> Арахис сушеный очищенный 38/42</a>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <ul class="product-card__info">
+                                    <li> <span>Страна</span><span>Чили</span></li>
+                                    <li> <span>Цена за 1 кг</span><span>163 ₽</span></li>
+                                    <li> <span>Цена за упаковку (10 кг)</span><span>4 075 ₽</span></li>
+                                  </ul>
+                                  <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                    <div class="product-card__packaging-list">
+                                      <label class="product-card__package">
+                                        <input type="radio" name="985099" value="15" checked><span data-custom-interaction>15</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="985099" value="40"><span data-custom-interaction>40</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="985099" value="100"><span data-custom-interaction>100</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="985099" value="150"><span data-custom-interaction>150</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__calculator"> <span class="product-card__calculator-text product-card__calculator-count"><span>15 </span>кг</span>
+                                    <div class="count-calculator" data-custom-interaction>
+                                      <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                      <input class="count-calculator__input" type="number" value="1">
+                                      <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                    </div><span class="product-card__calculator-text">шт</span>
+                                  </div>
+                                  <div class="product-card__button">
+                                    <button class="button button_style-1 button_small">
+                                      <svg class="icon">
+                                        <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                      </svg><span>Купить</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-card" data-custom-interaction>
+                              <div class="product-card__image"><a class="image image_contain" href="./product.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                <div class="product-gradation-label product-card__gradation-label">
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                  </svg><span>от</span><span>1 тонны</span>
+                                </div>
+                              </div>
+                              <div class="product-card__content">
+                                <div class="product-card__top">
+                                  <div class="product-card__label-info">
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                    </svg>Срок хранения: 12 мес
+                                  </div><a class="product-card__title link" href="./product.html"> Арахис сушеный очищенный 38/42</a>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <ul class="product-card__info">
+                                    <li> <span>Страна</span><span>Чили</span></li>
+                                    <li> <span>Цена за 1 кг</span><span>163 ₽</span></li>
+                                    <li> <span>Цена за упаковку (10 кг)</span><span>4 075 ₽</span></li>
+                                  </ul>
+                                  <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                    <div class="product-card__packaging-list">
+                                      <label class="product-card__package">
+                                        <input type="radio" name="170936" value="15" checked><span data-custom-interaction>15</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="170936" value="40"><span data-custom-interaction>40</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="170936" value="100"><span data-custom-interaction>100</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="170936" value="150"><span data-custom-interaction>150</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__calculator"> <span class="product-card__calculator-text product-card__calculator-count"><span>15 </span>кг</span>
+                                    <div class="count-calculator" data-custom-interaction>
+                                      <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                      <input class="count-calculator__input" type="number" value="1">
+                                      <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                    </div><span class="product-card__calculator-text">шт</span>
+                                  </div>
+                                  <div class="product-card__button">
+                                    <button class="button button_style-1 button_small">
+                                      <svg class="icon">
+                                        <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                      </svg><span>Купить</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-card" data-custom-interaction>
+                              <div class="product-card__image"><a class="image image_contain" href="./product.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                <div class="product-gradation-label product-card__gradation-label">
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                  </svg><span>от</span><span>1 тонны</span>
+                                </div>
+                              </div>
+                              <div class="product-card__content">
+                                <div class="product-card__top">
+                                  <div class="product-card__label-info">
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                    </svg>Срок хранения: 12 мес
+                                  </div><a class="product-card__title link" href="./product.html"> Арахис сушеный очищенный 38/42</a>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <ul class="product-card__info">
+                                    <li> <span>Страна</span><span>Чили</span></li>
+                                    <li> <span>Цена за 1 кг</span><span>163 ₽</span></li>
+                                    <li> <span>Цена за упаковку (10 кг)</span><span>4 075 ₽</span></li>
+                                  </ul>
+                                  <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                    <div class="product-card__packaging-list">
+                                      <label class="product-card__package">
+                                        <input type="radio" name="611122" value="15" checked><span data-custom-interaction>15</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="611122" value="40"><span data-custom-interaction>40</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="611122" value="100"><span data-custom-interaction>100</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="611122" value="150"><span data-custom-interaction>150</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__calculator"> <span class="product-card__calculator-text product-card__calculator-count"><span>15 </span>кг</span>
+                                    <div class="count-calculator" data-custom-interaction>
+                                      <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                      <input class="count-calculator__input" type="number" value="1">
+                                      <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                    </div><span class="product-card__calculator-text">шт</span>
+                                  </div>
+                                  <div class="product-card__button">
+                                    <button class="button button_style-1 button_small">
+                                      <svg class="icon">
+                                        <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                      </svg><span>Купить</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-card" data-custom-interaction>
+                              <div class="product-card__image"><a class="image image_contain" href="./product.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                <div class="product-label product-label_type-1 product-card__label">Акция</div>
+                                <div class="product-gradation-label product-card__gradation-label">
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                  </svg><span>от</span><span>1 тонны</span>
+                                </div>
+                              </div>
+                              <div class="product-card__content">
+                                <div class="product-card__top">
+                                  <div class="product-card__label-info">
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                    </svg>Срок хранения: 12 мес
+                                  </div><a class="product-card__title link" href="./product.html"> Арахис сушеный очищенный 38/42</a>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <ul class="product-card__info">
+                                    <li> <span>Страна</span><span>Чили</span></li>
+                                    <li> <span>Цена за 1 кг</span><span>163 ₽</span></li>
+                                    <li> <span>Цена за упаковку (10 кг)</span><span>4 075 ₽</span></li>
+                                  </ul>
+                                  <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                    <div class="product-card__packaging-list">
+                                      <label class="product-card__package">
+                                        <input type="radio" name="808514" value="15" checked><span data-custom-interaction>15</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="808514" value="40"><span data-custom-interaction>40</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="808514" value="100"><span data-custom-interaction>100</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="808514" value="150"><span data-custom-interaction>150</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__calculator"> <span class="product-card__calculator-text product-card__calculator-count"><span>15 </span>кг</span>
+                                    <div class="count-calculator" data-custom-interaction>
+                                      <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                      <input class="count-calculator__input" type="number" value="1">
+                                      <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                    </div><span class="product-card__calculator-text">шт</span>
+                                  </div>
+                                  <div class="product-card__button">
+                                    <button class="button button_style-1 button_small">
+                                      <svg class="icon">
+                                        <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                      </svg><span>Купить</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-card" data-custom-interaction>
+                              <div class="product-card__image"><a class="image image_contain" href="./product.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                <div class="product-gradation-label product-card__gradation-label">
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                  </svg><span>от</span><span>1 тонны</span>
+                                </div>
+                              </div>
+                              <div class="product-card__content">
+                                <div class="product-card__top">
+                                  <div class="product-card__label-info">
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                    </svg>Срок хранения: 12 мес
+                                  </div><a class="product-card__title link" href="./product.html"> Арахис сушеный очищенный 38/42</a>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <ul class="product-card__info">
+                                    <li> <span>Страна</span><span>Чили</span></li>
+                                    <li> <span>Цена за 1 кг</span><span>163 ₽</span></li>
+                                    <li> <span>Цена за упаковку (10 кг)</span><span>4 075 ₽</span></li>
+                                  </ul>
+                                  <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                    <div class="product-card__packaging-list">
+                                      <label class="product-card__package">
+                                        <input type="radio" name="538762" value="15" checked><span data-custom-interaction>15</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="538762" value="40"><span data-custom-interaction>40</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="538762" value="100"><span data-custom-interaction>100</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="538762" value="150"><span data-custom-interaction>150</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__calculator"> <span class="product-card__calculator-text product-card__calculator-count"><span>15 </span>кг</span>
+                                    <div class="count-calculator" data-custom-interaction>
+                                      <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                      <input class="count-calculator__input" type="number" value="1">
+                                      <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                    </div><span class="product-card__calculator-text">шт</span>
+                                  </div>
+                                  <div class="product-card__button">
+                                    <button class="button button_style-1 button_small">
+                                      <svg class="icon">
+                                        <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                      </svg><span>Купить</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-card" data-custom-interaction>
+                              <div class="product-card__image"><a class="image image_contain" href="./product.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                <div class="product-label product-label_type-1 product-card__label">Акция</div>
+                                <div class="product-gradation-label product-card__gradation-label">
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                  </svg><span>от</span><span>1 тонны</span>
+                                </div>
+                              </div>
+                              <div class="product-card__content">
+                                <div class="product-card__top">
+                                  <div class="product-card__label-info">
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                    </svg>Срок хранения: 12 мес
+                                  </div><a class="product-card__title link" href="./product.html"> Арахис сушеный очищенный 38/42</a>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <ul class="product-card__info">
+                                    <li> <span>Страна</span><span>Чили</span></li>
+                                    <li> <span>Цена за 1 кг</span><span>163 ₽</span></li>
+                                    <li> <span>Цена за упаковку (10 кг)</span><span>4 075 ₽</span></li>
+                                  </ul>
+                                  <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                    <div class="product-card__packaging-list">
+                                      <label class="product-card__package">
+                                        <input type="radio" name="906133" value="15" checked><span data-custom-interaction>15</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="906133" value="40"><span data-custom-interaction>40</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="906133" value="100"><span data-custom-interaction>100</span>
+                                      </label>
+                                      <label class="product-card__package">
+                                        <input type="radio" name="906133" value="150"><span data-custom-interaction>150</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__calculator"> <span class="product-card__calculator-text product-card__calculator-count"><span>15 </span>кг</span>
+                                    <div class="count-calculator" data-custom-interaction>
+                                      <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                      <input class="count-calculator__input" type="number" value="1">
+                                      <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                    </div><span class="product-card__calculator-text">шт</span>
+                                  </div>
+                                  <div class="product-card__button">
+                                    <button class="button button_style-1 button_small">
+                                      <svg class="icon">
+                                        <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                      </svg><span>Купить</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section__banner row">
+              <div class="col-xl-10 offset-xl-1">
+                <div class="banner image image_cover"> <img src="./img/Banners_3 1.png" alt="image">
+                  <div class="banner__content">
+                    <h6 class="banner__title">
+                      Только опт от <strong>30 000 ₽</strong><br>Хотите купить небольшой объем?</h6><a class="button button_style-1 button_small banner__button" href="#"><span>Вам сюда </span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section products-section">
+          <div class="container">
+            <div class="section__head section__head_with-button">
+              <h4 class="section__title section__title_with-button">Продукция</h4><a class="button button_style-2 button_small button_arrow" href="./katalog.html"><span>Смотреть все</span>
+                <svg class="icon">
+                  <use xlink:href="./img/icons/sprite.svg#right-arrow"></use>
+                </svg></a>
+            </div>
+            <div class="products-section__content"><a class="product-category-block" href="#">
+                <div class="image image_contain"><img class="lazyload" data-src="./img/Nuts 1.png" alt="image"></div>
+                <h6 class="product-category-block__title">Орехи</h6></a><a class="product-category-block" href="#">
+                <div class="image image_contain"><img class="lazyload" data-src="./img/Semena 1.png" alt="image"></div>
+                <h6 class="product-category-block__title">Семена</h6></a><a class="product-category-block" href="#">
+                <div class="image image_contain"><img class="lazyload" data-src="./img/Suxofruct 1.png" alt="image"></div>
+                <h6 class="product-category-block__title">Сухофрукты</h6></a><a class="product-category-block" href="#">
+                <div class="image image_contain">
+                  <!--img(data-src="/", alt="image").lazyload-->
+                </div>
+                <h6 class="product-category-block__title">Фасовка</h6></a></div>
+          </div>
+        </section>
+        <section class="section about-section">
+          <div class="container">
+            <h3>Компания «Семушка»</h3>
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="mb-3">
+                  <p>В 2017 году в целях расширения производственных и складских площадей, а также оптимизации логистических процессов, производство «Семушки» переехало на новую площадку, расположенную в деревне Новосельцево Мытищинского района Подмосковья.</p>
+                  <p>Суммарная площадь производства составляет около 6 тыс. кв. метров. Количество сотрудников составляет 120 человек, автопарк состоит из 20 грузовых и полу-грузовых автомашин. Производственное оборудование включает современные автоматизированные фасовочные линии.</p>
+                </div><a class="button button_style-1" href="#"> <span>Подробнее</span></a>
+              </div>
+              <div class="col-xl-6 about-section__video"><a class="video-block image image_cover" href="#"><img class="lazyload" data-src="./img/Rectangle 117.jpg" alt="image">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="./img/icons/sprite.svg#play"></use>
+                    </svg>
+                  </div></a></div>
+            </div>
+          </div>
+        </section>
+        <section class="section certificates-section">
+          <div class="container">
+            <div class="section__head">
+              <h3 class="section__title">Наши сертификаты</h3>
+            </div>
+            <div class="section__container certificates-section__container">
+                      <div class="certificate-block" data-custom-interaction>
+                        <div class="image image_contain"><img class="lazyload" data-src="./img/iso-logo 1.png" alt="image"></div>
+                      </div>
+                      <div class="certificate-block" data-custom-interaction>
+                        <div class="image image_contain"><img class="lazyload" data-src="./img/unnamed 1.png" alt="image"></div>
+                      </div>
+                      <div class="certificate-block" data-custom-interaction>
+                        <div class="image image_contain"><img class="lazyload" data-src="./img/haccp-GMN 1.png" alt="image"></div>
+                      </div>
+                      <div class="certificate-block" data-custom-interaction>
+                        <div class="image image_contain"><img class="lazyload" data-src="./img/quality-3_2048x2048 1.png" alt="image"></div>
+                      </div>
+                      <div class="certificate-block" data-custom-interaction>
+                        <div class="image image_contain"><img class="lazyload" data-src="./img/da4250415df2241580c146658cbd6701 1.png" alt="image"></div>
+                      </div>
+            </div>
+          </div>
+        </section>
+        <section class="section news-grid">
+          <div class="container">
+            <div class="section__head section__head_with-button">
+              <h3 class="section__title section__title_with-button">Новости</h3><a class="button button_style-2 button_small button_arrow" href="novosti.html"><span>Смотреть все</span>
+                <svg class="icon">
+                  <use xlink:href="./img/icons/sprite.svg#right-arrow"></use>
+                </svg></a>
+            </div>
+            <div class="news-grid__container">
+                      <div class="news-element news-element_wide" data-custom-interaction>
+                        <div class="image image_cover"> <img class="lazyload" data-src="./img/News_pic_588x266 1.jpg" alt="image"></div>
+                        <div class="news-element__text"><span class="news-element__date">18.06.2021</span>
+                          <h6 class="news-element__title">Экскурсия в магазин «Семушка»<br> на Мясницкой</h6>
+                        </div>
+                        <div class="news-element__button"><a class="button button_style-4 button_small" href="#"> <span>Читать</span></a></div>
+                      </div>
+                      <div class="news-element" data-custom-interaction>
+                        <div class="image image_cover"> <img class="lazyload" data-src="./img/Mask Group.jpg" alt="image"></div>
+                        <div class="news-element__text"><span class="news-element__date">18.06.2021</span>
+                          <h6 class="news-element__title">Открытие магазина «Семушка» в Москве</h6>
+                        </div>
+                        <div class="news-element__button"><a class="button button_style-4 button_small" href="#"> <span>Читать</span></a></div>
+                      </div>
+                      <div class="news-element" data-custom-interaction>
+                        <div class="image image_cover"> <img class="lazyload" data-src="./img/News_pic_282x266_2 1.jpg" alt="image"></div>
+                        <div class="news-element__text"><span class="news-element__date">18.06.2021</span>
+                          <h6 class="news-element__title">Открытие сайта для оптовых покупателей</h6>
+                        </div>
+                        <div class="news-element__button"><a class="button button_style-4 button_small" href="#"> <span>Читать</span></a></div>
+                      </div>
+                      <div class="news-element" data-custom-interaction>
+                        <div class="image image_cover"> <img class="lazyload" data-src="./img/News_pic_282x266_3 1.jpg" alt="image"></div>
+                        <div class="news-element__text"><span class="news-element__date">18.06.2021</span>
+                          <h6 class="news-element__title">Увеличение цены на чернослив и курагу</h6>
+                        </div>
+                        <div class="news-element__button"><a class="button button_style-4 button_small" href="#"> <span>Читать</span></a></div>
+                      </div>
+                      <div class="news-element" data-custom-interaction>
+                        <div class="image image_cover"> <img class="lazyload" data-src="./img/News_pic_282x266_4 1.jpg" alt="image"></div>
+                        <div class="news-element__text"><span class="news-element__date">18.06.2021</span>
+                          <h6 class="news-element__title">Компания «Семушка» прошла сертификацию FSSC 22000 </h6>
+                        </div>
+                        <div class="news-element__button"><a class="button button_style-4 button_small" href="#"> <span>Читать</span></a></div>
+                      </div>
+                      <div class="news-element news-element_wide" data-custom-interaction>
+                        <div class="image image_cover"> <img class="lazyload" data-src="./img/News_pic_588x266_1 1.jpg" alt="image"></div>
+                        <div class="news-element__text"><span class="news-element__date">18.06.2021</span>
+                          <h6 class="news-element__title">Логистический кризис: цены на контейнерные перевозки резко увеличились</h6>
+                        </div>
+                        <div class="news-element__button"><a class="button button_style-4 button_small" href="#"> <span>Читать</span></a></div>
+                      </div>
+            </div>
+            <div class="news-grid__contacts-widget">
+              <div class="contacts-widget">
+                <div class="contacts-widget__section">
+                  <div class="contacts-widget__text-1">Не нашли что искали?</div>
+                  <div class="contacts-widget__text-2">Свяжитесь с нами</div>
+                </div>
+                <div class="contacts-widget__section">
+                  <div class="contacts-widget__text-3">Горячая линия</div><a class="contacts-widget__phone link" href="tel:74991103044">+7 499 110-30-44</a>
+                </div>
+                <div class="contacts-widget__section"><a class="button button_style-1" href="#"><span>Заказать звонок </span></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="row">
+            <div class="col-xl-2 footer__box-1">
+              <div class="footer__box-1-top"><a class="logo footer__logo" href="./"><img src="./img/logos/logo.svg" alt="logo"></a>
+                <div class="footer__phone"><a class="link" href="tel:74991103044">+7 499 110-30-44</a></div>
+                <div class="footer__adress">129012, Москва, 2-я Ямская, д. 9, этаж З, комната 22. </div>
+                <div class="socials footer__socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"> <a class="socials__link" href="#">
+                        <svg class="icon" viewBox="0 0 22 21">
+                          <use xlink:href="./img/icons/sprite.svg#facebook"> </use>
+                        </svg>facebook</a></li>
+                    <li class="socials__item"> <a class="socials__link" href="#">
+                        <svg class="icon" viewBox="0 0 22 21">
+                          <use xlink:href="./img/icons/sprite.svg#instagram"> </use>
+                        </svg>instagram</a></li>
+                    <li class="socials__item"> <a class="socials__link" href="#">
+                        <svg class="icon" viewBox="0 0 30 21">
+                          <use xlink:href="./img/icons/sprite.svg#youtube"> </use>
+                        </svg>youtube</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__box-1-bottom"><a class="accent-link" href="#">Политика конфиденциальности </a><span class="footer__copyright">Все права защищены © </span></div>
+            </div>
+            <div class="col-xl-2">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Продукция</a></li>
+                <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Новости</a></li>
+                <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Контакты</a></li>
+                <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">О компании</a></li>
+                <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Как сделать заказ?</a></li>
+              </ul>
+            </div>
+            <div class="col-xl-2 footer__product-nav"><strong class="footer__product-nav-title">Орехи</strong>
+              <ul class="footer__product-nav-list">
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Арахис</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Бразильский орех</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Грецкий орех</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кедровый орех</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кешью</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кокос</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Макадамия</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Миндаль</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Орехи карамелизированные</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Пекан</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Смесь ореховая</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Фисташки</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Фундук</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Ядро абрикосовой косточки</a></li>
+              </ul>
+            </div>
+            <div class="col-xl-2 footer__product-nav"><strong class="footer__product-nav-title">Семена</strong>
+              <ul class="footer__product-nav-list">
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Амарант</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Киноа</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кунжут</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Лен</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Мак</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Подсолнечник</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Тыква</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Чиа</a></li>
+              </ul>
+            </div>
+            <div class="col-xl-2 footer__product-nav"><strong class="footer__product-nav-title">Сухофрукты</strong>
+              <ul class="footer__product-nav-list">
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Армянские</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Изюм</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Инжир</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Курага</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Пасты</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Тропические</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Финики</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Цукаты</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Чернослив</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Шиповник</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Яблоко</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Ягоды</a></li>
+              </ul>
+            </div>
+            <div class="col-xl-2 footer__product-nav"><strong class="footer__product-nav-title">Фасовка</strong>
+              <ul class="footer__product-nav-list">
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Орехи</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Семена</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Сухофрукты</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Чурчхела и лаваш</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Шоколад и мармелад</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Цукаты</a></li>
+                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Подарочные наборы</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <!--scripts-->
     <script src="./scripts/libs/lazysizes.min.js"></script>
     <script src="./scripts/libs/scroll-lock.min.js"></script>
+    <script src="./scripts/libs/swiper-bundle.min.js"></script>
+    <script src="./scripts/libs/slim-select.min.js"></script>
     <script src="./scripts/scripts.js"></script>
     <!--preview only-->
     <link rel="stylesheet" href="./styles/helper.css">
@@ -47,7 +927,7 @@
       <div class="helper__container">
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="components.html">Components</a><a class="helper__section-button" href="grid.html">Grid</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="produkcziya.html">Продукция</a><a class="helper__section-button" href="katalog.html">Каталог</a><a class="helper__section-button" href="product.html">Продукт</a><a class="helper__section-button" href="novosti.html">Новости</a><a class="helper__section-button" href="novost.html">Новость</a><a class="helper__section-button" href="o-kompanii.html">О компании</a><a class="helper__section-button" href="404.html">404</a></div>
         </div>
       </div>
     </div>

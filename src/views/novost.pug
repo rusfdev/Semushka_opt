@@ -1,0 +1,55 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Экскурсия в магазин «Семушка» на Мясницкой'
+  -var title = sitename + ' - ' + page_title
+
+block content
+  include blocks/components
+
+  -var breadcrumbs_links = ['Главная', 'Новости', page_title]
+  include blocks/breadcrumbs
+
+  section.section.article
+    .container 
+      .article__container
+        .article__head 
+          .image.image_cover 
+            img(data-src="../img/Banners_news_1122x350 1.jpg", alt="image").lazyload
+          .article__head-text
+            span.article__date 14.06.2021
+            h1.h3.article__title Экскурсия в магазин «Семушка» на Мясницкой
+        .article__content 
+          p В 2017 году в целях расширения производственных и складских площадей, а также оптимизации логистических процессов, производство «Семушки» переехало на новую площадку, расположенную в деревне Новосельцево Мытищинского района Подмосковья. Суммарная площадь производства составляет около 6 тыс. кв. метров. Количество сотрудников составляет 120 человек, автопарк состоит из 20 грузовых и полу-грузовых автомашин. Производственное оборудование включает современные автоматизированные фасовочные линии.
+          p Натуральные фрукты – отборные, впитавшие всю силу солнца. Вкусные, сладкие ягоды. Орехи, способные напитать организм чистой энергией, витаминами и минералами. В наших магазинах вас ждут: ⁣⁣⠀
+          ul 
+            li Отборные орехи и сухофрукты на развес
+            li Только лучшие калиброванные орехи высшего сорта
+            li Ваши любимые продукты и новинки, весь ассортимент в одном месте
+            li Первый в столице ореховый бар: ореховые масла можно приобрести прямо в день отжима
+            li Акции и специальные предложения месяца, подарки при покупке и дегустации
+          p Натуральные фрукты – отборные, впитавшие всю силу солнца. Вкусные, сладкие ягоды. Орехи, способные напитать организм чистой энергией, витаминами и минералами. Приходите, чтобы составить свою витаминную корзину.
+      
+      .back-link 
+        a(href="novosti.html") 
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#left-arrow')
+          span Вернуться назад
+
+
+
+  section.section.news-grid
+    .container 
+      .section__head.section__head_with-button
+        h3.section__title.section__title_with-button Новости
+        a(href="novosti.html").button.button_style-2.button_small.button_arrow
+          span Смотреть все
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+      .news-grid__container 
+        +news-element('./img/News_pic_588x266 1.jpg', 'Экскурсия в магазин «Семушка»<br> на Мясницкой', 2)
+        +news-element('./img/Mask Group.jpg', 'Открытие магазина «Семушка» в Москве')
+        +news-element('./img/News_pic_282x266_2 1.jpg', 'Открытие сайта для оптовых покупателей')
+        +news-element('./img/News_pic_282x266_3 1.jpg', 'Увеличение цены на чернослив и курагу')
+        +news-element('./img/News_pic_282x266_4 1.jpg', 'Компания «Семушка» прошла сертификацию FSSC 22000 ')
+        +news-element('./img/News_pic_588x266_1 1.jpg', 'Логистический кризис: цены на контейнерные перевозки резко увеличились', 2)

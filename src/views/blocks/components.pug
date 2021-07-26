@@ -1,0 +1,137 @@
+mixin product-card(type)
+  -let index = Math.round(Math.random() * 1000000)
+  .product-card(data-custom-interaction)
+    .product-card__image
+      a(href="./product.html").image.image_contain 
+        if type == 3
+          img(data-src="./img/5_Box_Semushka_ok 2.png", alt="image").lazyload
+        else 
+          img(data-src="./img/5_Box_Semushka_ok 1.png", alt="image").lazyload
+      
+      if type == 2
+        .product-label.product-label_type-1.product-card__label Акция
+      else if type == 3
+        .product-label.product-label_type-2.product-card__label Новинка
+
+      .product-gradation-label.product-card__gradation-label
+        svg.icon
+          use(xlink:href='./img/icons/sprite.svg#figure')
+        span от
+        span 1 тонны
+    .product-card__content 
+      .product-card__top
+        .product-card__label-info 
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#clock')
+          | Срок хранения: 12 мес
+        a(href="./product.html").product-card__title.link 
+          if type == 3
+            | Арахис сушеный очищенный 38/42 и еще какой-то очень длинный текст
+          else 
+            | Арахис сушеный очищенный 38/42
+      .product-card__bottom 
+        ul.product-card__info 
+          li 
+            span Страна
+            span Чили
+          li 
+            span Цена за 1 кг
+            span 163 ₽
+          li 
+            span Цена за упаковку (10 кг)
+            span 4 075 ₽
+        
+        .product-card__packaging
+          span.product-card__packaging-title 
+            if type == 3 
+              | Вес одной упаковки, гр
+            else 
+              | Вес товара, кг
+          .product-card__packaging-list
+            label.product-card__package
+              input(type="radio" name=index value='15' checked)
+              span(data-custom-interaction) 15
+            label.product-card__package
+              input(type="radio" name=index value='40')
+              span(data-custom-interaction) 40
+
+            if type == 3
+              label.product-card__package
+                input(type="radio" name=index value='100' disabled)
+                span(data-custom-interaction) 100
+            else 
+              label.product-card__package
+                input(type="radio" name=index value='100')
+                span(data-custom-interaction) 100
+
+            label.product-card__package
+              input(type="radio" name=index value='150')
+              span(data-custom-interaction) 150
+
+        .product-card__calculator 
+          if type !== 3
+            span.product-card__calculator-text.product-card__calculator-count
+              span 15 
+              | кг
+          .count-calculator(data-custom-interaction) 
+            button.count-calculator__button.count-calculator__button_minus 
+            input(type="number" value='1').count-calculator__input
+            button.count-calculator__button.count-calculator__button_plus 
+          span.product-card__calculator-text шт
+
+        .product-card__button
+          button.button.button_style-1.button_small 
+            svg.icon
+              use(xlink:href='./img/icons/sprite.svg#cart')
+            span Купить
+
+mixin certificate(image) 
+  .certificate-block(data-custom-interaction)
+    .image.image_contain
+      img(data-src=image, alt="image").lazyload
+
+mixin news-element(image, title, type)
+  .news-element(class=type==2?'news-element_wide':'' data-custom-interaction)
+    .image.image_cover 
+      img(data-src=image, alt="image").lazyload
+    .news-element__text
+      span.news-element__date 18.06.2021
+      h6.news-element__title !{title}
+    .news-element__button
+      a(href="#").button.button_style-4.button_small 
+        span Читать
+
+mixin checkbox(title)
+  -let index = Math.round(Math.random() * 1000000)
+  .checkbox
+    input(type="checkbox" id=index).checkbox__input
+    label(for=index).checkbox__label=title
+
+mixin pagination()
+  .pagination 
+    ul.pagination__list 
+      li.pagination__item 
+        a(href="#").pagination__link
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#left-arrow')
+      li.pagination__item 
+        a(href="#").pagination__link.is-active 1
+      li.pagination__item 
+        a(href="#").pagination__link 2
+      li.pagination__item 
+        a(href="#").pagination__link 3
+      li.pagination__item 
+        a(href="#").pagination__link 4
+      li.pagination__item 
+        a(href="#").pagination__link 5
+      li.pagination__item 
+        a(href="#").pagination__link 6
+      li.pagination__item 
+        a(href="#").pagination__link ...
+      li.pagination__item 
+        a(href="#").pagination__link 36
+      li.pagination__item 
+        a(href="#").pagination__link
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+      
