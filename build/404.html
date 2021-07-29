@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" data-scroll-lock-fill-gap>
         <div class="container header__container">
           <div class="header__left"><a class="logo header__logo" href="./"><img src="./img/logos/logo.svg" alt="logo"></a>
             <nav class="header-nav">
@@ -52,7 +52,7 @@
               </button>
             </from>
           </div>
-          <div class="header__right"><a class="header__phone link" href="tel:74991103044">+7 499 110-30-44</a><a class="button button_style-3 header__price-button" href="#"><span>Запрос прайс-листа</span></a>
+          <div class="header__right"><a class="header__phone link" href="tel:74991103044">+7 499 110-30-44</a><a class="button button_style-3 header__price-button" href="#zapros-prajs-lista" data-modal="open"><span>Запрос прайс-листа</span></a>
             <ul class="header__small-buttons">
               <li class="header__small-buttons-item"><a class="header__small-button link" href="#">
                   <svg class="icon">
@@ -82,105 +82,382 @@
       </main>
       <footer class="footer">
         <div class="container footer__container">
-          <div class="row">
-            <div class="col-xl-2 footer__box-1">
-              <div class="footer__box-1-top"><a class="logo footer__logo" href="./"><img src="./img/logos/logo.svg" alt="logo"></a>
-                <div class="footer__phone"><a class="link" href="tel:74991103044">+7 499 110-30-44</a></div>
-                <div class="footer__adress">129012, Москва, 2-я Ямская, д. 9, этаж З, комната 22. </div>
-                <div class="socials footer__socials">
-                  <ul class="socials__list">
-                    <li class="socials__item"> <a class="socials__link" href="#">
-                        <svg class="icon" viewBox="0 0 22 21">
-                          <use xlink:href="./img/icons/sprite.svg#facebook"> </use>
-                        </svg>facebook</a></li>
-                    <li class="socials__item"> <a class="socials__link" href="#">
-                        <svg class="icon" viewBox="0 0 22 21">
-                          <use xlink:href="./img/icons/sprite.svg#instagram"> </use>
-                        </svg>instagram</a></li>
-                    <li class="socials__item"> <a class="socials__link" href="#">
-                        <svg class="icon" viewBox="0 0 30 21">
-                          <use xlink:href="./img/icons/sprite.svg#youtube"> </use>
-                        </svg>youtube</a></li>
-                  </ul>
-                </div>
+          <div class="footer__box-1">
+            <div class="footer__box-1-top"><a class="logo footer__logo" href="./"><img src="./img/logos/logo.svg" alt="logo"></a>
+              <div class="footer__phone"><a class="link" href="tel:74991103044">+7 499 110-30-44</a></div>
+              <div class="footer__adress">129012, Москва, 2-я Ямская, д. 9, этаж З, комната 22. </div>
+              <div class="socials footer__socials">
+                <ul class="socials__list">
+                  <li class="socials__item"> <a class="socials__link" href="#">
+                      <svg class="icon" viewBox="0 0 22 21">
+                        <use xlink:href="./img/icons/sprite.svg#facebook"> </use>
+                      </svg>facebook</a></li>
+                  <li class="socials__item"> <a class="socials__link" href="#">
+                      <svg class="icon" viewBox="0 0 22 21">
+                        <use xlink:href="./img/icons/sprite.svg#instagram"> </use>
+                      </svg>instagram</a></li>
+                  <li class="socials__item"> <a class="socials__link" href="#">
+                      <svg class="icon" viewBox="0 0 30 21">
+                        <use xlink:href="./img/icons/sprite.svg#youtube"> </use>
+                      </svg>youtube</a></li>
+                </ul>
               </div>
-              <div class="footer__box-1-bottom"><a class="accent-link" href="#">Политика конфиденциальности </a><span class="footer__copyright">Все права защищены © </span></div>
             </div>
-            <div class="col-xl-2">
-              <ul class="footer__nav-list">
-                <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Продукция</a></li>
-                <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Новости</a></li>
-                <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Контакты</a></li>
-                <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">О компании</a></li>
-                <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Как сделать заказ?</a></li>
-              </ul>
-            </div>
-            <div class="col-xl-2 footer__product-nav"><strong class="footer__product-nav-title">Орехи</strong>
-              <ul class="footer__product-nav-list">
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Арахис</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Бразильский орех</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Грецкий орех</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кедровый орех</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кешью</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кокос</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Макадамия</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Миндаль</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Орехи карамелизированные</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Пекан</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Смесь ореховая</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Фисташки</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Фундук</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Ядро абрикосовой косточки</a></li>
-              </ul>
-            </div>
-            <div class="col-xl-2 footer__product-nav"><strong class="footer__product-nav-title">Семена</strong>
-              <ul class="footer__product-nav-list">
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Амарант</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Киноа</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кунжут</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Лен</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Мак</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Подсолнечник</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Тыква</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Чиа</a></li>
-              </ul>
-            </div>
-            <div class="col-xl-2 footer__product-nav"><strong class="footer__product-nav-title">Сухофрукты</strong>
-              <ul class="footer__product-nav-list">
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Армянские</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Изюм</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Инжир</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Курага</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Пасты</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Тропические</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Финики</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Цукаты</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Чернослив</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Шиповник</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Яблоко</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Ягоды</a></li>
-              </ul>
-            </div>
-            <div class="col-xl-2 footer__product-nav"><strong class="footer__product-nav-title">Фасовка</strong>
-              <ul class="footer__product-nav-list">
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Орехи</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Семена</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Сухофрукты</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Чурчхела и лаваш</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Шоколад и мармелад</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Цукаты</a></li>
-                <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Подарочные наборы</a></li>
-              </ul>
-            </div>
+            <div class="footer__box-1-bottom"><a class="link-dashed" href="#">Политика конфиденциальности </a><span class="footer__copyright">Все права защищены © </span></div>
+          </div>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Продукция</a></li>
+            <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Новости</a></li>
+            <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Контакты</a></li>
+            <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">О компании</a></li>
+            <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Как сделать заказ?</a></li>
+          </ul>
+          <div class="footer__product-nav"><strong class="footer__product-nav-title">Орехи</strong>
+            <ul class="footer__product-nav-list">
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Арахис</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Бразильский орех</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Грецкий орех</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кедровый орех</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кешью</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кокос</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Макадамия</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Миндаль</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Орехи карамелизированные</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Пекан</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Смесь ореховая</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Фисташки</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Фундук</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Ядро абрикосовой косточки</a></li>
+            </ul>
+          </div>
+          <div class="footer__product-nav"><strong class="footer__product-nav-title">Семена</strong>
+            <ul class="footer__product-nav-list">
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Амарант</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Киноа</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Кунжут</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Лен</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Мак</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Подсолнечник</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Тыква</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Чиа</a></li>
+            </ul>
+          </div>
+          <div class="footer__product-nav"><strong class="footer__product-nav-title">Сухофрукты</strong>
+            <ul class="footer__product-nav-list">
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Армянские</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Изюм</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Инжир</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Курага</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Пасты</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Тропические</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Финики</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Цукаты</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Чернослив</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Шиповник</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Яблоко</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Ягоды</a></li>
+            </ul>
+          </div>
+          <div class="footer__product-nav"><strong class="footer__product-nav-title">Фасовка</strong>
+            <ul class="footer__product-nav-list">
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Орехи</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Семена</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Сухофрукты</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Чурчхела и лаваш</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Шоколад и мармелад</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Цукаты</a></li>
+              <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Подарочные наборы</a></li>
+            </ul>
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal" id="zakaz-tovara" style="display:none;">
+      <div class="modal__wrapper" data-scroll-lock-scrollable>
+        <div class="modal-block">
+          <button class="modal-close" data-modal="close"></button>
+          <div class="modal-block__container">
+            <h6 class="modal-block__title">Заказ товара</h6>
+            <form class="form">
+              <label class="input-item form__element"> <span class="input-item__label">Товар</span>
+                <div class="input">
+                  <input type="text" placeholder="Товар" value="Грецкий орех дробленый карамелизированный">
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">ИНН</span>
+                <div class="input">
+                  <input type="text" placeholder="89851456234">
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">ФИО<span>*</span></span>
+                <div class="input">
+                  <input type="text" placeholder="Смирнов Александр Александрович" required>
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Номер телефона<span>*</span></span>
+                <div class="input">
+                  <input type="text" placeholder="8 (___) ___-__-__" required data-phone>
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Emаil<span>*</span></span>
+                <div class="input">
+                  <input type="email" placeholder="Smirnov.alex@yandex.ru" required>
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Город<span>*</span></span>
+                <div class="input">
+                  <input type="text" placeholder="Москва" required>
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Комментарий</span>
+                <div class="input">
+                  <textarea></textarea>
+                </div>
+              </label>
+              <div class="form__element"><span class="form__required-message">*поле обязательно для заполнения</span></div>
+              <div class="input-item form__element"> <span class="input-item__label">Карточка организации</span>
+                <label class="input-file">
+                  <input type="file"><span class="input-file__text">Прикрепить файл</span>
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/sprite.svg#paper-clip"></use>
+                  </svg>
+                </label>
+              </div>
+              <div class="form__checkbox">
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox" id="16755">
+                      <label class="checkbox__label" for="16755">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                    </div>
+              </div>
+              <div class="form__submit">
+                <button class="button button_style-1"> <span>Заказать</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="zapros-prajs-lista" style="display:none;">
+      <div class="modal__wrapper" data-scroll-lock-scrollable>
+        <div class="modal-block">
+          <button class="modal-close" data-modal="close"></button>
+          <div class="modal-block__container">
+            <h6 class="modal-block__title">Запрос прайс-листа</h6>
+            <form class="form">
+              <label class="input-item form__element"> <span class="input-item__label">Организация / ИНН</span>
+                <div class="input">
+                  <input type="text" placeholder="ООО РИК / 7975642956865" value="ООО РИК / 7975642956865">
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">ФИО<span>*</span></span>
+                <div class="input">
+                  <input type="text" placeholder="Смирнов Александр Александрович" required>
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Номер телефона<span>*</span></span>
+                <div class="input">
+                  <input type="text" placeholder="8 (___) ___-__-__" required data-phone>
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Emаil<span>*</span></span>
+                <div class="input">
+                  <input type="email" placeholder="Smirnov.alex@yandex.ru" required>
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Город<span>*</span></span>
+                <div class="input">
+                  <input type="text" placeholder="Москва" required>
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Комментарий</span>
+                <div class="input">
+                  <textarea></textarea>
+                </div>
+              </label>
+              <div class="form__element"><span class="form__required-message">*поле обязательно для заполнения</span></div>
+              <div class="input-item form__element"> <span class="input-item__label">Карточка организации</span>
+                <label class="input-file">
+                  <input type="file"><span class="input-file__text">Прикрепить файл</span>
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/sprite.svg#paper-clip"></use>
+                  </svg>
+                </label>
+              </div>
+              <div class="form__checkbox">
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox" id="457372">
+                      <label class="checkbox__label" for="457372">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                    </div>
+              </div>
+              <div class="form__submit">
+                <button class="button button_style-1"> <span>Заказать</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="obratnyj-zvonok" style="display:none;">
+      <div class="modal__wrapper" data-scroll-lock-scrollable>
+        <div class="modal-block">
+          <button class="modal-close" data-modal="close"> </button>
+          <div class="modal-block__container">
+            <h6 class="modal-block__title">Закажите обратный звонок</h6>
+            <form class="form">
+              <label class="input-item form__element"> <span class="input-item__label">Номер телефона<span>*</span></span>
+                <div class="input">
+                  <input type="text" placeholder="8 (___) ___-__-__" required data-phone>
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Комментарий</span>
+                <div class="input">
+                  <textarea></textarea>
+                </div>
+              </label>
+              <div class="form__element"><span class="form__required-message">*поле обязательно для заполнения</span></div>
+              <div class="form__checkbox">
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox" id="309477">
+                      <label class="checkbox__label" for="309477">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                    </div>
+              </div>
+              <div class="form__submit">
+                <button class="button button_style-1"> <span>Заказать</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="vkhod" style="display:none;">
+      <div class="modal__wrapper" data-scroll-lock-scrollable>
+        <div class="modal-block">
+          <button class="modal-close" data-modal="close"> </button>
+          <div class="modal-block__container">
+            <h6 class="modal-block__title">Вход в личный кабинет</h6>
+            <form class="form">
+              <label class="input-item form__element"> <span class="input-item__label">Логин</span>
+                <div class="input">
+                  <input type="text" placeholder="Smirnov.alex@yandex.ru" required>
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Пароль</span>
+                <div class="input">
+                  <input type="password" required>
+                </div>
+              </label>
+              <div class="form__checkbox">
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox" id="696362">
+                      <label class="checkbox__label" for="696362">Запомнить логин и пароль</label>
+                    </div>
+              </div>
+              <div class="form__submit form__buttons">
+                <button class="button button_style-1"> <span>Войти</span></button><a class="button button_style-5" href="#registracziya" data-modal="open"><span>Зарегистрироваться</span></a>
+              </div>
+              <div class="form__else-link"> <a class="link-dashed" href="#vosstanovit-parol" data-modal="open">Забыли пароль?</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="registracziya" style="display:none;">
+      <div class="modal__wrapper" data-scroll-lock-scrollable>
+        <div class="modal-block">
+          <button class="modal-close" data-modal="close"> </button>
+          <div class="modal-block__container">
+            <h6 class="modal-block__title">Регистрация</h6>
+            <form class="form">
+              <label class="input-item form__element"> <span class="input-item__label">Имя</span>
+                <div class="input">
+                  <input type="text" placeholder="Алексей">
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Фамилия</span>
+                <div class="input">
+                  <input type="text" placeholder="Смирнов">
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Emаil</span>
+                <div class="input">
+                  <input type="email" placeholder="Smirnov.alex@yandex.ru">
+                </div>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Логин<span>*</span></span>
+                <div class="input">
+                  <input type="text" placeholder="Smirnov.alex@yandex.ru" required>
+                </div><span class="input-item__description">Логин может состоять минимум из 3 символов</span>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Пароль<span>*</span></span>
+                <div class="input">
+                  <input type="password" required>
+                </div><span class="input-item__description">Пароль может состоять минимум из 3 символов</span>
+              </label>
+              <label class="input-item form__element"> <span class="input-item__label">Подтверждение пароля<span>*</span></span>
+                <div class="input">
+                  <input type="password" required>
+                </div><span class="input-item__description"></span>
+              </label>
+              <div class="form__element"><span class="form__required-message">*поле обязательно для заполнения</span></div>
+              <div class="form__checkbox">
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox" id="896832">
+                      <label class="checkbox__label" for="896832">Запомнить логин и пароль</label>
+                    </div>
+              </div>
+              <div class="form__submit">
+                <button class="button button_style-1"> <span>Зарегистрироваться</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="vosstanovit-parol" style="display:none;">
+      <div class="modal__wrapper" data-scroll-lock-scrollable>
+        <div class="modal-block">
+          <button class="modal-close" data-modal="close"> </button>
+          <div class="modal-block__container">
+            <h6 class="modal-block__title">Восстановить пароль</h6>
+            <form class="form">
+              <label class="input-item form__element"> <span class="input-item__label">Укажите ваш логин или email</span>
+                <div class="input">
+                  <input type="text" placeholder="Smirnov.alex@yandex.ru" required>
+                </div><span class="input-item__message">Ваши регистрационные данные, будут высланы вам по email.</span>
+              </label>
+              <div class="form__submit">
+                <button class="button button_style-1"> <span>Выслать</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-product" id="product" style="display:none;">
+      <div class="modal__wrapper" data-scroll-lock-scrollable>
+        <div class="modal-block">
+          <button class="modal-close" data-modal="close"> </button>
+          <div class="modal-block__container">
+            <h6 class="modal-block__title">Товар добавлен в корзину!</h6>
+            <div class="modal-product__container">
+              <div class="image image_contain"><img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></div>
+              <div class="modal-product__content"><span class="modal-product__title">Арахис жаренный мелко дробленный 02-мм № 2</span>
+                <div class="modal-product__buttons">
+                  <button class="button button_style-5 button_small" data-modal="close"> <span>Продолжить покупки</span></button><a class="button button_style-1 button_small" href="#"><span>Оформить заказ</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--scripts-->
     <script src="./scripts/libs/lazysizes.min.js"></script>
     <script src="./scripts/libs/scroll-lock.min.js"></script>
     <script src="./scripts/libs/swiper-bundle.min.js"></script>
     <script src="./scripts/libs/slim-select.min.js"></script>
+    <script src="./scripts/libs/gsap.min.js"></script>
+    <script src="./scripts/libs/inputmask.min.js"></script>
     <script src="./scripts/scripts.js"></script>
     <!--preview only-->
     <link rel="stylesheet" href="./styles/helper.css">
@@ -195,8 +472,12 @@
         </svg></a>
       <div class="helper__container">
         <!--section-->
+        <div class="helper__section"><span class="helper__section-title">Модальные окна:</span>
+          <div class="helper__section-content"><a class="helper__section-button" href="#zakaz-tovara" data-modal="open">Заказ товара</a><a class="helper__section-button" href="#zapros-prajs-lista" data-modal="open">Запрос прайс-листа</a><a class="helper__section-button" href="#obratnyj-zvonok" data-modal="open">Закажите обратный звонок</a><a class="helper__section-button" href="#vkhod" data-modal="open">Вход в личный кабинет</a><a class="helper__section-button" href="#registracziya" data-modal="open">Регистрация</a><a class="helper__section-button" href="#vosstanovit-parol" data-modal="open">Восстановить пароль</a><a class="helper__section-button" href="#product" data-modal="open">Товар добавлен в корзину! </a></div>
+        </div>
+        <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="produkcziya.html">Продукция</a><a class="helper__section-button" href="katalog.html">Каталог</a><a class="helper__section-button" href="product.html">Продукт</a><a class="helper__section-button" href="novosti.html">Новости</a><a class="helper__section-button" href="novost.html">Новость</a><a class="helper__section-button" href="o-kompanii.html">О компании</a><a class="helper__section-button" href="404.html">404</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="produkcziya.html">Продукция</a><a class="helper__section-button" href="katalog.html">Каталог</a><a class="helper__section-button" href="product1.html">Продукт (тип1)</a><a class="helper__section-button" href="product2.html">Продукт (тип2)</a><a class="helper__section-button" href="novosti.html">Новости</a><a class="helper__section-button" href="novost.html">Новость</a><a class="helper__section-button" href="o-kompanii.html">О компании</a><a class="helper__section-button" href="404.html">404</a></div>
         </div>
       </div>
     </div>

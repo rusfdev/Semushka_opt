@@ -1,0 +1,241 @@
+include components
+
+.modal#zakaz-tovara(style='display:none;')
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal-block
+      button.modal-close(data-modal='close')
+      .modal-block__container 
+        h6.modal-block__title Заказ товара
+        form.form
+          label.input-item.form__element 
+            span.input-item__label Товар
+            .input
+              input(type="text" placeholder="Товар" value='Грецкий орех дробленый карамелизированный')
+          label.input-item.form__element 
+            span.input-item__label ИНН
+            .input
+              input(type="text" placeholder="89851456234")
+          label.input-item.form__element 
+            span.input-item__label ФИО<span>*</span>
+            .input
+              input(type="text" placeholder="Смирнов Александр Александрович" required)
+          label.input-item.form__element 
+            span.input-item__label Номер телефона<span>*</span>
+            .input
+              input(type="text" placeholder="8 (___) ___-__-__" required data-phone)
+          label.input-item.form__element 
+            span.input-item__label Emаil<span>*</span>
+            .input
+              input(type="email" placeholder="Smirnov.alex@yandex.ru" required)
+          label.input-item.form__element 
+            span.input-item__label Город<span>*</span>
+            .input
+              input(type="text" placeholder="Москва" required)
+          label.input-item.form__element 
+            span.input-item__label Комментарий
+            .input
+              textarea
+          .form__element
+            span.form__required-message *поле обязательно для заполнения
+
+          .input-item.form__element 
+            span.input-item__label Карточка организации
+            label.input-file
+              input(type="file")
+              span.input-file__text Прикрепить файл
+              svg.icon
+                use(xlink:href='./img/icons/sprite.svg#paper-clip')
+
+          .form__checkbox
+            +checkbox('Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных')
+
+          .form__submit 
+            button.button.button_style-1 
+              span Заказать
+
+.modal#zapros-prajs-lista(style='display:none;')
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal-block
+      button.modal-close(data-modal='close')
+      .modal-block__container 
+        h6.modal-block__title Запрос прайс-листа
+        form.form
+          label.input-item.form__element 
+            span.input-item__label Организация / ИНН
+            .input
+              input(type="text" placeholder="ООО РИК / 7975642956865" value='ООО РИК / 7975642956865')
+          label.input-item.form__element 
+            span.input-item__label ФИО<span>*</span>
+            .input
+              input(type="text" placeholder="Смирнов Александр Александрович" required)
+          label.input-item.form__element 
+            span.input-item__label Номер телефона<span>*</span>
+            .input
+              input(type="text" placeholder="8 (___) ___-__-__" required data-phone)
+          label.input-item.form__element 
+            span.input-item__label Emаil<span>*</span>
+            .input
+              input(type="email" placeholder="Smirnov.alex@yandex.ru" required)
+          label.input-item.form__element 
+            span.input-item__label Город<span>*</span>
+            .input
+              input(type="text" placeholder="Москва" required)
+          label.input-item.form__element 
+            span.input-item__label Комментарий
+            .input
+              textarea
+          .form__element
+            span.form__required-message *поле обязательно для заполнения
+
+          .input-item.form__element 
+            span.input-item__label Карточка организации
+            label.input-file
+              input(type="file")
+              span.input-file__text Прикрепить файл
+              svg.icon
+                use(xlink:href='./img/icons/sprite.svg#paper-clip')
+
+          .form__checkbox
+            +checkbox('Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных')
+
+          .form__submit 
+            button.button.button_style-1 
+              span Заказать
+
+
+
+
+.modal#obratnyj-zvonok(style='display:none;')
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal-block
+      button.modal-close(data-modal='close')    
+      .modal-block__container 
+        h6.modal-block__title Закажите обратный звонок
+        form.form
+          label.input-item.form__element 
+            span.input-item__label Номер телефона<span>*</span>
+            .input
+              input(type="text" placeholder="8 (___) ___-__-__" required data-phone)
+          label.input-item.form__element 
+            span.input-item__label Комментарий
+            .input
+              textarea
+          .form__element
+            span.form__required-message *поле обязательно для заполнения
+            
+          .form__checkbox
+            +checkbox('Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных')
+
+          .form__submit 
+            button.button.button_style-1 
+              span Заказать
+
+              
+
+.modal#vkhod(style='display:none;')
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal-block
+      button.modal-close(data-modal='close')    
+      .modal-block__container 
+        h6.modal-block__title Вход в личный кабинет
+        form.form
+          label.input-item.form__element 
+            span.input-item__label Логин
+            .input
+              input(type="text" placeholder="Smirnov.alex@yandex.ru" required)
+          label.input-item.form__element 
+            span.input-item__label Пароль
+            .input
+              input(type="password" required)
+
+          .form__checkbox
+            +checkbox('Запомнить логин и пароль')
+          
+          .form__submit.form__buttons
+            button.button.button_style-1 
+              span Войти
+            a(href="#registracziya" data-modal='open').button.button_style-5
+              span Зарегистрироваться
+
+          .form__else-link 
+            a(href="#vosstanovit-parol" data-modal='open').link-dashed Забыли пароль?
+
+.modal#registracziya(style='display:none;')
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal-block
+      button.modal-close(data-modal='close')    
+      .modal-block__container 
+        h6.modal-block__title Регистрация
+        form.form
+          label.input-item.form__element 
+            span.input-item__label Имя
+            .input
+              input(type="text" placeholder="Алексей")
+          label.input-item.form__element 
+            span.input-item__label Фамилия
+            .input
+              input(type="text" placeholder="Смирнов")
+          label.input-item.form__element 
+            span.input-item__label Emаil
+            .input
+              input(type="email" placeholder="Smirnov.alex@yandex.ru")
+          label.input-item.form__element 
+            span.input-item__label Логин<span>*</span>
+            .input
+              input(type="text" placeholder="Smirnov.alex@yandex.ru" required)
+            span.input-item__description Логин может состоять минимум из 3 символов
+          label.input-item.form__element 
+            span.input-item__label Пароль<span>*</span>
+            .input
+              input(type="password" required)
+            span.input-item__description Пароль может состоять минимум из 3 символов
+          label.input-item.form__element 
+            span.input-item__label Подтверждение пароля<span>*</span>
+            .input
+              input(type="password" required)
+            span.input-item__description
+          .form__element
+            span.form__required-message *поле обязательно для заполнения
+
+          .form__checkbox
+            +checkbox('Запомнить логин и пароль')
+
+          .form__submit
+            button.button.button_style-1 
+              span Зарегистрироваться
+
+
+              
+.modal#vosstanovit-parol(style='display:none;')
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal-block
+      button.modal-close(data-modal='close')    
+      .modal-block__container 
+        h6.modal-block__title Восстановить пароль
+        form.form
+          label.input-item.form__element 
+            span.input-item__label Укажите ваш логин или email
+            .input
+              input(type="text" placeholder="Smirnov.alex@yandex.ru" required)
+            span.input-item__message Ваши регистрационные данные, будут высланы вам по email.
+          .form__submit
+            button.button.button_style-1 
+              span Выслать
+
+.modal.modal-product#product(style='display:none;')
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal-block
+      button.modal-close(data-modal='close')    
+      .modal-block__container 
+        h6.modal-block__title Товар добавлен в корзину!
+        .modal-product__container 
+          .image.image_contain
+            img(data-src="./img/5_Box_Semushka_ok 1.png", alt="image").lazyload
+          .modal-product__content
+            span.modal-product__title Арахис жаренный мелко дробленный 02-мм №2
+            .modal-product__buttons   
+              button(data-modal='close').button.button_style-5.button_small 
+                span Продолжить покупки
+              a(href="#").button.button_style-1.button_small
+                span Оформить заказ
+

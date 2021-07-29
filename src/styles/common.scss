@@ -1,24 +1,13 @@
 @import "./components/variables";
-//bootstrap components
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
-@import "../../node_modules/bootstrap/scss/mixins/container";
-@import "../../node_modules/bootstrap/scss/mixins/grid";
-@import "../../node_modules/bootstrap/scss/mixins/utilities";
-@import "../../node_modules/bootstrap/scss/vendor/rfs";
+@import "./components/mixins";
+
 /*========== Variables ==========*/
 @import "./components/css-variables";
+
 //normalize
 @import "../../node_modules/normalize.css/normalize";
-//bootstrap grid
-@import "../../node_modules/bootstrap/scss/containers";
-@import "../../node_modules/bootstrap/scss/grid";
-@import "../../node_modules/bootstrap/scss/utilities";
-$utilities: map-get-multiple($utilities, ("display", "order", "flex", "flex-direction", "flex-grow", "flex-shrink", "flex-wrap", "justify-content", "align-items", "align-content", "align-self", "margin-top", "margin-bottom"));
-@import "../../node_modules/bootstrap/scss/utilities/api";
 
-//swiper
+//libs
 @import "./components/swiper";
 
 /*========== Basic ==========*/
@@ -26,6 +15,9 @@ $utilities: map-get-multiple($utilities, ("display", "order", "flex", "flex-dire
 
 /*========== Layout ==========*/
 @import "./components/layout";
+
+/*========== Modals ==========*/
+@import "./components/modals";
 
 /*========== Components ==========*/
 @import "./components/components";

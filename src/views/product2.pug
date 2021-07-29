@@ -1,0 +1,101 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Арахис жаренный дробленный'
+  -var title = sitename + ' - ' + page_title
+
+block content
+  include blocks/components
+
+  -var breadcrumbs_links = ['Главная', 'Продукция', 'Каталог', 'Орехи', page_title]
+  include blocks/breadcrumbs
+
+  section.section.product
+    .container
+      -var head_type = 2
+      include blocks/product-head
+
+  section.section.product-description
+    .container 
+      .product-description__block
+        h4 Описание
+        p Тут описание 40 грамм фасовки. Арахис по питательной ценности превосходит все орехи. Является полноценным заменителем животных белков, так как по содержанию и составу белков превосходит даже мясо. Снижает риск сердечно-сосудистых заболеваний и активизирует иммунную систему.
+      .product-description__block
+        h6 Условия хранения
+        p В сухом месте, в сухом прохладном месте, при температуре от +5`С до +21`С
+      .product-description__block
+        h6 Характеристики
+        .product-description__info-content 
+          table.info-table 
+            tr 
+              td 
+                span Тип
+              td 
+                span Орехи
+            tr 
+              td 
+                span Вид орехов
+              td 
+                span Арахис
+            tr 
+              td 
+                span Белки, г/100 г
+              td 
+                span 26,5
+            tr 
+              td 
+                span Жиры, г/100 г
+              td 
+                span 46,5
+            tr 
+              td 
+                span Углеводы, г/100 г
+              td 
+                span 11.0
+            tr 
+              td 
+                span Энергетическая ценность, ккал/100 г
+              td 
+                span 569
+            tr 
+              td 
+                span Страна-изготовитель
+              td 
+                span Россия
+          table.info-table 
+            tr 
+              td 
+                span Тип
+              td 
+                span Орехи
+            tr 
+              td 
+                span Вид орехов
+              td 
+                span Арахис
+            tr 
+              td 
+                span Белки, г/100 г
+              td 
+                span 26,5
+            tr 
+              td 
+                span Жиры, г/100 г
+              td 
+                span 46,5
+            tr 
+              td 
+                span Углеводы, г/100 г
+              td 
+                span 11.0
+            tr 
+              td 
+                span Энергетическая ценность, ккал/100 г
+              td 
+                span 569
+            tr 
+              td 
+                span Страна-изготовитель
+              td 
+                span Россия
+  

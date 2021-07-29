@@ -1,0 +1,112 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Арахис жаренный дробленный'
+  -var title = sitename + ' - ' + page_title
+
+block content
+  include blocks/components
+
+  -var breadcrumbs_links = ['Главная', 'Продукция', 'Каталог', 'Орехи', page_title]
+  include blocks/breadcrumbs
+
+  section.section.product
+    .container
+      -var head_type = 1
+      include blocks/product-head
+      .product-tabs(data-tabs='parent')
+        .product-tabs__head
+          a(href="javascript:void(0);" data-tabs='link').product-tabs__link.is-active О продукции
+          a(href="javascript:void(0);" data-tabs='link').product-tabs__link Документация 
+        .product-tabs__wrapper 
+          .product-tabs__tab.is-active(data-tabs='block')
+            p Миндаль Нонпарель Экстра № 1, калибр 18/20. Имеет натуральный вкус и запах, свойственный миндалю, без посторонних примесей и добавок. Широко применяется в кулинарии, кондитерском производстве при изготовлении десертов, конфет, выпечки. Страна происхождения – Чили. Упакован в полиэтиленовый пакет внутри гофрокороба. Хранить 18 месяцев при температуре окружающей среды, в чистом, свежем и сухом месте, вдали от сильных запахов и загрязняющих веществ. Срок хранения можно увеличить до 24 месяцев при хранении в холодильных установках.
+          .product-tabs__tab(data-tabs='block')
+            ul.pdf-list 
+              li.pdf-list__item 
+                img(src="./img/icons/pdf-file.svg", alt="icon").icon
+                .pdf-list__item-content 
+                  span.pdf-list__item-title Статистика мирового производства и импорта в РФ
+                  a(href="#").link-dashed Скачать (pdf)
+              li.pdf-list__item 
+                img(src="./img/icons/pdf-file.svg", alt="icon").icon
+                .pdf-list__item-content 
+                  span.pdf-list__item-title Данные импорта таможенной статистике  по Российской федерации
+                  a(href="#").link-dashed Скачать (pdf)
+              li.pdf-list__item 
+                img(src="./img/icons/pdf-file.svg", alt="icon").icon
+                .pdf-list__item-content 
+                  span.pdf-list__item-title Статиситика стран мирового производсва 
+                  a(href="#").link-dashed Скачать (pdf)
+
+
+  section.section.product-statistics
+    .container 
+      .product-statistics__head
+        h4 Статистика
+        p 
+          strong Кешью*: статистика мирового производства и импорта в РФ
+        p Производство кешью в мире сконцентрировано в Африке. Кот-д'Ивуар является одним из крупнейших производителей кешью в Западной Африке, а Танзания - в Восточной. Однако лидером по объему обработки орехов кешью являются Индия (176 600 тонн в 2019 году) и Вьетнам, куда сырой продукт импортируется из Африки. Урожай кешью собирают в Индии и Вьетнаме с марта по июнь, в Западной Африке - в феврале-марте, в Восточной Африке – в октябре-декабре. Общий объем производства кешью в мире достиг 786 266 тонн в 2019 году.
+      .large-images 
+        .large-images__block 
+          h6.large-images__block-title Объем мирового производства кешью
+          .image.image_contain 
+            img(data-src="./img/image 1.png", alt="image").lazyload
+        .large-images__block 
+          h6.large-images__block-title Страны лидеры
+          .image.image_contain 
+            img(data-src="./img/image 2.png", alt="image").lazyload
+        .large-images__block 
+          h6.large-images__block-title Страны экспортеры
+          .image.image_contain 
+            img(data-src="./img/image 3.png", alt="image").lazyload
+        .large-images__block 
+          h6.large-images__block-title Объем импорта
+          .image.image_contain 
+            img(data-src="./img/image 4.png", alt="image").lazyload
+
+  section.section.product-package
+    .container 
+      .section__head
+        h4.section__title Упаковка 
+      .large-images
+        .large-images__block 
+          .image.image_contain 
+            img(data-src="./img/korobka56 1.png", alt="image").lazyload
+        .large-images__block
+          .image.image_contain 
+            img(data-src="./img/i1 1.png", alt="image").lazyload
+
+  section.section.product-slider
+    .container 
+      .section__head.product-slider__head 
+        h3.section__title Рекомендованные товары
+      .swiper
+        .swiper-button.swiper-button-prev(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+        .swiper-button.swiper-button-next(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#right-arrow')
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(3)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)
+            .swiper-slide
+              +product-card(1)
+            .swiper-slide
+              +product-card(2)    

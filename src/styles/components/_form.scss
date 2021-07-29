@@ -1,17 +1,23 @@
 .input {
-  border-radius: 4px;
-  border: 1px solid var(--color-input-border);
   background-color: #fff;
+  border-radius: 4px;
+  width: 100%;
   input {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
+  textarea {
+    height: 114px;
+  }
   input, textarea {
+    width: 100%;
     font-size: 14px;
     line-height: 18px;
-    padding: 10px 15px;
-    width: 100%;
+    padding: 11px 15px;
+    border-radius: inherit;
+    transition: border-color $trs1;
+    border: 1px solid var(--color-input-border);
     &:-webkit-autofill {
       -webkit-text-fill-color: var(--color-text);
       box-shadow: 0 0 0px 1000px transparent inset;
@@ -22,6 +28,7 @@
       transition: opacity $trs1;
     }
     &:focus {
+      border-color: var(--color-accent-1);
       &::placeholder {
         opacity: 0;
       }
@@ -35,13 +42,9 @@
     position: relative;
   }
   &__input {
-    padding-right: 50px;
     width: 100%;
     input {
-      padding-left: 12px;
-      font-size: 10px;
-      line-height: 14px;
-
+      padding-right: 65px;
     }
   }
   &__search-button {
@@ -53,8 +56,8 @@
     display: flex;
     color: var(--color-accent-2);
     .icon {
-      width: 14px;
-      height: 14px;
+      width: 16px;
+      height: 16px;
       margin: auto;
     }
   }
@@ -62,6 +65,8 @@
 
 .checkbox {
   position: relative;
+  font-size: 14px;
+  line-height: 1.5;
   &__input {
     display: none;
     &:checked ~ .checkbox__label {
@@ -76,18 +81,18 @@
   &__label {
     display: block;
     position: relative;
-    padding-left: 1.5em;
+    padding-left: 1.8em;
     &:before {
       content: '';
       display: block;
-      width: 1em;
-      height: 1em;
+      width: 1.25em;
+      height: 1.25em;
       border: 1px solid var(--color-borders);
       background-color: #fff;
       border-radius: 2px;
       position: absolute;
       left: 0;
-      top: 0.125em;
+      top: 0.1em;
       transition: border-color $trs1;
     }
     &:after {
@@ -95,10 +100,10 @@
       display: block;
       position: absolute;
       left: 0;
-      top: 0.36em;
-      left: 0.22em;
-      width: 0.6em;
-      height: 0.35em;
+      top: 0.4em;
+      left: 0.25em;
+      width: 0.7em;
+      height: 0.4em;
       border-width: 0 0 1px 1px;
       transform: rotate(-45deg);
       border-style: solid;
@@ -115,16 +120,30 @@
 }
 
 
+.select {
+  --font-size: 14px;
+  --line-height: 18px;
+  --padding: 12px 26px 12px 14px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  &:not(.ss-main) {
+    padding: var(--padding);
+    box-shadow: var(--block-shadow);
+    border-radius: 4px; 
+  }
+}
+
 .ss-main {
   position: relative;
-  font-size: 10px;
-  line-height: 14px;
+  
 }
 .ss-single-selected {
   border-radius: 4px;
   box-shadow: var(--block-shadow);
   background-color: #fff;
-  padding: 10px 26px 10px 14px;
+  padding: var(--padding);
   position: relative;
   cursor: pointer;
   white-space: nowrap;
@@ -149,16 +168,16 @@
   transform: translateY(-50%);
   .arrow-down, .arrow-up {
     display: block;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     position: relative;
     transition: transform $trs1;
     &::before {
       content: '';
       display: block;
       position: absolute;
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       border-color: var(--color-accent-1);
       border-style: solid;
       border-width: 1px 1px 0 0;
@@ -195,7 +214,7 @@
 }
 
 .ss-option {
-  padding: 10px 14px;
+  padding: 12px 14px;
   cursor: pointer;
   transition: color $trs1;
   &:not(:last-child) {
@@ -211,5 +230,91 @@
   }
   &[data-touch], &[data-hover] {
     color: var(--color-accent-1);
+  }
+}
+
+.input-item {
+  pointer-events: none;
+  &__label {
+    pointer-events: all;
+    display: inline-block;
+    color: var(--color-muted);
+    margin: 0 0 10px 0;
+    span {
+      color: #E93D3D;
+    }
+  }
+  &__description {
+    font-size: 12px;
+    margin-top: 7px;
+    color: var(--color-muted);
+  }
+  &__message {
+    font-size: 12px;
+    margin-top: 15px;
+    color: var(--color-muted);
+  }
+  .input, .input-file {
+    pointer-events: all;
+  }
+}
+
+.input-file {
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 25px;
+  position: relative;
+  color: var(--color-accent-2);
+  transition: color $trs1;
+  &__text {
+    border-bottom: 1px dashed currentColor;
+  }
+  input {
+    display: none;
+  }
+  .icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 2px;
+  }
+  &[data-touch], &[data-hover] {
+    color: var(--color-accent-2_2);
+  }
+}
+
+.form {
+  &__element {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__checkbox {
+    margin-top: 30px;
+  }
+  &__submit {
+    margin-top: 30px;
+    text-align: center;
+  }
+  &__required-message {
+    font-size: 14px;
+    color: var(--color-muted);
+  }
+  &__buttons {
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+  }
+  &__else-link {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
   }
 }

@@ -11,8 +11,11 @@ const $wrapper = document.querySelector('.wrapper');
 document.addEventListener("DOMContentLoaded", function() {
   CustomInteractionEvents.init();
   Header.init();
+  Modal.init();
+
   calculator();
   change_package();
+  input_file();
 
   //Product sliders
   document.querySelectorAll('.product-slider').forEach($this => {
@@ -34,6 +37,21 @@ document.addEventListener("DOMContentLoaded", function() {
       showContent: 'down'
     })
   })
+  //tabs
+  document.querySelectorAll('[data-tabs="parent"]').forEach($this => {
+    new TabsElement($this).init();
+  })
+  //Product Slider
+  document.querySelectorAll('.product-preview-slider').forEach($this => {
+    new ProductPreviewSlider($this).init();
+  })
+
+  //mask
+  Inputmask({
+    mask: "8 (999) 999-99-99",
+    showMaskOnHover: false,
+    clearIncomplete: false
+  }).mask('[data-phone]'); //validation events
 });
 
 const CustomInteractionEvents = Object.create({
@@ -140,12 +158,31 @@ function calculator() {
 
 function change_package() {
   let events = (event) => {
-    let $target = event.target.closest('.product-card__package input');
+    let $target = event.target.closest('.packaging-list__item input');
 
     if($target) {
-      let $value = $target.closest('.product-card').querySelector('.product-card__calculator-count span');
+      let name = $target.getAttribute('name'),
+          $value = document.querySelector(`[data-name='${name}'] span`);
 
       if($value) $value.innerHTML = $target.value;
+    }
+  }
+
+  document.addEventListener('change', events);
+}
+
+function input_file() {
+  let events = (event) => {
+    let $target = event.target.closest('.input-file');
+
+    if($target) {
+
+      let $input = $target.querySelector('input'),
+          $text = $target.querySelector('.input-file__text'),
+          value = $input.value.split('\\');
+
+      $text.innerHTML = value[value.length - 1]
+
     }
   }
 
@@ -172,7 +209,7 @@ class ProductSlider {
       },
       breakpoints: {
         [brakepoints.xl]: {
-          slidesPerView: 6
+          slidesPerView: 5
         }
       }
     });
@@ -240,6 +277,88 @@ class ToggleElement {
   }
 }
 
+class TabsElement {
+  constructor($parent) {
+    this.$parent = $parent;
+  }
+
+  init() {
+    this.$links = this.$parent.querySelectorAll('[data-tabs="link"]');
+    this.$blocks = this.$parent.querySelectorAll('[data-tabs="block"]');
+
+    this.set = (index) => {
+      this.$links[index].classList.add('is-active');
+      this.$blocks[index].classList.add('is-active');
+      
+      if(this.index!==undefined) {
+        this.$links[this.index].classList.remove('is-active');
+        this.$blocks[this.index].classList.remove('is-active');
+      }
+  
+      
+      
+      //gsap.fromTo(this.$blocks[index], {autoAlpha:0}, {autoAlpha:1, duration:0.5, ease:'power2.out'})
+      
+      this.index = index;
+    }
+
+    this.$links.forEach(($this, index) => {
+      if($this.classList.contains('is-active')) {
+        this.index = index;
+      }
+      $this.addEventListener('click', () => {
+        if(this.index !== index) this.set(index);
+      })
+    })
+
+  }
+}
+
+class ProductPreviewSlider {
+  constructor($parent) {
+    this.$parent = $parent;
+  }
+
+  init() {
+    this.$slider = this.$parent.querySelector('.swiper-container');
+    this.$small_images = this.$parent.querySelectorAll('.product-preview-slider__small-image');
+
+    console.log(this.$slider )
+
+    this.slider = new Swiper(this.$slider, {
+      touchStartPreventDefault: false,
+      slidesPerView: 1,
+      speed: 500,
+      lazy: {
+        loadOnTransitionStart: true,
+        loadPrevNext: true
+      }
+    });
+
+    if(this.$small_images.length>1) {
+
+      this.$small_images[0].classList.add('is-active');
+      this.slider.on('slideChange', (event)=> {
+        this.$small_images.forEach($this => {
+          $this.classList.remove('is-active')
+        })
+        this.$small_images[event.realIndex].classList.add('is-active');
+      })
+
+      this.$small_images.forEach(($this, index)=>{
+        $this.addEventListener('mouseenter', ()=> {
+          this.slider.slideTo(index);
+        })
+        $this.addEventListener('click', ()=> {
+          this.slider.slideTo(index);
+        })
+      })
+      
+    }
+
+  }
+}
+
 const Header = {
   $element: document.querySelector('.header'),
 
@@ -255,5 +374,72 @@ const Header = {
 
     window.addEventListener('scroll', check)
     check();
+  }
+}
+
+const Modal = {
+  init: function () {
+    gsap.registerEffect({
+      name: "modal",
+      effect: ($modal, $content) => {
+        let anim = gsap.timeline({paused: true})
+          .fromTo($modal, {autoAlpha: 0}, {autoAlpha:1, duration:0.5})
+          .fromTo($content, {y: 20}, {y:0, duration:0.5, ease:'power2.out'}, `-=0.5`)
+        return anim;
+      },
+      extendTimeline: true
+    });
+
+    document.addEventListener('click', (event) => {
+      let $open = event.target.closest('[data-modal="open"]'),
+        $close = event.target.closest('[data-modal="close"]'),
+        $wrap = event.target.closest('.modal'),
+        $block = event.target.closest('.modal-block');
+
+      //open
+      if ($open) {
+        event.preventDefault();
+        let $modal = document.querySelector(`${$open.getAttribute('href')}`);
+        this.open($modal);
+      }
+      //close 
+      else if ($close || (!$block && $wrap)) {
+        this.close();
+      }
+    })
+
+    //this.open(document.querySelector('#product'))
+  },
+  open: function ($modal) {
+    let open = ()=> {
+      scrollLock.disablePageScroll();
+      $modal.classList.add('active');
+      //animation
+      let $content = $modal.querySelector('.modal-block')
+      this.animation = gsap.effects.modal($modal, $content);
+      this.animation.play();
+      this.$active = $modal;
+    }
+    if($modal) {
+      if(this.$active) this.close(open);
+      else open();
+    }
+  },
+  close: function (callback) {
+    if (this.$active) {
+
+      if(this.timeout) {
+        clearTimeout(this.timeout);
+        delete this.timeout;
+      }
+
+      this.animation.timeScale(2).reverse().eventCallback('onReverseComplete', ()=> {
+        delete this.animation;
+        scrollLock.enablePageScroll();
+        this.$active.classList.remove('active');
+        delete this.$active;
+        if (callback) callback();
+      })
+    }
   }
 }

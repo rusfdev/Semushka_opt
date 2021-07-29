@@ -60,16 +60,15 @@ block content
         +certificate('./img/haccp-GMN 1.png')
         +certificate('./img/quality-3_2048x2048 1.png')
         +certificate('./img/da4250415df2241580c146658cbd6701 1.png')
-      .section__banner.row  
-        .col-xl-10.offset-xl-1
-          include blocks/banner1  
+      .section__banner
+        include blocks/banner1  
 
 
   section.section.news-grid
     .container 
       .section__head.section__head_with-button
         h3.section__title.section__title_with-button Новости
-        a(href="novosti.html").button.button_style-2.button_small.button_arrow
+        a(href="novosti.html").button.button_style-2.button_arrow
           span Смотреть все
           svg.icon
             use(xlink:href='./img/icons/sprite.svg#right-arrow')

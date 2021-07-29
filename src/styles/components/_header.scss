@@ -1,5 +1,5 @@
 .header {
-  --spacer: 34px;
+  --spacer: 25px;
   position: absolute;
   top: 0;
   left: 0;
@@ -29,7 +29,7 @@
   }
   &__phone {
     flex: 0 0 auto;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     margin-right: var(--spacer);
   }
   &__price-button {
@@ -84,10 +84,10 @@
   }
   &__item {
     &:not(:last-child) {
-      margin-right: 25px;
+      margin-right: 20px;
     }
   }
   &__link {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }

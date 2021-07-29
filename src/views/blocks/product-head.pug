@@ -1,0 +1,105 @@
+.product-head 
+  .product-head__head 
+    h1.h4.product-head__title Арахис жаренный дробленный 
+    
+  .swiper.product-preview-slider.product-head__slider 
+    .product-preview-slider__small-images 
+      .product-preview-slider__small-image.image.image_contain 
+        img(data-src="./img/5_Box_Semushka_ok 2.png", alt="image").lazyload
+      .product-preview-slider__small-image.image.image_contain 
+        img(data-src="./img/5_Box_Semushka_ok 1.png", alt="image").lazyload
+
+    .swiper-container 
+      .swiper-wrapper 
+        .swiper-slide 
+          .image.image_contain  
+            img(data-src="./img/5_Box_Semushka_ok 2.png", alt="image").swiper-lazy
+        .swiper-slide 
+          .image.image_contain  
+            img(data-src="./img/5_Box_Semushka_ok 1.png", alt="image").swiper-lazy
+
+  .product-head__content
+    .product-head__content-section
+      span.product-head__content-section-title Характеристики:
+      table.info-table 
+        tr 
+          td 
+            span Страна происхождения
+          td 
+            span Чили
+        tr 
+          td 
+            span Срок хранения
+          td 
+            span 18 месяцев
+        tr 
+          td 
+            span Сорт
+          td 
+            span Нонпарель
+        tr 
+          td 
+            span Калибр
+          td 
+            span 18/20
+        tr 
+          td 
+            span Вес упаковки
+          td 
+            span 10 кг
+        tr 
+          td 
+            span Размер упаковки
+          td 
+            span 38,5х29x15 см
+        tr 
+          td 
+            span Упаковка
+          td 
+            span Полиэтиленовый пакет
+    .product-head__content-section
+      if head_type == 1
+        span.product-head__content-section-title Вес товара, кг:
+      else 
+        span.product-head__content-section-title Вес одной упаковки, гр:
+
+      .packaging-list.product-head__packaging-list
+        label.packaging-list__item
+          input(type="radio" name='1234' value='15' checked)
+          span(data-custom-interaction) 15
+        label.packaging-list__item
+          input(type="radio" name='1234' value='40')
+          span(data-custom-interaction) 40
+        label.packaging-list__item
+          input(type="radio" name='1234' value='100' disabled)
+          span(data-custom-interaction) 100
+        label.packaging-list__item
+          input(type="radio" name='1234' value='150')
+          span(data-custom-interaction) 150
+
+    .product-head__content-section 
+      .product-calculator.product-head__product-calculator
+          if head_type == 1
+            span.product-calculator__calculator-text(data-name='1234')
+              span 15 
+              | кг
+          .count-calculator(data-custom-interaction) 
+            button.count-calculator__button.count-calculator__button_minus 
+            input(type="number" value='1').count-calculator__input
+            button.count-calculator__button.count-calculator__button_plus 
+          span.product-calculator__calculator-text шт
+
+    .product-head__content-section.product-head__last-section
+
+      .product-head__pricing
+        .product-head__pricing-element 
+          span Цена за 1 кг
+          span 163 ₽ 
+        .product-head__pricing-element 
+          span Цена за уп. (10 кг)
+          span 4 163 ₽
+
+      button.button.button_style-1.product-head__button 
+        svg.icon
+          use(xlink:href='./img/icons/sprite.svg#cart')
+        span Купить

@@ -24,11 +24,7 @@ mixin product-card(type)
           svg.icon
             use(xlink:href='./img/icons/sprite.svg#clock')
           | Срок хранения: 12 мес
-        a(href="./product.html").product-card__title.link 
-          if type == 3
-            | Арахис сушеный очищенный 38/42 и еще какой-то очень длинный текст
-          else 
-            | Арахис сушеный очищенный 38/42
+        a(href="./product.html").product-card__title.link Арахис сушеный очищенный 38/42
       .product-card__bottom 
         ul.product-card__info 
           li 
@@ -38,7 +34,7 @@ mixin product-card(type)
             span Цена за 1 кг
             span 163 ₽
           li 
-            span Цена за упаковку (10 кг)
+            span Цена за уп (10 кг)
             span 4 075 ₽
         
         .product-card__packaging
@@ -47,37 +43,37 @@ mixin product-card(type)
               | Вес одной упаковки, гр
             else 
               | Вес товара, кг
-          .product-card__packaging-list
-            label.product-card__package
+          .packaging-list.product-card__packaging-list
+            label.packaging-list__item
               input(type="radio" name=index value='15' checked)
               span(data-custom-interaction) 15
-            label.product-card__package
+            label.packaging-list__item
               input(type="radio" name=index value='40')
               span(data-custom-interaction) 40
 
             if type == 3
-              label.product-card__package
+              label.packaging-list__item
                 input(type="radio" name=index value='100' disabled)
                 span(data-custom-interaction) 100
             else 
-              label.product-card__package
+              label.packaging-list__item
                 input(type="radio" name=index value='100')
                 span(data-custom-interaction) 100
 
-            label.product-card__package
+            label.packaging-list__item
               input(type="radio" name=index value='150')
               span(data-custom-interaction) 150
 
-        .product-card__calculator 
+        .product-calculator.product-card__calculator 
           if type !== 3
-            span.product-card__calculator-text.product-card__calculator-count
+            span.product-calculator__calculator-text(data-name=index)
               span 15 
               | кг
           .count-calculator(data-custom-interaction) 
             button.count-calculator__button.count-calculator__button_minus 
             input(type="number" value='1').count-calculator__input
             button.count-calculator__button.count-calculator__button_plus 
-          span.product-card__calculator-text шт
+          span.product-calculator__calculator-text шт
 
         .product-card__button
           button.button.button_style-1.button_small 
@@ -105,7 +101,7 @@ mixin checkbox(title)
   -let index = Math.round(Math.random() * 1000000)
   .checkbox
     input(type="checkbox" id=index).checkbox__input
-    label(for=index).checkbox__label=title
+    label(for=index).checkbox__label !{title}
 
 mixin pagination()
   .pagination 

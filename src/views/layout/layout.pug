@@ -38,13 +38,18 @@ html(lang='ru')
       main.main
         block content
       include ../blocks/footer
+
+    include ../blocks/modals
     
     //scripts
     script(src="./scripts/libs/lazysizes.min.js")
     script(src="./scripts/libs/scroll-lock.min.js")
     script(src="./scripts/libs/swiper-bundle.min.js")
     script(src="./scripts/libs/slim-select.min.js")
+    script(src="./scripts/libs/gsap.min.js")
+    script(src="./scripts/libs/inputmask.min.js")
     script(src="./scripts/scripts.js")
+    
 
     //preview only
     include ../blocks/helper

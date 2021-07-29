@@ -1,16 +1,5 @@
-$grid-breakpoints: (xs:0, sm:576px, md:768px, lg:1024px, xl:1280px, xxl:1600px);
-$container-max-widths: (sm:540px, md:720px, lg:960px, xl:1200px, xxl:1440px);
-
-$spacers: (
-  0: 0,
-  1: 10px,
-  2: 20px,
-  3: 30px,
-  4: 40px,
-  5: 60px,
-) !default;
-
-$field: calc((100vw - #{var(--content-width)}) / 2);
+$grid-breakpoints: (xs:0, sm:576px, md:768px, lg:1024px, xl:1280px);
+$container-max-widths: (sm:540px, md:720px, lg:960px, xl:1248px);
 
 $trs1: .15s ease-in-out;
 $trs2: .3s ease-in-out;

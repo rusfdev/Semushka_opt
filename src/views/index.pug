@@ -42,15 +42,14 @@ block content
             .swiper-slide
               +product-card(2)
 
-      .section__banner.row  
-        .col-xl-10.offset-xl-1
-          include blocks/banner1       
+      .section__banner
+        include blocks/banner1       
 
   section.section.products-section
     .container 
       .section__head.section__head_with-button
         h4.section__title.section__title_with-button Продукция
-        a(href="./katalog.html").button.button_style-2.button_small.button_arrow
+        a(href="./katalog.html").button.button_style-2.button_arrow
           span Смотреть все
           svg.icon
             use(xlink:href='./img/icons/sprite.svg#right-arrow')
@@ -75,14 +74,14 @@ block content
   section.section.about-section
     .container 
       h3 Компания «Семушка»
-      .row 
-        .col-xl-6 
-          .mb-3 
-            p В 2017 году в целях расширения производственных и складских площадей, а также оптимизации логистических процессов, производство «Семушки» переехало на новую площадку, расположенную в деревне Новосельцево Мытищинского района Подмосковья.
-            p Суммарная площадь производства составляет около 6 тыс. кв. метров. Количество сотрудников составляет 120 человек, автопарк состоит из 20 грузовых и полу-грузовых автомашин. Производственное оборудование включает современные автоматизированные фасовочные линии.
+      .about-section__container 
+        .about-section__text
+          p В 2017 году в целях расширения производственных и складских площадей, а также оптимизации логистических процессов, производство «Семушки» переехало на новую площадку, расположенную в деревне Новосельцево Мытищинского района Подмосковья.
+          p Суммарная площадь производства составляет около 6 тыс. кв. метров. Количество сотрудников составляет 120 человек, автопарк состоит из 20 грузовых и полу-грузовых автомашин. Производственное оборудование включает современные автоматизированные фасовочные линии.
           a(href="#").button.button_style-1 
             span Подробнее
-        .col-xl-6.about-section__video
+
+        .about-section__video
           a(href="#").video-block.image.image_cover
             img(data-src="./img/Rectangle 117.jpg", alt="image").lazyload
             .icon
@@ -104,7 +103,7 @@ block content
     .container 
       .section__head.section__head_with-button
         h3.section__title.section__title_with-button Новости
-        a(href="novosti.html").button.button_style-2.button_small.button_arrow
+        a(href="novosti.html").button.button_style-2.button_arrow
           span Смотреть все
           svg.icon
             use(xlink:href='./img/icons/sprite.svg#right-arrow')
@@ -124,5 +123,5 @@ block content
             .contacts-widget__text-3 Горячая линия
             a(href="tel:74991103044").contacts-widget__phone.link +7 (499) 110 30 44
           .contacts-widget__section
-            a(href="#").button.button_style-1
+            a(href="#obratnyj-zvonok" data-modal='open').button.button_style-1
               span Заказать звонок 

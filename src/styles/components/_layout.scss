@@ -23,6 +23,12 @@
   }
   &__banner {
     margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter-x);
+    .banner {
+      grid-column: 2/12;
+    }
   }
   &:first-child {
     margin-top: 75px;
@@ -40,7 +46,6 @@
 .container {
   position: relative;
   padding: 0 var(--container-gutter-x);
-  @include media-breakpoint-up(xxl) {
-    max-width: #{map-get($container-max-widths, xl)};
-  }
+  max-width: var(--content-width);
+  margin: 0 auto;
 }
