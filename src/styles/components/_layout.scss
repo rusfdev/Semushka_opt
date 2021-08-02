@@ -9,6 +9,9 @@
 .main {
   flex: 1 1 100%;
   padding: 65px 0 0 0;
+  @include media-breakpoint-down(lg) {
+    padding: 50px 0 0 0;
+  }
 }
 
 .section {

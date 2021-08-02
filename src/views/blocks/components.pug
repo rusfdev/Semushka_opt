@@ -8,10 +8,11 @@ mixin product-card(type)
         else 
           img(data-src="./img/5_Box_Semushka_ok 1.png", alt="image").lazyload
       
-      if type == 2
-        .product-label.product-label_type-1.product-card__label Акция
-      else if type == 3
-        .product-label.product-label_type-2.product-card__label Новинка
+      .product-labels-list 
+        if type == 2
+          .product-label.product-label_type-1 Акция
+        else if type == 3
+          .product-label.product-label_type-2 Новинка
 
       .product-gradation-label.product-card__gradation-label
         svg.icon

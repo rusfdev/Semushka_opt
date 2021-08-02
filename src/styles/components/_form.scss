@@ -62,10 +62,14 @@
     height: 100%;
     display: flex;
     color: var(--color-accent-2);
+    transition: color $trs1;
     .icon {
       width: 17px;
       height: 17px;
       margin: auto;
+    }
+    &[data-touch], &[data-hover] {
+      color: var(--color-accent-2_2);
     }
   }
 }

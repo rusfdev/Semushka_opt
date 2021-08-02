@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
   input_file();
   header_search();
 
+  //Filter
+  document.querySelectorAll('.catalogue-filter').forEach($this => {
+    new Filter($this).init();
+  })
   //Product sliders
   document.querySelectorAll('.product-slider').forEach($this => {
     new ProductSlider($this).init();
@@ -465,5 +469,45 @@ const Modal = {
         if (callback) callback();
       })
     }
+  }
+}
+
+class Filter {
+  constructor($element) {
+    this.$element = $element;
+  }
+  init() {
+    this.$open = document.querySelector('.catalogue-filter-open');
+    this.$close = document.querySelector('.catalogue-filter-close');
+
+    this.state = () => {
+      return this.$element.classList.contains('is-active');
+    }
+
+    this.open = () => {
+      this.$element.classList.add('is-active');
+      scrollLock.disablePageScroll();
+
+    }
+
+    this.close = () => {
+      this.$element.classList.remove('is-active');
+      scrollLock.enablePageScroll();
+    }
+
+    window.addEventListener('resize', () => {
+      if( this.state() && window.innerWidth >= brakepoints.lg ) {
+        this.close();
+      }
+    })
+
+    this.$open.addEventListener('click', () => {
+      if( !this.state() ) this.open();
+    })
+
+    this.$close.addEventListener('click', () => {
+      if( this.state() ) this.close();
+    })
+
   }
 }
