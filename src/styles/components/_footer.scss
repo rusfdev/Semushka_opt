@@ -5,7 +5,9 @@
   &__container {
     display: grid;
     column-gap: var(--grid-gutter-x);
+    row-gap: 50px;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr auto;
   }
   &__logo {
     width: 120px;
@@ -21,12 +23,7 @@
   &__socials {
     margin-top: 40px;
   }
-  &__box-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  &__box-1-bottom {
+  &__last {
     margin-top: 40px;
     font-size: 0.875rem;
     a {
@@ -58,5 +55,47 @@
   }
   &__product-nav-link {
     font-size: 0.875rem;
+  }
+  @include media-breakpoint-up(xl) {
+    &__box-1 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    &__product-nav {
+      grid-row: 1/3;
+    }
+    &__nav-list {
+      grid-row: 1/3;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    &__nav-list {
+      grid-column: 2/5;
+    }
+    &__last {
+      margin: 0;
+    }
+    &__copyright {
+      margin-top: 20px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__box-1 {
+      grid-column: 1/3;
+    }
+    &__nav-list {
+      grid-column: 3/5;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__container {
+      row-gap: 40px;
+    }
+    &__product-nav {
+      grid-column: span 2;
+    }
   }
 }

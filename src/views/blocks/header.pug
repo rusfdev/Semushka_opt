@@ -3,6 +3,7 @@ header.header(data-scroll-lock-fill-gap)
     .header__left
       a(href="./").logo.header__logo
         img(src="./img/logos/logo.svg", alt="logo")
+
       nav.header-nav 
         ul.header-nav__list 
           li.header-nav__item 
@@ -13,16 +14,21 @@ header.header(data-scroll-lock-fill-gap)
             a(href="#").header-nav__link.link О компании
           li.header-nav__item 
             a(href="#").header-nav__link.link Контакты
-    .search-block.header__search-block
-      from.search-block__element 
+
+    .search-block.header-search
+      from.search-block__element.header-search__element
         .input.search-block__input
           input(type="text" placeholder="Поиск по каталогу")
         button.search-block__search-button.link 
           svg.icon
             use(xlink:href='./img/icons/sprite.svg#loupe')
+      
+      button(aria-label='close search').header__search-close-button.link
+
+
     .header__right
       a(href="tel:74991103044").header__phone.link +7 (499) 110 30 44
-      a(href="#zapros-prajs-lista" data-modal='open').button.button_style-3.header__price-button
+      a(href="#zapros-prajs-lista" data-modal='open').button.button_style-3.header__large-button
         span Запрос прайс-листа
 
       ul.header__small-buttons 
@@ -37,3 +43,14 @@ header.header(data-scroll-lock-fill-gap)
         li.header__small-buttons-item
           a(href="#").header__small-button.link
             span en
+
+        li.header__small-buttons-item.header__search-open-item
+          button(aria-label='open nav').header__small-button.link.header__search-open-button
+            svg.icon
+              use(xlink:href='./img/icons/sprite.svg#loupe')
+
+        li.header__small-buttons-item.header__nav-open-item
+          button(aria-label='open search').header__small-button.nav-open-button.link
+            span
+            span
+            span

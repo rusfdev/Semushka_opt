@@ -13,10 +13,14 @@
   @include media-breakpoint-down(lg) {
     --content-width: #{map-get($container-max-widths, md)};
   }
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     --content-width: #{map-get($container-max-widths, sm)};
     --container-gutter-x: 16px;
     --grid-gutter-x: 16px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    --content-width: 100%;
   }
   
 

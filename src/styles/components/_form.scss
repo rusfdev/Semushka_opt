@@ -34,6 +34,13 @@
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    input, textarea {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 15px;
+    }
+  }
 }
 
 .search-block {
@@ -51,13 +58,13 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 50px;
+    width: 42px;
     height: 100%;
     display: flex;
     color: var(--color-accent-2);
     .icon {
-      width: 16px;
-      height: 16px;
+      width: 17px;
+      height: 17px;
       margin: auto;
     }
   }

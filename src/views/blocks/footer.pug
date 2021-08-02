@@ -1,33 +1,28 @@
 footer.footer
   .container.footer__container
     .footer__box-1
-      .footer__box-1-top
-        a(href="./").logo.footer__logo
-          img(src="./img/logos/logo.svg", alt="logo")
-        .footer__phone
-          a(href="tel:74991103044").link +7 (499) 110 30 44
-        .footer__adress 129012, Москва, 2-я Ямская, д. 9, этаж З, комната 22. 
-        .socials.footer__socials
-          ul.socials__list 
-            li.socials__item 
-              a(href="#").socials__link
-                svg.icon(viewBox="0 0 22 21")
-                  use(xlink:href='./img/icons/sprite.svg#facebook') 
-                | facebook
-            li.socials__item 
-              a(href="#").socials__link
-                svg.icon(viewBox="0 0 22 21")
-                  use(xlink:href='./img/icons/sprite.svg#instagram') 
-                | instagram
-            li.socials__item 
-              a(href="#").socials__link
-                svg.icon(viewBox="0 0 30 21")
-                  use(xlink:href='./img/icons/sprite.svg#youtube') 
-                | youtube
-      .footer__box-1-bottom
-        a(href="#").link-dashed Политика конфиденциальности 
-
-        span.footer__copyright Все права защищены © 
+      a(href="./").logo.footer__logo
+        img(src="./img/logos/logo.svg", alt="logo")
+      .footer__phone
+        a(href="tel:74991103044").link +7 (499) 110 30 44
+      .footer__adress 129012, Москва, 2-я Ямская, д. 9, этаж З, комната 22. 
+      .socials.footer__socials
+        ul.socials__list 
+          li.socials__item 
+            a(href="#").socials__link
+              svg.icon(viewBox="0 0 22 21")
+                use(xlink:href='./img/icons/sprite.svg#facebook') 
+              | facebook
+          li.socials__item 
+            a(href="#").socials__link
+              svg.icon(viewBox="0 0 22 21")
+                use(xlink:href='./img/icons/sprite.svg#instagram') 
+              | instagram
+          li.socials__item 
+            a(href="#").socials__link
+              svg.icon(viewBox="0 0 30 21")
+                use(xlink:href='./img/icons/sprite.svg#youtube') 
+              | youtube
     ul.footer__nav-list 
       li.footer__nav-list-item
         a(href="#").footer__nav-list-link.link Продукция
@@ -133,3 +128,7 @@ footer.footer
           a(href="#").footer__product-nav-link.link Цукаты
         li.footer__product-nav-item
           a(href="#").footer__product-nav-link.link Подарочные наборы
+    
+    .footer__last
+      a(href="#").link-dashed Политика конфиденциальности 
+      span.footer__copyright Все права защищены © 

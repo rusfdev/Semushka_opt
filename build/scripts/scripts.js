@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
   calculator();
   change_package();
   input_file();
+  header_search();
 
   //Product sliders
   document.querySelectorAll('.product-slider').forEach($this => {
@@ -127,6 +128,19 @@ const CustomInteractionEvents = Object.create({
   }
 })
 
+function header_search() {
+  let $open = document.querySelector('.header__search-open-button'),
+      $close = document.querySelector('.header__search-close-button'),
+      $search = document.querySelector('.header-search');
+
+  $open.addEventListener('click', () => {
+    $search.classList.add('is-active');
+  })
+
+  $close.addEventListener('click', () => {
+    $search.classList.remove('is-active');
+  })
+}
 
 function calculator() {
 
@@ -198,11 +212,17 @@ class ProductSlider {
     this.$slider = this.$parent.querySelector('.swiper-container');
     this.$prev = this.$parent.querySelector('.swiper-button-prev');
     this.$next = this.$parent.querySelector('.swiper-button-next');
+    this.$pagination = this.$parent.querySelector('.swiper-pagination');
 
     this.swiper = new Swiper(this.$slider, {
       touchStartPreventDefault: false,
-      slidesPerView: 1,
+      slidesPerView: 2,
       speed: 500,
+      pagination: {
+        el: this.$pagination,
+        clickable: true,
+        bulletElement: 'button'
+      },
       navigation: {
         prevEl: this.$prev,
         nextEl: this.$next
@@ -210,6 +230,12 @@ class ProductSlider {
       breakpoints: {
         [brakepoints.xl]: {
           slidesPerView: 5
+        },
+        [brakepoints.lg]: {
+          slidesPerView: 4
+        },
+        [brakepoints.md]: {
+          slidesPerView: 3
         }
       }
     });
@@ -322,8 +348,6 @@ class ProductPreviewSlider {
   init() {
     this.$slider = this.$parent.querySelector('.swiper-container');
     this.$small_images = this.$parent.querySelectorAll('.product-preview-slider__small-image');
-
-    console.log(this.$slider )
 
     this.slider = new Swiper(this.$slider, {
       touchStartPreventDefault: false,

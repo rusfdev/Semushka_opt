@@ -1,0 +1,11 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Шаблон'
+  -var title = sitename + ' - ' + page_title
+
+block content
+  include blocks/components
+
+  -var breadcrumbs_links = ['Главная', page_title]
+  include blocks/breadcrumbs

@@ -15,11 +15,6 @@
   margin-bottom: 150px;
   &__head {
     margin-bottom: 45px;
-    &_with-button {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
   }
   &__banner {
     margin-top: 80px;
@@ -36,9 +31,34 @@
   &:last-child {
     margin-bottom: 80px;
   }
-  &__title {
-    &_with-button {
-      margin: 0;
+  @include media-breakpoint-up(sm) {
+    &__head {
+      &_with-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &__title {
+      &_with-button {
+        margin: 0;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__banner {
+      .banner {
+        grid-column: 1/13;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 100px;
+    &__head {
+      margin-bottom: 40px;
     }
   }
 }

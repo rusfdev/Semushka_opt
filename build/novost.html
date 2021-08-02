@@ -40,8 +40,8 @@
               </ul>
             </nav>
           </div>
-          <div class="search-block header__search-block">
-            <from class="search-block__element">
+          <div class="search-block header-search">
+            <from class="search-block__element header-search__element">
               <div class="input search-block__input">
                 <input type="text" placeholder="Поиск по каталогу">
               </div>
@@ -51,8 +51,9 @@
                 </svg>
               </button>
             </from>
+            <button class="header__search-close-button link" aria-label="close search"></button>
           </div>
-          <div class="header__right"><a class="header__phone link" href="tel:74991103044">+7 499 110-30-44</a><a class="button button_style-3 header__price-button" href="#zapros-prajs-lista" data-modal="open"><span>Запрос прайс-листа</span></a>
+          <div class="header__right"><a class="header__phone link" href="tel:74991103044">+7 499 110-30-44</a><a class="button button_style-3 header__large-button" href="#zapros-prajs-lista" data-modal="open"><span>Запрос прайс-листа</span></a>
             <ul class="header__small-buttons">
               <li class="header__small-buttons-item"><a class="header__small-button link" href="#">
                   <svg class="icon">
@@ -63,6 +64,16 @@
                     <use xlink:href="./img/icons/sprite.svg#cart"></use>
                   </svg></a></li>
               <li class="header__small-buttons-item"><a class="header__small-button link" href="#"><span>en</span></a></li>
+              <li class="header__small-buttons-item header__search-open-item">
+                <button class="header__small-button link header__search-open-button" aria-label="open nav">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/sprite.svg#loupe"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="header__small-buttons-item header__nav-open-item">
+                <button class="header__small-button nav-open-button link" aria-label="open search"><span></span><span></span><span></span></button>
+              </li>
             </ul>
           </div>
         </div>
@@ -170,28 +181,25 @@
       </main>
       <footer class="footer">
         <div class="container footer__container">
-          <div class="footer__box-1">
-            <div class="footer__box-1-top"><a class="logo footer__logo" href="./"><img src="./img/logos/logo.svg" alt="logo"></a>
-              <div class="footer__phone"><a class="link" href="tel:74991103044">+7 499 110-30-44</a></div>
-              <div class="footer__adress">129012, Москва, 2-я Ямская, д. 9, этаж З, комната 22. </div>
-              <div class="socials footer__socials">
-                <ul class="socials__list">
-                  <li class="socials__item"> <a class="socials__link" href="#">
-                      <svg class="icon" viewBox="0 0 22 21">
-                        <use xlink:href="./img/icons/sprite.svg#facebook"> </use>
-                      </svg>facebook</a></li>
-                  <li class="socials__item"> <a class="socials__link" href="#">
-                      <svg class="icon" viewBox="0 0 22 21">
-                        <use xlink:href="./img/icons/sprite.svg#instagram"> </use>
-                      </svg>instagram</a></li>
-                  <li class="socials__item"> <a class="socials__link" href="#">
-                      <svg class="icon" viewBox="0 0 30 21">
-                        <use xlink:href="./img/icons/sprite.svg#youtube"> </use>
-                      </svg>youtube</a></li>
-                </ul>
-              </div>
+          <div class="footer__box-1"><a class="logo footer__logo" href="./"><img src="./img/logos/logo.svg" alt="logo"></a>
+            <div class="footer__phone"><a class="link" href="tel:74991103044">+7 499 110-30-44</a></div>
+            <div class="footer__adress">129012, Москва, 2-я Ямская, д. 9, этаж З, комната 22. </div>
+            <div class="socials footer__socials">
+              <ul class="socials__list">
+                <li class="socials__item"> <a class="socials__link" href="#">
+                    <svg class="icon" viewBox="0 0 22 21">
+                      <use xlink:href="./img/icons/sprite.svg#facebook"> </use>
+                    </svg>facebook</a></li>
+                <li class="socials__item"> <a class="socials__link" href="#">
+                    <svg class="icon" viewBox="0 0 22 21">
+                      <use xlink:href="./img/icons/sprite.svg#instagram"> </use>
+                    </svg>instagram</a></li>
+                <li class="socials__item"> <a class="socials__link" href="#">
+                    <svg class="icon" viewBox="0 0 30 21">
+                      <use xlink:href="./img/icons/sprite.svg#youtube"> </use>
+                    </svg>youtube</a></li>
+              </ul>
             </div>
-            <div class="footer__box-1-bottom"><a class="link-dashed" href="#">Политика конфиденциальности </a><span class="footer__copyright">Все права защищены © </span></div>
           </div>
           <ul class="footer__nav-list">
             <li class="footer__nav-list-item"><a class="footer__nav-list-link link" href="#">Продукция</a></li>
@@ -257,6 +265,7 @@
               <li class="footer__product-nav-item"><a class="footer__product-nav-link link" href="#">Подарочные наборы</a></li>
             </ul>
           </div>
+          <div class="footer__last"><a class="link-dashed" href="#">Политика конфиденциальности </a><span class="footer__copyright">Все права защищены © </span></div>
         </div>
       </footer>
     </div>
@@ -313,8 +322,8 @@
               </div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="115933">
-                      <label class="checkbox__label" for="115933">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                      <input class="checkbox__input" type="checkbox" id="936110">
+                      <label class="checkbox__label" for="936110">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
                     </div>
               </div>
               <div class="form__submit">
@@ -373,8 +382,8 @@
               </div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="654821">
-                      <label class="checkbox__label" for="654821">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                      <input class="checkbox__input" type="checkbox" id="748615">
+                      <label class="checkbox__label" for="748615">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
                     </div>
               </div>
               <div class="form__submit">
@@ -405,8 +414,8 @@
               <div class="form__element"><span class="form__required-message">*поле обязательно для заполнения</span></div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="533183">
-                      <label class="checkbox__label" for="533183">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                      <input class="checkbox__input" type="checkbox" id="764808">
+                      <label class="checkbox__label" for="764808">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
                     </div>
               </div>
               <div class="form__submit">
@@ -436,8 +445,8 @@
               </label>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="468240">
-                      <label class="checkbox__label" for="468240">Запомнить логин и пароль</label>
+                      <input class="checkbox__input" type="checkbox" id="710862">
+                      <label class="checkbox__label" for="710862">Запомнить логин и пароль</label>
                     </div>
               </div>
               <div class="form__submit form__buttons">
@@ -489,8 +498,8 @@
               <div class="form__element"><span class="form__required-message">*поле обязательно для заполнения</span></div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="135251">
-                      <label class="checkbox__label" for="135251">Запомнить логин и пароль</label>
+                      <input class="checkbox__input" type="checkbox" id="228492">
+                      <label class="checkbox__label" for="228492">Запомнить логин и пароль</label>
                     </div>
               </div>
               <div class="form__submit">
@@ -546,6 +555,7 @@
     <script src="./scripts/libs/slim-select.min.js"></script>
     <script src="./scripts/libs/gsap.min.js"></script>
     <script src="./scripts/libs/inputmask.min.js"></script>
+    <script src="./scripts/libs/current-device.min.js"></script>
     <script src="./scripts/scripts.js"></script>
     <!--preview only-->
     <link rel="stylesheet" href="./styles/helper.css">
@@ -565,7 +575,7 @@
         </div>
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="produkcziya.html">Продукция</a><a class="helper__section-button" href="katalog.html">Каталог</a><a class="helper__section-button" href="product1.html">Продукт (тип1)</a><a class="helper__section-button" href="product2.html">Продукт (тип2)</a><a class="helper__section-button" href="novosti.html">Новости</a><a class="helper__section-button" href="novost.html">Новость</a><a class="helper__section-button" href="o-kompanii.html">О компании</a><a class="helper__section-button" href="404.html">404</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="produkcziya.html">Продукция</a><a class="helper__section-button" href="katalog.html">Каталог</a><a class="helper__section-button" href="product1.html">Продукт (тип1)</a><a class="helper__section-button" href="product2.html">Продукт (тип2)</a><a class="helper__section-button" href="novosti.html">Новости</a><a class="helper__section-button" href="novost.html">Новость</a><a class="helper__section-button" href="o-kompanii.html">О компании</a><a class="helper__section-button" href="404.html">404</a><a class="helper__section-button" href="template.html">Шаблон</a></div>
         </div>
       </div>
     </div>

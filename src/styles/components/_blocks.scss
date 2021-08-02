@@ -85,6 +85,7 @@
   margin-top: 36px;
   text-align: center;
 }
+
 .pagination {
   margin-top: 36px;
   &__list {
@@ -130,6 +131,9 @@
     width: 100%;
     height: 100%;
     background-color: transparent;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 300px;
   }
 }
 
@@ -474,6 +478,27 @@
     text-align: center;
     margin-top: 20px;
   }
+  @include media-breakpoint-down(sm) {
+    &__title {
+      font-size: 12px;
+    }
+    &__top, &__info {
+      margin-bottom: 15px;
+    }
+    &__label-info, &__info, &__packaging-title, &__packaging-list, &__calculator {
+      font-size: 10px;
+    }
+    &__content {
+      padding: 15px 10px 20px 10px;
+    }
+    &__button {
+      .button {
+        padding: 0;
+        min-width: initial;
+        width: 100%;
+      }
+    }
+  }
 }
 
 .products-section {
@@ -482,80 +507,9 @@
     grid-template-columns: repeat(4, 1fr);
     gap: var(--grid-gutter-x);
   }
-}
-
-.product-slider {
-  .swiper-container {
-    margin: calc(var(--grid-gutter-x) / -2);
-  }
-  .swiper-slide {
-    padding: calc(var(--grid-gutter-x) / 2);
-  }
-  .swiper-button {
-    bottom: calc(100% + calc(60px - var(--grid-gutter-x) / 2));
-  }
-  .swiper-button-prev {
-    right: 52px;
-  }
-  .swiper-button-next {
-    right: 0;
-  }
-  &__head {
-    padding-right: 104px;
-  }
-}
-
-.banner {
-  padding: 30px 0;
-  border-radius: 4px;
-  overflow: hidden;
-  &__content {
-    position: relative;
-    z-index: 2;
-    padding-left: 440px;
-    color: #fff;
-  }
-  &__title {
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  &__button {
-    min-width: 170px;
-  }
-}
-
-.info-table {
-  width: 100%;
-  tr {
-    &:not(:last-child) {
-      td {
-        padding-bottom: 10px;
-      }
-    }
-  }
-  td {
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-    &:first-child {
-      padding-right: 8px;
-      color: var(--color-muted);
-      span {
-        position: relative;
-        display: inline-block;
-        &::after {
-          content: '';
-          display: block;
-          border-bottom: 1px dashed currentColor;
-          position: absolute;
-          left: calc(100% + 8px);
-          bottom: 0.25em;
-          width: 100vw;
-        }
-      }
-    }
-    &:last-child {
-      padding-left: 8px;
+  @include media-breakpoint-down(lg) {
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
@@ -597,10 +551,162 @@
     z-index: 2;
     text-align: center;
     margin: 0;
-    font-size: 1.25rem;
     font-weight: 700;
   }
+  @include media-breakpoint-up(lg) {
+    &__title {
+      font-size: 1.25rem;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 20px;
+    .image {
+      height: initial;
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 80%;
+      }
+      img {
+        padding: 20px;
+      }
+    }
+  }
 }
+
+.product-slider {
+  .swiper-container {
+    margin: calc(var(--grid-gutter-x) / -2);
+  }
+  .swiper-slide {
+    padding: calc(var(--grid-gutter-x) / 2);
+  }
+  .swiper-button {
+    bottom: calc(100% + calc(60px - var(--grid-gutter-x) / 2));
+  }
+  .swiper-button-prev {
+    right: 52px;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+  &__head {
+    padding-right: 104px;
+  }
+  @include media-breakpoint-up(sm) {
+    .swiper-pagination {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .swiper-button {
+      bottom: calc(100% + calc(53px - var(--grid-gutter-x) / 2));
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .swiper-button {
+      display: none;
+    }
+    .swiper-pagination {
+      margin-top: 20px;
+      justify-content: center;
+      --color: rgba(0, 0, 0, 0.2);
+      --color-hover: rgba(0, 0, 0, 0.4);
+      --color-active: currentColor;
+    }
+    &__head {
+      padding-right: 0;
+    }
+  }
+}
+
+.banner {
+  padding: 30px 0;
+  border-radius: 4px;
+  overflow: hidden;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__content {
+    position: relative;
+    z-index: 3;
+    padding: 0 40px 0 440px;
+    color: #fff;
+  }
+  &__title {
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  &__button {
+    min-width: 170px;
+  }
+  @include media-breakpoint-down(xl) {
+    &__content {
+      padding: 0 20px 0 340px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__content {
+      padding: 0 20px 0 300px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__content {
+      padding: 0 20px 0 200px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &::after {
+      background: rgba(0, 0, 0, 0.4);
+    }
+    &__content {
+      padding: 0 20px;
+    }
+  }
+}
+
+.info-table {
+  width: 100%;
+  tr {
+    &:not(:last-child) {
+      td {
+        padding-bottom: 10px;
+      }
+    }
+  }
+  td {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    &:first-child {
+      padding-right: 8px;
+      color: var(--color-muted);
+      span {
+        position: relative;
+        display: inline-block;
+        &::after {
+          content: '';
+          display: block;
+          border-bottom: 1px dashed currentColor;
+          position: absolute;
+          left: calc(100% + 8px);
+          bottom: 0.25em;
+          width: 100vw;
+        }
+      }
+    }
+    &:last-child {
+      padding-left: 8px;
+    }
+  }
+}
+
 
 .video-block {
   .icon {
@@ -668,16 +774,47 @@
   &__phone {
     font-size: 1.5rem;
   }
+  @include media-breakpoint-down(md) {
+    padding: 30px 0 0 30px;
+    &__section {
+      margin: 0 30px 30px 0;
+    }
+    &__text-1 {
+      font-size: 1rem;
+    }
+    &__text-2 {
+      font-size: 1.25rem;
+    }
+    &__phone {
+      font-size: 1.25rem;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 30px 10px 10px 30px;
+    &__section {
+      margin: 0 20px 20px 0;
+    }
+  }
 }
 
 .about-section {
   &__video {
     padding-left: 40px;
+    order: 2;
   }
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: var(--grid-gutter-x);
+  }
+  @include media-breakpoint-down(lg) {
+    &__container {
+      display: block;
+    }
+    &__video {
+      padding-left: 0;
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -720,6 +857,16 @@
     grid-template-columns: repeat(5, 1fr);
     gap: var(--grid-gutter-x);
   }
+  @include media-breakpoint-down(lg) {
+    &__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 
 .news-grid {
@@ -736,6 +883,11 @@
   }
   &__tags {
     margin-bottom: 60px;
+  }
+  @include media-breakpoint-down(lg) {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -779,8 +931,8 @@
       top: 0;
       left: 0;
       background-color: rgba(43, 41, 41, 0.5);
-      opacity: 0;
       transition: opacity .5s $out;
+      opacity: 0;
     }
   }
   &__text {
@@ -798,8 +950,53 @@
     margin: 0;
   }
   &__button {
-    transition: opacity .5s $out;
-    opacity: 0;
+    .desktop & {
+      transition: opacity .5s $out;
+      opacity: 0;
+    }
+    .mobile & {
+      .button {
+        font-size: 0;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        &::before, &::after {
+          display: none;
+        }
+      }
+    }
+    width: 100%;
+  }
+  @include media-breakpoint-down(xl) {
+    padding: 30px 20px;
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 30px;
+  }
+  @include media-breakpoint-down(md) {
+    min-height: 220px;
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: 180px;
+    padding: 20px var(--container-gutter-x);
+    &__title {
+      font-size: 0.75rem;
+    }
+    &__text {
+      margin-bottom: 20px;
+    }
+    &__date {
+      font-size: 0.875rem;
+    }
+    &_wide {
+      .news-element__title {
+        font-size: 1rem;
+      }
+    }
   }
 }
 
