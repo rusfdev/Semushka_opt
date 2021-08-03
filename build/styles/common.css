@@ -650,6 +650,18 @@ a {
 .modal-product .modal-block {
   padding: 40px; }
 
+@media (max-width: 575.98px) {
+  .modal-product .modal-block {
+    padding: 40px 20px 30px 20px; }
+  .modal-product__container {
+    -moz-column-gap: 20px;
+         column-gap: 20px; }
+  .modal-product__title {
+    font-size: 1rem; }
+  .modal-product__buttons {
+    grid-template-columns: 100%;
+    gap: 10px; } }
+
 /*========== Components ==========*/
 img {
   display: block;

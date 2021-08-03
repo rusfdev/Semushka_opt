@@ -101,4 +101,19 @@
   .modal-block {
     padding: 40px;
   }
+  @include media-breakpoint-down(sm) {
+    .modal-block {
+      padding: 40px 20px 30px 20px;
+    }
+    &__container {
+      column-gap: 20px;
+    }
+    &__title {
+      font-size: 1rem;
+    }
+    &__buttons {
+      grid-template-columns: 100%;
+      gap: 10px;
+    }
+  }
 }
