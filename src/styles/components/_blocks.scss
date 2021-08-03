@@ -430,7 +430,7 @@
     box-shadow: var(--block-shadow);
     transition: width $trs1, height $trs1;
   }
-  &[data-touch], &[data-hover] {
+  &[data-hover] {
     &::before {
       width: calc(100% + 10px);
       height: calc(100% + 10px);
