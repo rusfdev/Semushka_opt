@@ -160,7 +160,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  &[data-touch], &[data-hover] {
+  &[data-hover] {
     .arrow-down, .arrow-up {
       transform: rotate(90deg);
     }

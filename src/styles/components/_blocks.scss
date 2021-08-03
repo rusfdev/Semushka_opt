@@ -43,17 +43,18 @@
 
 .breadcrumbs {
   font-size: 0.875rem;
+  line-height: 1.5;
   margin-bottom: 50px;
   margin-top: 75px;
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px -10px 0;
+    margin: 0 -10px -8px 0;
   }
   &__item {
     display: flex;
     align-items: center;
-    margin: 0 10px 10px 0;
+    margin: 0 10px 8px 0;
     .icon {
       width: 10px;
       height: 10px;
@@ -253,6 +254,7 @@
     border: 1px solid var(--color-borders);
     position: relative;
     transition: border-color $trs1;
+    flex-shrink: 0;
     &::before, &::after {
       content: '';
       background-color: var(--color-accent-1);
@@ -302,7 +304,6 @@
   @include media-breakpoint-down(sm) {
     &__input {
       line-height: calc(2.5em - 2px);
-      width: 2.5em;
     }
     &__button {
       width: 2.5em;
@@ -315,6 +316,7 @@
   display: flex;
   align-items: center;
   &__calculator-text {
+    flex-shrink: 0;
     &:last-child {
       margin-left: 0.5em;
     }
@@ -501,6 +503,7 @@
     li {
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
       &:not(:last-child) {
         margin-bottom: 6px;
       }
@@ -527,15 +530,24 @@
     margin-top: 20px;
   }
   @include media-breakpoint-down(sm) {
-    &__title {
-      font-size: 12px;
+    .product-calculator {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 0.5em;
+      &__calculator-text:first-child {
+        display: none;
+      }
+      .count-calculator {
+        grid-column: 1/4;
+        &__button {
+          width: calc(33.33% - 0.25em - 1px);
+        }
+        &__input {
+          width: calc(33.33% + 0.5em + 2px);
+        }
+      }
     }
-    &__top, &__info {
-      margin-bottom: 15px;
-    }
-    &__label-info, &__info, &__packaging-title, &__packaging-list, &__calculator {
-      font-size: 10px;
-    }
+    
     &__content {
       padding: 15px 10px 20px 10px;
     }
@@ -545,6 +557,17 @@
         min-width: initial;
         width: 100%;
       }
+    }
+  }
+  @media screen and (max-width:359px) {
+    &__title {
+      font-size: 12px;
+    }
+    &__top, &__info {
+      margin-bottom: 15px;
+    }
+    &__label-info, &__info, &__packaging-title, &__packaging-list, &__calculator {
+      font-size: 10px;
     }
   }
 }
@@ -714,10 +737,10 @@
   }
   @include media-breakpoint-down(sm) {
     &::after {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.2);
     }
     &__content {
-      padding: 0 20px;
+      padding: 0 40px;
     }
   }
 }
@@ -1328,13 +1351,28 @@
   &__text {
     grid-column: 6/13;
   }
+  @include media-breakpoint-down(lg) {
+    &__slider {
+      grid-column: 1/13;
+      margin-bottom: 40px;
+    }
+    &__text {
+      grid-column: 1/13;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__slide {
+      height: 280px;
+    }
+  }
 }
 
 .section-benefits {
   &__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--grid-gutter-x);
+    column-gap: var(--grid-gutter-x);
+    row-gap: 40px;
   }
   &__block {
     text-align: center;
@@ -1349,6 +1387,16 @@
     color: var(--color-accent-1);
     margin: 0 0 12px 0;
   }
+  @include media-breakpoint-down(lg) {
+    &__block {
+      padding: 0;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 .contacts-section {
@@ -1357,6 +1405,11 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--grid-gutter-x);
   }
+  @include media-breakpoint-down(md) {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 .contact-box {
@@ -1364,13 +1417,17 @@
   box-shadow: var(--block-shadow);
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
   &__content {
     padding: 32px 36px 40px 36px;
+    flex: 1 1 auto;
   }
   &__title {
     margin: 0 0 30px 0;
   }
   &__elements {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: var(--grid-gutter-x);
@@ -1408,10 +1465,33 @@
       left: 0;
     }
   }
+  @include media-breakpoint-down(lg) {
+    &__content {
+      padding: 30px 20px;
+    }
+    &__elements {
+      grid-template-columns: 1fr;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__elements {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__elements {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+    &__item-head {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .page-404 {
   position: relative;
+  padding: 170px 0;
   .image {
     position: absolute;
     width: 100%;
@@ -1424,7 +1504,6 @@
     z-index: 2;
     display: flex;
     justify-content: flex-end;
-    padding: 170px 0;
   }
   &__box {
     background-color: #fff;
@@ -1440,6 +1519,14 @@
   }
   &__box-text {
     margin: 0 0 30px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 80px 0;
+    &__box {
+      width: 100%;
+      max-width: initial;
+      padding: 40px 20px;
+    }
   }
 }
 
