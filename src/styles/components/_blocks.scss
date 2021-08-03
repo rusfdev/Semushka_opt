@@ -1805,6 +1805,7 @@
     column-gap: 40px;
   }
   @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
     column-gap: var(--grid-gutter-x);
     row-gap: 40px;
   }

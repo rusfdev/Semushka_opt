@@ -2749,6 +2749,7 @@ ol:not([class]) {
            column-gap: 40px; } }
   @media (max-width: 575.98px) {
     .large-images {
+      grid-template-columns: 1fr;
       -moz-column-gap: var(--grid-gutter-x);
            column-gap: var(--grid-gutter-x);
       row-gap: 40px; } }
