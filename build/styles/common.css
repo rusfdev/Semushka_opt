@@ -617,6 +617,12 @@ a {
     max-width: 580px; }
     .modal-block__title {
       text-align: center; }
+  @media (max-width: 575.98px) {
+    .modal-block {
+      padding: 40px 20px 30px 20px; }
+    .modal-close {
+      right: 5px;
+      top: 5px; } }
 
 #vkhod-v-lichnyj-kabinet .modal-block, #registracziya .modal-block, #vosstanovit-parol .modal-block {
   max-width: 520px; }
@@ -1316,6 +1322,7 @@ ol:not([class]) {
 
 .form__buttons {
   display: grid;
+  justify-content: center;
   grid-template-columns: auto 1fr;
   gap: 16px; }
 
@@ -1324,6 +1331,10 @@ ol:not([class]) {
   display: flex;
   justify-content: flex-end;
   font-size: 14px; }
+
+@media (max-width: 575.98px) {
+  .form__buttons {
+    grid-template-columns: auto; } }
 
 /*========== Blocks ==========*/
 .product-labels-list {

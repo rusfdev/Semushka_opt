@@ -318,7 +318,7 @@
   }
   &__buttons {
     display: grid;
-
+    justify-content: center;
     grid-template-columns: auto 1fr;
     gap: 16px;
   }
@@ -327,5 +327,10 @@
     display: flex;
     justify-content: flex-end;
     font-size: 14px;
+  }
+  @include media-breakpoint-down(sm) {
+    &__buttons {
+      grid-template-columns: auto;
+    }
   }
 }

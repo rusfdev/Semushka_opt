@@ -61,6 +61,15 @@
       text-align: center;
     }
   }
+  @include media-breakpoint-down(sm) {
+    &-block {
+      padding: 40px 20px 30px 20px;
+    }
+    &-close {
+      right: 5px;
+      top: 5px;
+    }
+  }
 }
 
 #vkhod-v-lichnyj-kabinet, #registracziya, #vosstanovit-parol {
