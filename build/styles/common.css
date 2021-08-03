@@ -1145,7 +1145,7 @@ ol:not([class]) {
   .checkbox__input {
     display: none; }
     .checkbox__input:checked ~ .checkbox__label:before {
-      border-color: var(--color-accent-1); }
+      border-color: var(--color-accent-1_2); }
     .checkbox__input:checked ~ .checkbox__label:after {
       opacity: 1; }
   .checkbox__label {
@@ -1181,7 +1181,7 @@ ol:not([class]) {
       opacity: 0;
       transition: opacity 0.15s ease-in-out; }
     .checkbox__label[data-touch]::before, .checkbox__label[data-hover]::before {
-      border-color: var(--color-accent-1_2); }
+      border-color: var(--color-accent-1); }
 
 .select {
   --font-size: 14px;

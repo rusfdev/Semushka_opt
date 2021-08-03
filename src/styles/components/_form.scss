@@ -82,7 +82,7 @@
     display: none;
     &:checked ~ .checkbox__label {
       &:before {
-        border-color: var(--color-accent-1);
+        border-color: var(--color-accent-1_2);
       }
       &:after {
         opacity: 1;
@@ -125,7 +125,7 @@
     }
     &[data-touch], &[data-hover] {
       &::before {
-        border-color: var(--color-accent-1_2);
+        border-color: var(--color-accent-1);
       }
     }
   }
