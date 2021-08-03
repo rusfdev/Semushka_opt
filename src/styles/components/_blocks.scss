@@ -537,6 +537,9 @@
       &__calculator-text:first-child {
         display: none;
       }
+      &__calculator-text:last-child {
+        margin: 0;
+      }
       .count-calculator {
         grid-column: 1/4;
         &__button {
@@ -1195,6 +1198,13 @@
     &:not(:last-child) {
       border-bottom: 1px solid var(--color-borders);
     }
+    .checkbox {
+      &__label {
+        &[data-touch], &[data-hover] {
+          color: var(--color-accent-1);
+        }
+      }
+    }
   }
   @include media-breakpoint-up(lg) {
     &-open {
@@ -1387,6 +1397,9 @@
     color: var(--color-accent-1);
     margin: 0 0 12px 0;
   }
+  &__title {
+    text-align: center;
+  }
   @include media-breakpoint-down(lg) {
     &__block {
       padding: 0;
@@ -1492,6 +1505,9 @@
 .page-404 {
   position: relative;
   padding: 170px 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
   .image {
     position: absolute;
     width: 100%;

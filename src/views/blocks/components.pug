@@ -2,7 +2,7 @@ mixin product-card(type)
   -let index = Math.round(Math.random() * 1000000)
   .product-card(data-custom-interaction)
     .product-card__image
-      a(href="./product.html").image.image_contain 
+      a(href="./product1.html").image.image_contain 
         if type == 3
           img(data-src="./img/5_Box_Semushka_ok 2.png", alt="image").lazyload
         else 
@@ -25,7 +25,7 @@ mixin product-card(type)
           svg.icon
             use(xlink:href='./img/icons/sprite.svg#clock')
           | Срок хранения: 12 мес
-        a(href="./product.html").product-card__title.link Арахис сушеный очищенный 38/42
+        a(href="./product1.html").product-card__title.link Арахис сушеный очищенный 38/42
       .product-card__bottom 
         ul.product-card__info 
           li 
