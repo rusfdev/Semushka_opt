@@ -1,7 +1,7 @@
 .product-labels-list {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 -5px -5px 0;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .product-label {
@@ -12,7 +12,10 @@
   border-radius: 4px;
   color: #fff;
   pointer-events: none;
-  margin: 0 5px 5px 0;
+  text-align: center;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
   &_type-1 {
     background: var(--color-label-1);
   }
@@ -165,8 +168,59 @@
   }
 }
 
-.tag-list {
+.tab-head {
+  border-bottom: 1px solid var(--color-borders);
   &__container {
+    display: flex;
+  }
+  &__link {
+    font-size: 18px;
+    padding: 11px 36px;
+    transition: background-color $trs1, color $trs1, border-color $trs1;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    &[data-touch], &[data-hover] {
+      color: var(--color-accent-1);
+    }
+    &.is-active {
+      background-color: var(--color-accent-1);
+      color: #fff;
+      pointer-events: none;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 12px;
+    display: flex;
+    &__container {
+      flex-wrap: wrap;
+      margin: 0 -12px -12px 0;
+    }
+    &__link {
+      border-radius: 0;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 20px;
+      border: 1px solid var(--color-borders);
+      margin: 0 12px 12px 0;
+      &[data-touch], &[data-hover] {
+        border-color: var(--color-accent-1);
+      }
+      &.is-active {
+        border-color: var(--color-accent-1);
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__link {
+      font-size: 14px;
+    }
+  }
+}
+
+.tag-list {
+  display: flex;
+  &__container {
+    width: 100%;
     margin: 0 -12px -12px 0;
     display: flex;
     flex-wrap: wrap;
@@ -178,7 +232,6 @@
 
 .tag-element {
   white-space: nowrap;
-  grid-column: auto;
   border: 1px solid var(--color-borders);
   border-radius: 4px;
   color: var(--color-muted);
@@ -187,6 +240,10 @@
   padding: 0 18px;
   position: relative;
   transition: color .3s $out, border-color .3s $out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   &::before {
     content: '';
     display: block;
@@ -200,7 +257,12 @@
     transform: scaleX(0.7);
     transition: transform .3s $out, opacity .3s $out, background-color $trs1;
   }
-  span {
+  .icon {
+    margin-right: 8px;
+    width: 17px;
+    height: 17px;
+  }
+  span, .icon {
     position: relative;
     z-index: 2;
   }
@@ -606,7 +668,7 @@
     box-shadow: var(--block-shadow);
     transition: width $trs1, height $trs1;
   }
-  &[data-touch], &[data-hover] {
+  &[data-hover] {
     &::before {
       width: calc(100% + 10px);
       height: calc(100% + 10px);
@@ -615,9 +677,9 @@
   .image {
     border-radius: 4px;
     height: 170px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     img {
-      padding: 40px;
+      padding: 40px 40px 0 40px;
     }
   }
   &__title {
@@ -648,7 +710,7 @@
   }
 }
 
-.product-slider {
+.items-slider {
   .swiper-container {
     margin: calc(var(--grid-gutter-x) / -2);
   }
@@ -685,11 +747,11 @@
       display: none;
     }
     .swiper-pagination {
-      margin-top: 20px;
+      margin-top: 30px;
       justify-content: center;
-      --color: rgba(0, 0, 0, 0.2);
-      --color-hover: rgba(0, 0, 0, 0.4);
-      --color-active: currentColor;
+      --color: var(--color-dark-pagination);
+      --color-hover: var(--color-dark-pagination-hover);
+      --color-active: var(--color-dark-pagination-active);
     }
     &__head {
       padding-right: 0;
@@ -934,7 +996,7 @@
     box-shadow: var(--block-shadow);
     transition: width $trs1, height $trs1;
   }
-  &[data-touch], &[data-hover] {
+  &[data-hover] {
     &::before {
       width: calc(100% + 10px);
       height: calc(100% + 10px);
@@ -968,29 +1030,12 @@
 }
 
 .news-grid {
-  &__container {
-    display: grid;
-    grid-auto-flow: dense;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--grid-gutter-x);
-  }
-  &__contacts-widget {
-    margin: 80px auto 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-  &__tags {
-    margin-bottom: 60px;
-  }
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gutter-x);
   @include media-breakpoint-down(lg) {
-    &__container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @include media-breakpoint-down(sm) {
-    &__tags {
-      margin-bottom: 40px;
-    }
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1156,12 +1201,15 @@
 
 .catalogue-filter {
   --gutter: 12px;
-  border-radius: 4px;
-  box-shadow: var(--block-shadow);
+  &__box {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
   &__category-head {
+    display: block;
     padding: var(--gutter);
     position: relative;
-    cursor: pointer;
     font-size: 16px;
     line-height: 20px;
     user-select: none;
@@ -1188,9 +1236,11 @@
     }
   }
   &__category-content {
-    display: none;
-    &.is-active {
-      display: block;
+    &[data-toggle="content"] {
+      display: none;
+      &.is-active {
+        display: block;
+      }
     }
   }
   &__category-element {
@@ -1256,6 +1306,13 @@
       padding: 50px 0;
     }
   }
+  @include media-breakpoint-up(sm) {
+    &__box {
+      border-radius: 4px;
+      box-shadow: var(--block-shadow);
+      background: #fff;
+    }
+  }
   @include media-breakpoint-down(sm) {
     --gutter: 12px var(--grid-gutter-x);
     &__container {
@@ -1282,18 +1339,31 @@
   &__head {
     padding: 80px 60px;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
     position: relative;
     color: #fff;
     min-height: 350px;
     display: flex;
     margin-bottom: 55px;
-    .image {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
+  }
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    &_mask {
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 2;
+        background: linear-gradient(90deg, rgba(44, 41, 41, 0.7) 50.09%, rgba(196, 196, 196, 0) 100%);
+      }
     }
   }
   &__head-text {
@@ -1337,6 +1407,23 @@
   }
 }
 
+.image-slider {
+  .swiper-pagination {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .swiper-slide {
+    height: 370px;
+  }
+  @include media-breakpoint-down(sm) {
+    .swiper-slide {
+      height: 280px;
+    }
+  }
+}
+
 .about-company-section {
   &__container {
     align-items: flex-start;
@@ -1346,16 +1433,6 @@
   }
   &__slider {
     grid-column: 1/6;
-    position: relative;
-    .swiper-pagination {
-      position: absolute;
-      bottom: 25px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-  &__slide {
-    height: 370px;
     position: relative;
   }
   &__text {
@@ -1368,11 +1445,6 @@
     }
     &__text {
       grid-column: 1/13;
-    }
-  }
-  @include media-breakpoint-down(sm) {
-    &__slide {
-      height: 280px;
     }
   }
 }
@@ -1703,23 +1775,7 @@
     }
   }
   &__head {
-    display: flex;
-  }
-  &__link {
-    font-size: 18px;
-    padding: 11px 36px;
-    transition: background-color $trs1, color $trs1;
-    font-weight: 700;
-    border-radius: 4px 4px 0 0;
-    text-align: center;
-    &[data-touch], &[data-hover] {
-      color: var(--color-accent-1);
-    }
-    &.is-active {
-      background-color: var(--color-accent-1);
-      color: #fff;
-      cursor: default;
-    }
+    margin-bottom: -1px;
   }
   &__wrapper {
     border: 1px solid var(--color-borders);
@@ -1730,11 +1786,6 @@
     padding-bottom: 100px;
     &__wrapper {
       padding: 30px 20px;
-    }
-    &__link {
-      font-size: 16px;
-      padding: 11px 0;
-      flex: 1 0 auto;
     }
   }
 }
@@ -1808,5 +1859,16 @@
     grid-template-columns: 1fr;
     column-gap: var(--grid-gutter-x);
     row-gap: 40px;
+  }
+}
+
+.news-section {
+  &__tag-list {
+    margin-bottom: 60px;
+  }
+  @include media-breakpoint-down(sm) {
+    &__tag-list {
+      margin-bottom: 40px;
+    }
   }
 }

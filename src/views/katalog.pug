@@ -23,86 +23,87 @@ block content
                 button(aria-label='filter close').close-button.catalogue-filter-close
             .catalogue-filter__container(data-scroll-lock-scrollable)
               .container
-                //category
-                .catalogue-filter__category.is-active(data-toggle="parent")   
-                  .catalogue-filter__category-head.is-active(data-toggle="trigger")
-                    span Орехи
-                    svg.icon
-                      use(xlink:href='./img/icons/sprite.svg#drop-arrow')
-                  .catalogue-filter__category-content.is-active(data-toggle="content")
-                    .catalogue-filter__category-element
-                      +checkbox('Арахис')
-                    .catalogue-filter__category-element
-                      +checkbox('Бразильский орех')
-                    .catalogue-filter__category-element
-                      +checkbox('Грецкий орех')
-                    .catalogue-filter__category-element
-                      +checkbox('Кедровый орех')
-                    .catalogue-filter__category-element
-                      +checkbox('Кешью')
-                    .catalogue-filter__category-element
-                      +checkbox('Кокос')
-                    .catalogue-filter__category-element
-                      +checkbox('Макадамия')
-                    .catalogue-filter__category-element
-                      +checkbox('Миндаль')
-                    .catalogue-filter__category-element
-                      +checkbox('Орехи карамелизированные')
-                    .catalogue-filter__category-element
-                      +checkbox('Пека')
-                    .catalogue-filter__category-element
-                      +checkbox('Смесь ореховая')
-                    .catalogue-filter__category-element
-                      +checkbox('Фисташки')
-                    .catalogue-filter__category-element
-                      +checkbox('Фундук')
-                    .catalogue-filter__category-element
-                      +checkbox('Ядро абрикосовой косточки')
-                //category
-                .catalogue-filter__category(data-toggle="parent")  
-                  .catalogue-filter__category-head(data-toggle="trigger")
-                    span Семена
-                    svg.icon
-                      use(xlink:href='./img/icons/sprite.svg#drop-arrow')
-                  .catalogue-filter__category-content(data-toggle="content")
-                    .catalogue-filter__category-element
-                      +checkbox('Арахис')
-                    .catalogue-filter__category-element
-                      +checkbox('Бразильский орех')
-                    .catalogue-filter__category-element
-                      +checkbox('Грецкий орех')
-                    .catalogue-filter__category-element
-                      +checkbox('Кедровый орех')
-                //category
-                .catalogue-filter__category(data-toggle="parent")   
-                  .catalogue-filter__category-head(data-toggle="trigger") 
-                    span Сухофрукты
-                    svg.icon
-                      use(xlink:href='./img/icons/sprite.svg#drop-arrow')
-                  .catalogue-filter__category-content(data-toggle="content")
-                    .catalogue-filter__category-element
-                      +checkbox('Арахис')
-                    .catalogue-filter__category-element
-                      +checkbox('Бразильский орех')
-                    .catalogue-filter__category-element
-                      +checkbox('Грецкий орех')
-                    .catalogue-filter__category-element
-                      +checkbox('Кедровый орех')
-                //category
-                .catalogue-filter__category(data-toggle="parent")   
-                  .catalogue-filter__category-head(data-toggle="trigger") 
-                    span Фасовка
-                    svg.icon
-                      use(xlink:href='./img/icons/sprite.svg#drop-arrow')
-                  .catalogue-filter__category-content(data-toggle="content")
-                    .catalogue-filter__category-element
-                      +checkbox('Арахис')
-                    .catalogue-filter__category-element
-                      +checkbox('Бразильский орех')
-                    .catalogue-filter__category-element
-                      +checkbox('Грецкий орех')
-                    .catalogue-filter__category-element
-                      +checkbox('Кедровый орех')
+                .catalogue-filter__box
+                  //category
+                  .catalogue-filter__category.is-active(data-toggle="parent")   
+                    a(href="javascript:void(0);" data-toggle="trigger").catalogue-filter__category-head
+                      span Орехи
+                      svg.icon
+                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+                    .catalogue-filter__category-content.is-active(data-toggle="content")
+                      .catalogue-filter__category-element
+                        +checkbox('Арахис')
+                      .catalogue-filter__category-element
+                        +checkbox('Бразильский орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Грецкий орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Кедровый орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Кешью')
+                      .catalogue-filter__category-element
+                        +checkbox('Кокос')
+                      .catalogue-filter__category-element
+                        +checkbox('Макадамия')
+                      .catalogue-filter__category-element
+                        +checkbox('Миндаль')
+                      .catalogue-filter__category-element
+                        +checkbox('Орехи карамелизированные')
+                      .catalogue-filter__category-element
+                        +checkbox('Пека')
+                      .catalogue-filter__category-element
+                        +checkbox('Смесь ореховая')
+                      .catalogue-filter__category-element
+                        +checkbox('Фисташки')
+                      .catalogue-filter__category-element
+                        +checkbox('Фундук')
+                      .catalogue-filter__category-element
+                        +checkbox('Ядро абрикосовой косточки')
+                  //category
+                  .catalogue-filter__category(data-toggle="parent")  
+                    a(href="javascript:void(0);" data-toggle="trigger").catalogue-filter__category-head
+                      span Семена
+                      svg.icon
+                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+                    .catalogue-filter__category-content(data-toggle="content")
+                      .catalogue-filter__category-element
+                        +checkbox('Арахис')
+                      .catalogue-filter__category-element
+                        +checkbox('Бразильский орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Грецкий орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Кедровый орех')
+                  //category
+                  .catalogue-filter__category(data-toggle="parent")   
+                    a(href="javascript:void(0);" data-toggle="trigger").catalogue-filter__category-head
+                      span Сухофрукты
+                      svg.icon
+                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+                    .catalogue-filter__category-content(data-toggle="content")
+                      .catalogue-filter__category-element
+                        +checkbox('Арахис')
+                      .catalogue-filter__category-element
+                        +checkbox('Бразильский орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Грецкий орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Кедровый орех')
+                  //category
+                  .catalogue-filter__category(data-toggle="parent")   
+                    a(href="javascript:void(0);" data-toggle="trigger").catalogue-filter__category-head
+                      span Фасовка
+                      svg.icon
+                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+                    .catalogue-filter__category-content(data-toggle="content")
+                      .catalogue-filter__category-element
+                        +checkbox('Арахис')
+                      .catalogue-filter__category-element
+                        +checkbox('Бразильский орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Грецкий орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Кедровый орех')
 
         .catalogue__content
           .catalogue__head 
@@ -137,36 +138,4 @@ block content
             a(href="#").button.button_style-2
               span Загрузить еще 
 
-  section.section.product-slider
-    .container 
-      .section__head.product-slider__head 
-        h3.section__title Просмотренные товары
-      .swiper
-        .swiper-button.swiper-button-prev(data-custom-interaction)
-          svg.icon
-            use(xlink:href='./img/icons/sprite.svg#right-arrow')
-        .swiper-button.swiper-button-next(data-custom-interaction)
-          svg.icon
-            use(xlink:href='./img/icons/sprite.svg#right-arrow')
-        .swiper-container
-          .swiper-wrapper
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(3)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)    
+  include blocks/product-slider

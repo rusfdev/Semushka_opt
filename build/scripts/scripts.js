@@ -1,4 +1,4 @@
-const brakepoints = {
+const breakpoints = {
   sm: 576,
   md: 768,
   lg: 1024,
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
   CustomInteractionEvents.init();
   Header.init();
   Modal.init();
+  Nav.init();
 
   calculator();
   change_package();
@@ -23,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
     new Filter($this).init();
   })
   //Product sliders
-  document.querySelectorAll('.product-slider').forEach($this => {
-    new ProductSlider($this).init();
+  document.querySelectorAll('.items-slider').forEach($this => {
+    new ItemsSlider($this).init();
   })
   //Image sliders
   document.querySelectorAll('.image-slider').forEach($this => {
@@ -207,7 +208,7 @@ function input_file() {
   document.addEventListener('change', events);
 }
 
-class ProductSlider {
+class ItemsSlider {
   constructor($parent) {
     this.$parent = $parent
   }
@@ -218,9 +219,15 @@ class ProductSlider {
     this.$next = this.$parent.querySelector('.swiper-button-next');
     this.$pagination = this.$parent.querySelector('.swiper-pagination');
 
+    let slides_count = +this.$slider.getAttribute('data-slides') || 1,
+        slides_sm_count = +this.$slider.getAttribute('data-sm-slides') || slides_count,
+        slides_md_count = +this.$slider.getAttribute('data-md-slides') || slides_sm_count,
+        slides_lg_count = +this.$slider.getAttribute('data-lg-slides') || slides_md_count,
+        slides_xl_count = +this.$slider.getAttribute('data-xl-slides') || slides_lg_count;
+
     this.swiper = new Swiper(this.$slider, {
       touchStartPreventDefault: false,
-      slidesPerView: 2,
+      slidesPerView: slides_count,
       speed: 500,
       pagination: {
         el: this.$pagination,
@@ -232,14 +239,17 @@ class ProductSlider {
         nextEl: this.$next
       },
       breakpoints: {
-        [brakepoints.xl]: {
-          slidesPerView: 5
+        [breakpoints.xl]: {
+          slidesPerView: slides_xl_count
         },
-        [brakepoints.lg]: {
-          slidesPerView: 4
+        [breakpoints.lg]: {
+          slidesPerView: slides_lg_count
         },
-        [brakepoints.md]: {
-          slidesPerView: 3
+        [breakpoints.md]: {
+          slidesPerView: slides_md_count
+        },
+        [breakpoints.sm]: {
+          slidesPerView: slides_sm_count
         }
       }
     });
@@ -496,7 +506,7 @@ class Filter {
     }
 
     window.addEventListener('resize', () => {
-      if( this.state() && window.innerWidth >= brakepoints.lg ) {
+      if( this.state() && window.innerWidth >= breakpoints.lg ) {
         this.close();
       }
     })
@@ -507,6 +517,44 @@ class Filter {
 
     this.$close.addEventListener('click', () => {
       if( this.state() ) this.close();
+    })
+
+  }
+}
+
+const Nav = {
+  init: function() {
+    this.$element = document.querySelector('.mobile-navigation');
+    this.$open = document.querySelector('.nav-open-button');
+    this.$close = document.querySelector('.mobile-navigation__close-button');
+    
+    this.state = () => {
+      return this.$element.classList.contains('is-active');
+    }
+
+    this.open = () => {
+      scrollLock.disablePageScroll();
+      this.$element.classList.add('is-active');
+    }
+
+    this.close = () => {
+      scrollLock.enablePageScroll();
+      this.$element.classList.remove('is-active');
+    }
+
+    this.$open.addEventListener('click', () => {
+      if(!this.state()) this.open();
+    })
+
+    this.$close.addEventListener('click', () => {
+      if(this.state()) this.close();
+    })
+
+    document.addEventListener('click', (event) => {
+      let $target = event.target.closest('.mobile-navigation') && !event.target.closest('.mobile-navigation__element');
+      if($target && this.state()) {
+        this.close();
+      }
     })
 
   }

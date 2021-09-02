@@ -10,11 +10,12 @@ block content
   -var breadcrumbs_links = ['Главная', page_title]
   include blocks/breadcrumbs
 
-  section.section.news-grid
+  section.section.news-section
     .container 
       .section__head
         h1.section__title Новости
-      .tag-list.news-grid__tags
+
+      .tag-list.news-section__tag-list
         .tag-list__container 
           a(href="#").tag-element.tag-list__element
             span Арахис
@@ -49,7 +50,7 @@ block content
           a(href="#").tag-element.tag-list__element
             span Перевозки
       
-      .news-grid__container 
+      .news-grid 
         +news-element('./img/News_pic_588x266 1.jpg', 'Экскурсия в магазин «Семушка»<br> на Мясницкой', 2)
         +news-element('./img/Mask Group.jpg', 'Открытие магазина «Семушка» в Москве')
         +news-element('./img/News_pic_282x266_2 1.jpg', 'Открытие сайта для оптовых покупателей')
@@ -69,37 +70,4 @@ block content
           span Загрузить еще 
 
   
-  section.section.product-slider
-    .container 
-      .section__head.product-slider__head 
-        h3.section__title Рекомендованные товары
-      .swiper
-        .swiper-button.swiper-button-prev(data-custom-interaction)
-          svg.icon
-            use(xlink:href='./img/icons/sprite.svg#right-arrow')
-        .swiper-button.swiper-button-next(data-custom-interaction)
-          svg.icon
-            use(xlink:href='./img/icons/sprite.svg#right-arrow')
-        .swiper-container
-          .swiper-wrapper
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(3)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)    
-        .swiper-pagination
+  include blocks/product-slider

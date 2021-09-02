@@ -13,7 +13,7 @@
 
   //input
   --color-input-placeholder: rgba(158, 155, 164, 0.5);
-  --color-input-border: #E1E1E1;
+  --color-input-border: #C1BFC3;
 
   --color-label-1: #E93D3D;
   --color-label-2: #4E3AC7;
@@ -23,4 +23,14 @@
 
   //modal
   --color-modal-overlay: rgba(43, 41, 41, 0.6);
+
+  //scrollbar
+  --color-scrollbar-track: #F1F1F1;
+  --color-scrollbar-thumb: #C1C1C1;
+
+
+  //slider pagination
+  --color-dark-pagination: rgba(0, 0, 0, 0.2);
+  --color-dark-pagination-hover: rgba(0, 0, 0, 0.4);
+  --color-dark-pagination-active: #2B2929;
 }

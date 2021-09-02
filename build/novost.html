@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Семушка — Экскурсия в магазин «Семушка» на Мясницкой</title>
+    <title>Семушка_опт — Экскурсия в магазин «Семушка» на Мясницкой</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Крупнейший российский производитель и оптовый поставщик натуральных продуктов - орехов и сухофруктов.">
@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="https://ruslanmmr.github.io/Semushka/build/img/favicons/favicon-16x16.png">
     <!--open graph-->
     <meta property="og:title" content="Компания «Семушка»">
-    <meta property="og:site_name" content="Семушка">
+    <meta property="og:site_name" content="Семушка_опт">
     <meta property="og:url" content="https://ruslanmmr.github.io/Semushka/build/">
     <meta property="og:description" content="Крупнейший российский производитель и оптовый поставщик натуральных продуктов - орехов и сухофруктов.">
     <meta property="og:image" content="https://ruslanmmr.github.io/Semushka/build/img/Banners_2 1.jpg">
@@ -53,16 +53,17 @@
             </from>
             <button class="header__search-close-button close-button" aria-label="close search"></button>
           </div>
-          <div class="header__right"><a class="header__phone link" href="tel:74991103044">+7 499 110-30-44</a><a class="button button_style-3 header__large-button" href="#zapros-prajs-lista" data-modal="open"><span>Запрос прайс-листа</span></a>
+          <div class="header__right">
+            <div class="header__phone"><a class="link" href="tel:74991103044">+7 499 110-30-44</a><a class="link-dashed" href="#obratnyj-zvonok" data-modal="open">Заказать звонок </a></div><a class="button button_style-3 header__large-button" href="#zapros-prajs-lista" data-modal="open"><span>Запрос прайс-листа</span></a>
             <ul class="header__small-buttons">
               <li class="header__small-buttons-item"><a class="header__small-button link" href="#">
                   <svg class="icon">
                     <use xlink:href="./img/icons/sprite.svg#user"></use>
                   </svg></a></li>
-              <li class="header__small-buttons-item"><a class="header__small-button link" href="#">
+              <li class="header__small-buttons-item"><a class="header__small-button header__cart-button link" href="#">
                   <svg class="icon">
                     <use xlink:href="./img/icons/sprite.svg#cart"></use>
-                  </svg></a></li>
+                  </svg><span>100</span></a></li>
               <li class="header__small-buttons-item"><a class="header__small-button link" href="#"><span>en</span></a></li>
               <li class="header__small-buttons-item header__search-open-item">
                 <button class="header__small-button link header__search-open-button" aria-label="open nav">
@@ -78,21 +79,31 @@
           </div>
         </div>
       </header>
+      <nav class="mobile-navigation">
+        <div class="mobile-navigation__element">
+          <div class="mobile-navigation__head"> <a class="logo mobile-navigation__logo" href="./"><img src="./img/logos/logo.svg" alt="logo"></a>
+            <button class="close-button mobile-navigation__close-button" aria-label="filter close"></button>
+          </div>
+          <div class="mobile-navigation__container" data-scroll-lock-scrollable>
+            <ul class="mobile-nav-list">
+              <li class="mobile-nav-list__item"> <a class="mobile-nav-list__link link" href="./produkcziya.html">Продукция</a></li>
+              <li class="mobile-nav-list__item"> <a class="mobile-nav-list__link link" href="./novosti.html">Новости</a></li>
+              <li class="mobile-nav-list__item"> <a class="mobile-nav-list__link link" href="./o-kompanii.html">О компании</a></li>
+              <li class="mobile-nav-list__item"> <a class="mobile-nav-list__link link" href="./kontakty.html">Контакты</a></li>
+            </ul>
+            <div class="mobile-navigation__bottom">
+              <div class="mobile-navigation__phone"><a class="link" href="tel:74991103044">+7 499 110-30-44</a></div><a class="button button_style-3" href="#zapros-prajs-lista" data-modal="open"><span>Запрос прайс-листа </span></a>
+            </div>
+          </div>
+        </div>
+      </nav>
       <main class="main">
         <div class="breadcrumbs">
           <div class="container">
             <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item"> <a class="breadcrumbs__element link" href="./"><span>Главная</span></a>
-                <svg class="icon">
-                  <use xlink:href="./img/icons/sprite.svg#right-arrow"></use>
-                </svg>
-              </li>
-              <li class="breadcrumbs__item"> <a class="breadcrumbs__element link" href="./"><span>Новости</span></a>
-                <svg class="icon">
-                  <use xlink:href="./img/icons/sprite.svg#right-arrow"></use>
-                </svg>
-              </li>
-              <li class="breadcrumbs__item"> <span class="breadcrumbs__element"><span>Экскурсия в магазин «Семушка» на Мясницкой</span></span></li>
+              <li class="breadcrumbs__item"> <a class="breadcrumbs__element" href="./">Главная</a></li>
+              <li class="breadcrumbs__item"> <a class="breadcrumbs__element" href="#">Новости</a></li>
+              <li class="breadcrumbs__item">Экскурсия в магазин «Семушка» на Мясницкой</li>
             </ul>
           </div>
         </div>
@@ -100,7 +111,7 @@
           <div class="container">
             <div class="article__container">
               <div class="article__head">
-                <div class="image image_cover"> <img class="lazyload" data-src="./img/Banners_news_1122x350 1.jpg" alt="image"></div>
+                <div class="article__image image image_cover"><img class="lazyload" data-src="./img/Banners_news_1122x350 1.jpg" alt="image"></div>
                 <div class="article__head-text"><span class="article__date">14.06.2021</span>
                   <h1 class="h3 article__title">Экскурсия в магазин «Семушка» на Мясницкой</h1>
                 </div>
@@ -124,7 +135,7 @@
                 </svg><span>Вернуться назад</span></a></div>
           </div>
         </section>
-        <section class="section news-grid">
+        <section class="section">
           <div class="container">
             <div class="section__head section__head_with-button">
               <h3 class="section__title section__title_with-button">Новости</h3><a class="button button_style-2 button_arrow" href="novosti.html"><span>Смотреть все</span>
@@ -132,7 +143,7 @@
                   <use xlink:href="./img/icons/sprite.svg#right-arrow"></use>
                 </svg></a>
             </div>
-            <div class="news-grid__container">
+            <div class="news-grid">
                       <div class="news-element news-element_wide" data-custom-interaction>
                         <div class="image image_cover"> <img class="lazyload" data-src="./img/News_pic_588x266 1.jpg" alt="image"></div>
                         <div class="news-element__text"><span class="news-element__date">18.06.2021</span>
@@ -322,8 +333,8 @@
               </div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="172">
-                      <label class="checkbox__label" for="172">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                      <input class="checkbox__input" type="checkbox" id="717221">
+                      <label class="checkbox__label" for="717221">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
                     </div>
               </div>
               <div class="form__submit">
@@ -382,8 +393,8 @@
               </div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="66760">
-                      <label class="checkbox__label" for="66760">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                      <input class="checkbox__input" type="checkbox" id="326442">
+                      <label class="checkbox__label" for="326442">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
                     </div>
               </div>
               <div class="form__submit">
@@ -414,8 +425,8 @@
               <div class="form__element"><span class="form__required-message">*поле обязательно для заполнения</span></div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="183939">
-                      <label class="checkbox__label" for="183939">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                      <input class="checkbox__input" type="checkbox" id="581698">
+                      <label class="checkbox__label" for="581698">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
                     </div>
               </div>
               <div class="form__submit">
@@ -445,8 +456,8 @@
               </label>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="803335">
-                      <label class="checkbox__label" for="803335">Запомнить логин и пароль</label>
+                      <input class="checkbox__input" type="checkbox" id="355450">
+                      <label class="checkbox__label" for="355450">Запомнить логин и пароль</label>
                     </div>
               </div>
               <div class="form__submit form__buttons">
@@ -498,8 +509,8 @@
               <div class="form__element"><span class="form__required-message">*поле обязательно для заполнения</span></div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="112620">
-                      <label class="checkbox__label" for="112620">Запомнить логин и пароль</label>
+                      <input class="checkbox__input" type="checkbox" id="95993">
+                      <label class="checkbox__label" for="95993">Запомнить логин и пароль</label>
                     </div>
               </div>
               <div class="form__submit">

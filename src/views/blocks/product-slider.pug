@@ -1,0 +1,36 @@
+section.section.items-slider
+  .container 
+    .section__head.items-slider__head 
+      h3.section__title Товары по акции
+      if slider_type == 2
+        p При покупке товара от киллограма и тонны по акции действует скидка. Подробности уточняйте у менеджера. 
+    .swiper
+      .swiper-button.swiper-button-prev(data-custom-interaction)
+        svg.icon
+          use(xlink:href='./img/icons/sprite.svg#right-arrow')
+      .swiper-button.swiper-button-next(data-custom-interaction)
+        svg.icon
+          use(xlink:href='./img/icons/sprite.svg#right-arrow')
+      .swiper-container(data-slides='2' data-md-slides='3' data-lg-slides='4' data-xl-slides='5')
+        .swiper-wrapper
+          .swiper-slide
+            +product-card(1)
+          .swiper-slide
+            +product-card(2)
+          .swiper-slide
+            +product-card(3)
+          .swiper-slide
+            +product-card(2)
+          .swiper-slide
+            +product-card(1)
+          .swiper-slide
+            +product-card(1)
+          .swiper-slide
+            +product-card(1)
+          .swiper-slide
+            +product-card(2)
+          .swiper-slide
+            +product-card(1)
+          .swiper-slide
+            +product-card(2)
+      .swiper-pagination    

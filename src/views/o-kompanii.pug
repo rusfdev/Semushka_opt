@@ -64,7 +64,7 @@ block content
         include blocks/banner1  
 
 
-  section.section.news-grid
+  section.section
     .container 
       .section__head.section__head_with-button
         h3.section__title.section__title_with-button Новости
@@ -72,7 +72,7 @@ block content
           span Смотреть все
           svg.icon
             use(xlink:href='./img/icons/sprite.svg#right-arrow')
-      .news-grid__container 
+      .news-grid 
         +news-element('./img/News_pic_588x266 1.jpg', 'Экскурсия в магазин «Семушка»<br> на Мясницкой', 2)
         +news-element('./img/Mask Group.jpg', 'Открытие магазина «Семушка» в Москве')
         +news-element('./img/News_pic_282x266_2 1.jpg', 'Открытие сайта для оптовых покупателей')

@@ -18,6 +18,7 @@
     border-radius: inherit;
     transition: border-color $trs1;
     border: 1px solid var(--color-input-border);
+    background-color: #fff;
     &:-webkit-autofill {
       -webkit-text-fill-color: var(--color-text);
       box-shadow: 0 0 0px 1000px transparent inset;
@@ -133,6 +134,7 @@
 
 
 .select {
+  width: 100%;
   --font-size: 14px;
   --line-height: 18px;
   --padding: 12px 26px 12px 14px;
@@ -141,6 +143,7 @@
   font-size: var(--font-size);
   line-height: var(--line-height);
   &:not(.ss-main) {
+    background-color: #fff;
     padding: var(--padding);
     box-shadow: var(--block-shadow);
     border-radius: 4px; 
@@ -225,6 +228,20 @@
   }
 }
 
+.ss-list {
+  overflow: auto;
+  max-height: 172px;
+  &::-webkit-scrollbar {
+    width: 4px
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-scrollbar-track);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar-thumb);
+  }
+}
+
 .ss-option {
   padding: 12px 14px;
   cursor: pointer;
@@ -252,6 +269,7 @@
     display: inline-block;
     color: var(--color-muted);
     margin: 0 0 10px 0;
+    font-size: 0.875rem;
     span {
       color: #E93D3D;
     }
@@ -266,7 +284,7 @@
     margin-top: 15px;
     color: var(--color-muted);
   }
-  .input, .input-file {
+  .input, .input-file, .select {
     pointer-events: all;
   }
 }

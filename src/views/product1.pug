@@ -15,9 +15,10 @@ block content
       -var head_type = 1
       include blocks/product-head
       .product-tabs(data-tabs='parent')
-        .product-tabs__head
-          a(href="javascript:void(0);" data-tabs='link').product-tabs__link.is-active О продукции
-          a(href="javascript:void(0);" data-tabs='link').product-tabs__link Документация 
+        .tab-head.product-tabs__head
+          .tab-head__container
+            a(href="javascript:void(0);" data-tabs='link').tab-head__link.is-active О продукции
+            a(href="javascript:void(0);" data-tabs='link').tab-head__link Документация
         .product-tabs__wrapper 
           .product-tabs__tab.is-active(data-tabs='block')
             p Миндаль Нонпарель Экстра № 1, калибр 18/20. Имеет натуральный вкус и запах, свойственный миндалю, без посторонних примесей и добавок. Широко применяется в кулинарии, кондитерском производстве при изготовлении десертов, конфет, выпечки. Страна происхождения – Чили. Упакован в полиэтиленовый пакет внутри гофрокороба. Хранить 18 месяцев при температуре окружающей среды, в чистом, свежем и сухом месте, вдали от сильных запахов и загрязняющих веществ. Срок хранения можно увеличить до 24 месяцев при хранении в холодильных установках.
@@ -77,38 +78,4 @@ block content
           .image.image_contain 
             img(data-src="./img/i1 1.png", alt="image").lazyload
 
-  section.section.product-slider
-    .container 
-      .section__head.product-slider__head 
-        h3.section__title Рекомендованные товары
-      .swiper
-        .swiper-button.swiper-button-prev(data-custom-interaction)
-          svg.icon
-            use(xlink:href='./img/icons/sprite.svg#right-arrow')
-        .swiper-button.swiper-button-next(data-custom-interaction)
-          svg.icon
-            use(xlink:href='./img/icons/sprite.svg#right-arrow')
-        .swiper-container
-          .swiper-wrapper
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(3)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)    
-
-        .swiper-pagination
+  include blocks/product-slider

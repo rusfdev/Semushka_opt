@@ -7,49 +7,14 @@ block variables
 block content
   include blocks/components
   
-  section.section.product-slider
-    .container 
-      .section__head.product-slider__head 
-        h3.section__title Специальное предложение
-        p При покупке товара от киллограма и тонны по акции действует скидка. Подробности уточняйте у менеджера. 
-      .swiper
-        .swiper-button.swiper-button-prev(data-custom-interaction)
-          svg.icon
-            use(xlink:href='./img/icons/sprite.svg#right-arrow')
-        .swiper-button.swiper-button-next(data-custom-interaction)
-          svg.icon
-            use(xlink:href='./img/icons/sprite.svg#right-arrow')
-        .swiper-container
-          .swiper-wrapper
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(3)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)
-            .swiper-slide
-              +product-card(1)
-            .swiper-slide
-              +product-card(2)
-        .swiper-pagination
-      .section__banner
-        include blocks/banner1       
-
+  -var slider_type = 2
+  include blocks/product-slider
+  
   section.section.products-section
     .container 
       .section__head.section__head_with-button
         h4.section__title.section__title_with-button Продукция
-        a(href="./katalog.html").button.button_style-2.button_arrow
+        a(href="./produkcziya.html").button.button_style-2.button_arrow
           span Смотреть все
           svg.icon
             use(xlink:href='./img/icons/sprite.svg#right-arrow')
@@ -87,8 +52,6 @@ block content
           a(href="./o-kompanii.html").button.button_style-1 
             span Подробнее
 
-        
-
   section.section.certificates-section
     .container 
       .section__head
@@ -100,7 +63,7 @@ block content
         +certificate('./img/certificates/4.jpg')
         +certificate('./img/certificates/5.jpg')
 
-  section.section.news-grid
+  section.section
     .container 
       .section__head.section__head_with-button
         h3.section__title.section__title_with-button Новости
@@ -108,14 +71,14 @@ block content
           span Смотреть все
           svg.icon
             use(xlink:href='./img/icons/sprite.svg#right-arrow')
-      .news-grid__container 
+      .news-grid 
         +news-element('./img/News_pic_588x266 1.jpg', 'Экскурсия в магазин «Семушка»<br> на Мясницкой', 2)
         +news-element('./img/Mask Group.jpg', 'Открытие магазина «Семушка» в Москве')
         +news-element('./img/News_pic_282x266_2 1.jpg', 'Открытие сайта для оптовых покупателей')
         +news-element('./img/News_pic_282x266_3 1.jpg', 'Увеличение цены на чернослив и курагу')
         +news-element('./img/News_pic_282x266_4 1.jpg', 'Компания «Семушка» прошла сертификацию FSSC 22000 ')
         +news-element('./img/News_pic_588x266_1 1.jpg', 'Логистический кризис: цены на контейнерные перевозки резко увеличились', 2)
-      .news-grid__contacts-widget
+      .section__contacts-widget
         .contacts-widget
           .contacts-widget__section
             .contacts-widget__text-1 Не нашли что искали?

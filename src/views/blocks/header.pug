@@ -27,7 +27,10 @@ header.header(data-scroll-lock-fill-gap)
 
 
     .header__right
-      a(href="tel:74991103044").header__phone.link +7 (499) 110 30 44
+      .header__phone
+        a(href="tel:74991103044").link +7 (499) 110 30 44
+        a(href="#obratnyj-zvonok" data-modal='open').link-dashed Заказать звонок 
+
       a(href="#zapros-prajs-lista" data-modal='open').button.button_style-3.header__large-button
         span Запрос прайс-листа
 
@@ -37,9 +40,11 @@ header.header(data-scroll-lock-fill-gap)
             svg.icon
               use(xlink:href='./img/icons/sprite.svg#user')
         li.header__small-buttons-item
-          a(href="#").header__small-button.link
+          a(href="#").header__small-button.header__cart-button.link
             svg.icon
               use(xlink:href='./img/icons/sprite.svg#cart')
+            span 100
+
         li.header__small-buttons-item
           a(href="#").header__small-button.link
             span en
@@ -54,3 +59,27 @@ header.header(data-scroll-lock-fill-gap)
             span
             span
             span
+
+nav.mobile-navigation
+  .mobile-navigation__element
+    .mobile-navigation__head 
+      a(href="./").logo.mobile-navigation__logo
+        img(src="./img/logos/logo.svg", alt="logo")
+      button(aria-label='filter close').close-button.mobile-navigation__close-button
+    .mobile-navigation__container(data-scroll-lock-scrollable) 
+
+      ul.mobile-nav-list
+        li.mobile-nav-list__item 
+          a(href="./produkcziya.html").mobile-nav-list__link.link Продукция
+        li.mobile-nav-list__item  
+          a(href="./novosti.html").mobile-nav-list__link.link Новости
+        li.mobile-nav-list__item 
+          a(href="./o-kompanii.html").mobile-nav-list__link.link О компании
+        li.mobile-nav-list__item 
+          a(href="./kontakty.html").mobile-nav-list__link.link Контакты
+
+      .mobile-navigation__bottom 
+        .mobile-navigation__phone
+          a(href="tel:74991103044").link +7 (499) 110 30 44
+        a(href="#zapros-prajs-lista" data-modal='open').button.button_style-3
+          span Запрос прайс-листа 
