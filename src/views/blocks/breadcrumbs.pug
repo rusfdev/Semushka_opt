@@ -5,7 +5,13 @@
       each val in breadcrumbs_links
         if index < breadcrumbs_links.length - 1
           li.breadcrumbs__item 
-            a(href=index==0?'./':'#').breadcrumbs__element=val
+            a(href="./").breadcrumbs__element.link
+              span=val
+            svg.icon
+              use(xlink:href='./img/icons/sprite.svg#right-arrow')
         else 
-          li.breadcrumbs__item=val    
+          li.breadcrumbs__item 
+            span.breadcrumbs__element
+              span=val
+        
         -index++

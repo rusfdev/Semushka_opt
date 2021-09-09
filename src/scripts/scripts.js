@@ -366,6 +366,8 @@ class ProductPreviewSlider {
     this.slider = new Swiper(this.$slider, {
       touchStartPreventDefault: false,
       slidesPerView: 1,
+      observer: true,
+      observeParents: true,
       speed: 500,
       lazy: {
         loadOnTransitionStart: true,

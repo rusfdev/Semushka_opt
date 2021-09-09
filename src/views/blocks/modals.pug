@@ -203,9 +203,7 @@ include components
           .form__submit
             button.button.button_style-1 
               span Зарегистрироваться
-
-
-              
+           
 .modal#vosstanovit-parol(style='display:none;')
   .modal__wrapper(data-scroll-lock-scrollable)
     .modal-block
@@ -239,3 +237,10 @@ include components
               a(href="#").button.button_style-1.button_small
                 span Оформить заказ
 
+.modal.video-modal#video(style='display:none;')
+  .modal__wrapper(data-scroll-lock-scrollable)
+    .modal-block.video-modal__block
+      button.modal-close(data-modal='close')
+      .modal-block__container
+        .video-modal__element
+          iframe(src='https://www.youtube.com/embed/-TB7V6MCXU4' title='YouTube video player')
