@@ -432,25 +432,25 @@ const Modal = {
 
     document.addEventListener('click', (event) => {
       let $open = event.target.closest('[data-modal="open"]'),
-        $close = event.target.closest('[data-modal="close"]'),
-        $wrap = event.target.closest('.modal'),
-        $block = event.target.closest('.modal-block');
+          $close = event.target.closest('[data-modal="close"]'),
+          $wrap = event.target.closest('.modal'),
+          $block = event.target.closest('.modal-block');
 
       //open
       if ($open) {
         event.preventDefault();
-        let $modal = document.querySelector(`${$open.getAttribute('href')}`);
-        this.open($modal);
+        let $modal = document.querySelector(`${$open.getAttribute('href')}`),
+            video = $open.getAttribute('data-video');
+
+        this.open($modal, video);
       }
       //close 
       else if ($close || (!$block && $wrap)) {
         this.close();
       }
     })
-
-    //this.open(document.querySelector('#product'))
   },
-  open: function ($modal) {
+  open: function ($modal, video) {
     let open = ()=> {
       scrollLock.disablePageScroll();
       $modal.classList.add('active');
@@ -459,6 +459,10 @@ const Modal = {
       this.animation = gsap.effects.modal($modal, $content);
       this.animation.play();
       this.$active = $modal;
+      //play video
+      if(video && $modal.querySelector('iframe')) {
+        $modal.querySelector('iframe').setAttribute('src', video);
+      } 
     }
     if($modal) {
       if(this.$active) this.close(open);
@@ -467,16 +471,16 @@ const Modal = {
   },
   close: function (callback) {
     if (this.$active) {
-
-      if(this.timeout) {
-        clearTimeout(this.timeout);
-        delete this.timeout;
-      }
-
       this.animation.timeScale(2).reverse().eventCallback('onReverseComplete', ()=> {
         delete this.animation;
         scrollLock.enablePageScroll();
         this.$active.classList.remove('active');
+
+        //remove video
+        if(this.$active.querySelector('iframe')) {
+          this.$active.querySelector('iframe').setAttribute('src', '');
+        } 
+
         delete this.$active;
         if (callback) callback();
       })
@@ -523,6 +527,8 @@ class Filter {
 
   }
 }
+
+//this.open(document.querySelector('#product'))
 
 const Nav = {
   init: function() {
