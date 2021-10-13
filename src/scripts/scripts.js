@@ -9,6 +9,14 @@ const breakpoints = {
 const $wrapper = document.querySelector('.wrapper');
 
 document.addEventListener("DOMContentLoaded", function() {
+  //set scrollbar width
+  document.documentElement.style.setProperty('--scrollbar-width', `${scrollLock.getPageScrollBarWidth()}px`);
+  
+  //Product sliders
+  document.querySelectorAll('.items-slider').forEach($this => {
+    new ItemsSlider($this).init();
+  })
+
   CustomInteractionEvents.init();
   Header.init();
   Modal.init();
@@ -22,10 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
   //Filter
   document.querySelectorAll('.catalogue-filter').forEach($this => {
     new Filter($this).init();
-  })
-  //Product sliders
-  document.querySelectorAll('.items-slider').forEach($this => {
-    new ItemsSlider($this).init();
   })
   //Image sliders
   document.querySelectorAll('.image-slider').forEach($this => {
@@ -228,6 +232,7 @@ class ItemsSlider {
     this.swiper = new Swiper(this.$slider, {
       touchStartPreventDefault: false,
       slidesPerView: slides_count,
+      centerInsufficientSlides: true,
       speed: 500,
       pagination: {
         el: this.$pagination,
@@ -503,7 +508,6 @@ class Filter {
     this.open = () => {
       this.$element.classList.add('is-active');
       scrollLock.disablePageScroll();
-
     }
 
     this.close = () => {
@@ -527,8 +531,6 @@ class Filter {
 
   }
 }
-
-//this.open(document.querySelector('#product'))
 
 const Nav = {
   init: function() {

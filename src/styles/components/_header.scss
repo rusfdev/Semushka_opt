@@ -262,13 +262,23 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  &__phone {
-    font-size: 1.125rem;
-    margin-bottom: 15px;
-  }
   &__bottom {
     margin-top: 40px;
     flex-shrink: 0;
+  }
+
+  &__bottom-item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+    &-title {
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--color-accent-2);
+    }
+    .link {
+      font-size: 1.125rem;
+    }
   }
 
 

@@ -1,0 +1,99 @@
+#kombox-filter {
+  .modef {
+    background: initial;
+    padding: 0;
+    backface-visibility: hidden;
+    .modef-wrap {
+      color: inherit;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    .modef {
+      left: calc(100% + 10px);
+      transform: translate3d(0, -50%, 0);
+      font-size: 14px;
+      z-index: 99;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 6px;
+        height: 6px;
+        border-width: 1px 0 0 1px;
+        border-style: solid;
+        border-color: var(--color-accent-1_2);
+        background-color: #fff;
+        z-index: 2;
+      }
+      .modef-wrap {
+        border-radius: 2px;
+        border: 1px solid var(--color-accent-1_2);
+        background-color: #fff;
+        padding: 8px 14px;
+        color: initial;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .modef {
+      color: #fff;
+      position: relative;
+      flex: 0 0 auto;
+      height: 50px;
+      padding: 0 var(--content-gutter);
+      background-color: var(--color-accent-1_2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      top: initial !important;
+      .modef-wrap {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+      }
+      .link-dashed {
+        --color-accent-2: #fff;
+      }
+    }
+  }
+}
+
+.tag-element {
+  .checkbox {
+    padding: 0 18px;
+    margin: 0 -18px;
+    line-height: inherit;
+    &__label {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      transition: none;
+      &::before, &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.checkbox {
+  &__label {
+    &.kombox-disabled {
+      pointer-events: none;
+      color: var(--color-muted);
+      opacity: 0.5;
+    }
+    &.kombox-checked {
+      &:before {
+        border-color: var(--color-accent-1);
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}

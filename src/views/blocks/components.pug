@@ -32,7 +32,7 @@ mixin product-card(type)
             span Страна
             span Чили
           li 
-            span Цена за 1&nbsp;кг
+            span Цена за 1уп.(100 кг)
             span 163&nbsp;₽
           li 
             span Цена за уп (10&nbsp;кг)
@@ -64,6 +64,13 @@ mixin product-card(type)
             label.packaging-list__item
               input(type="radio" name=index value='150')
               span(data-custom-interaction) 150
+
+
+            if type == 3
+
+              label.packaging-list__item
+                input(type="radio" name=index value='150')
+                span(data-custom-interaction) 200
 
         .product-calculator.product-card__calculator 
           if type !== 3

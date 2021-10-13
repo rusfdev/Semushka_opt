@@ -83,7 +83,7 @@
     display: none;
     &:checked ~ .checkbox__label {
       &:before {
-        border-color: var(--color-accent-1_2);
+        border-color: var(--color-accent-1);
       }
       &:after {
         opacity: 1;
@@ -131,6 +131,7 @@
     }
   }
 }
+
 
 
 .select {

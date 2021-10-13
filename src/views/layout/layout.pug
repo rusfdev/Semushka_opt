@@ -30,9 +30,13 @@ html(lang='ru')
 
   body
     if has_banner
-      .video-banner 
+      .video-banner
         .image.image_cover 
           img(data-src="./img/cb.jpg", alt="img").lazyload
+        video(autoplay='' muted='' loop='')
+          source(src='https://opt.semushka.com/upload/video/FINALL2.mp4' type='video/mp4')
+
+  
     .wrapper
       include ../blocks/header
       main.main

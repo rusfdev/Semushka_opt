@@ -1,4 +1,7 @@
 :root {
+  --block-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.05);
+  --content-gutter: calc(((100vw - var(--scrollbar-width) - var(--content-width) + var(--container-gutter-x) * 2) / 2));
+
   @include media-breakpoint-up(sm) {
     --grid-gutter-x: 24px;
     --container-gutter-x: 24px;
@@ -7,12 +10,15 @@
   @include media-breakpoint-up(xl) {
     --content-width: #{map-get($container-max-widths, xl)};
   }
+
   @include media-breakpoint-down(xl) {
     --content-width: #{map-get($container-max-widths, lg)};
   }
+
   @include media-breakpoint-down(lg) {
     --content-width: #{map-get($container-max-widths, md)};
   }
+
   @include media-breakpoint-down(md) {
     --content-width: #{map-get($container-max-widths, sm)};
     --container-gutter-x: 16px;
@@ -23,6 +29,4 @@
     --content-width: 100%;
   }
   
-
-  --block-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.05);
 }
