@@ -1095,6 +1095,13 @@ ol:not([class]) {
   100% {
     transform: translateX(0); } }
 
+.reset-button {
+  color: var(--color-accent-2);
+  transition: color 0.15s ease-in-out;
+  text-decoration: underline; }
+  .reset-button[data-touch], .reset-button[data-hover] {
+    color: var(--color-accent-2_2); }
+
 /*========== Form ==========*/
 .input {
   background-color: #fff;
@@ -2020,14 +2027,6 @@ ol:not([class]) {
   overflow: hidden;
   display: flex;
   justify-content: flex-end; }
-  .banner::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0; }
   .banner__content {
     position: relative;
     z-index: 3;
@@ -2039,9 +2038,10 @@ ol:not([class]) {
     margin-bottom: 20px; }
   .banner__button {
     min-width: 170px; }
-  @media (max-width: 1023.98px) {
-    .banner::after {
-      background: rgba(0, 0, 0, 0.2); } }
+  @media (max-width: 1279.98px) {
+    .banner img {
+      -o-object-position: right center;
+         object-position: right center; } }
   @media (max-width: 575.98px) {
     .banner__content {
       padding: 0 30px; } }
@@ -2327,6 +2327,10 @@ ol:not([class]) {
   gap: var(--grid-gutter-x);
   margin-bottom: 40px; }
 
+@media (min-width: 1024px) {
+  .catalogue__head-reset {
+    display: none; } }
+
 @media (max-width: 1279.98px) {
   .catalogue__wrapper {
     grid-template-columns: repeat(4, 1fr); }
@@ -2394,6 +2398,8 @@ ol:not([class]) {
       display: none; }
     .catalogue-filter__head {
       display: none; }
+    .catalogue-filter__close-button {
+      display: none !important; }
     .catalogue-filter__container .container {
       padding: 0; } }
   @media (max-width: 1023.98px) {
@@ -2424,6 +2430,11 @@ ol:not([class]) {
           height: 50px;
           display: flex;
           align-items: center; }
+      .catalogue-filter__close-button {
+        flex-shrink: 0;
+        border-radius: 0;
+        line-height: 60px;
+        font-size: 16px; }
       .catalogue-filter__container {
         flex: 1 1 auto;
         overflow: auto;

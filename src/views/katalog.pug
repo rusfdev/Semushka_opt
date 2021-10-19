@@ -104,12 +104,19 @@ block content
                         +checkbox('Грецкий орех')
                       .catalogue-filter__category-element
                         +checkbox('Кедровый орех')
+            //button
+            button.button.button_style-1.catalogue-filter__close-button(data-filter-close)
+              span Применить фильтр
 
         .catalogue__content
           .catalogue__head 
             button(aria-label='open-filter').button.button_style-1.catalogue-filter-open
               span Фильтр товаров
 
+            a.button.reset-button.catalogue__head-reset
+              svg.icon
+                use(xlink:href='./img/icons/sprite.svg#filter-reset')
+              span Сбросить фильр
 
             select.select
               option По умолчанию

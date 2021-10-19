@@ -152,3 +152,12 @@
     transform: translateX(0);
   }
 }
+
+.reset-button {
+  color: var(--color-accent-2);
+  transition: color $trs1;
+  text-decoration: underline;
+  &[data-touch], &[data-hover] {
+    color: var(--color-accent-2_2);
+  }
+}

@@ -499,7 +499,7 @@ class Filter {
   }
   init() {
     this.$open = document.querySelector('.catalogue-filter-open');
-    this.$close = document.querySelector('.catalogue-filter-close');
+    this.$close = document.querySelectorAll('.catalogue-filter-close, [data-filter-close]');
 
     this.state = () => {
       return this.$element.classList.contains('is-active');
@@ -508,6 +508,7 @@ class Filter {
     this.open = () => {
       this.$element.classList.add('is-active');
       scrollLock.disablePageScroll();
+
     }
 
     this.close = () => {
@@ -524,9 +525,11 @@ class Filter {
     this.$open.addEventListener('click', () => {
       if( !this.state() ) this.open();
     })
-
-    this.$close.addEventListener('click', () => {
-      if( this.state() ) this.close();
+    
+    this.$close.forEach($this => {
+      $this.addEventListener('click', () => {
+        if( this.state() ) this.close();
+      })
     })
 
   }
