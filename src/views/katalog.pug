@@ -26,15 +26,10 @@ block content
                 .catalogue-filter__box
                   //category
                   .catalogue-filter__category.is-active(data-toggle="parent")   
-                    
-                    .catalogue-filter__category-head
-                      a(href="#").catalogue-filter__category-title
-                        span Орехи
-
-                      button(data-toggle="trigger" type='button').catalogue-filter__category-toggle.is-active
-                        svg.icon
-                          use(xlink:href='./img/icons/sprite.svg#drop-arrow')
-
+                    a(href="#" data-toggle="trigger").catalogue-filter__category-head.is-active
+                      span Орехи
+                      svg.icon
+                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
                     .catalogue-filter__category-content.is-active(data-toggle="content")
                       .catalogue-filter__category-element
                         +checkbox('Арахис')
@@ -66,13 +61,10 @@ block content
                         +checkbox('Ядро абрикосовой косточки')
                   //category
                   .catalogue-filter__category(data-toggle="parent")  
-                    .catalogue-filter__category-head
-                      a(href="#").catalogue-filter__category-title
-                        span Семена
-
-                      button(data-toggle="trigger" type='button').catalogue-filter__category-toggle.is-active
-                        svg.icon
-                          use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+                    a(href="javascript:void(0);" data-toggle="trigger").catalogue-filter__category-head
+                      span Семена
+                      svg.icon
+                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
                     .catalogue-filter__category-content(data-toggle="content")
                       .catalogue-filter__category-element
                         +checkbox('Арахис')
@@ -82,14 +74,41 @@ block content
                         +checkbox('Грецкий орех')
                       .catalogue-filter__category-element
                         +checkbox('Кедровый орех')
-
-            
+                  //category
+                  .catalogue-filter__category(data-toggle="parent")   
+                    a(href="javascript:void(0);" data-toggle="trigger").catalogue-filter__category-head
+                      span Сухофрукты
+                      svg.icon
+                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+                    .catalogue-filter__category-content(data-toggle="content")
+                      .catalogue-filter__category-element
+                        +checkbox('Арахис')
+                      .catalogue-filter__category-element
+                        +checkbox('Бразильский орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Грецкий орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Кедровый орех')
+                  //category
+                  .catalogue-filter__category(data-toggle="parent")   
+                    a(href="javascript:void(0);" data-toggle="trigger").catalogue-filter__category-head
+                      span Фасовка
+                      svg.icon
+                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+                    .catalogue-filter__category-content(data-toggle="content")
+                      .catalogue-filter__category-element
+                        +checkbox('Арахис')
+                      .catalogue-filter__category-element
+                        +checkbox('Бразильский орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Грецкий орех')
+                      .catalogue-filter__category-element
+                        +checkbox('Кедровый орех')
             //button
             button.button.button_style-1.catalogue-filter__close-button(data-filter-close)
               span Применить фильтр
 
         .catalogue__content
-
           .catalogue__head 
             button(aria-label='open-filter').button.button_style-1.catalogue-filter-open
               span Фильтр товаров

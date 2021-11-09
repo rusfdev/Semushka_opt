@@ -1216,68 +1216,49 @@
 }
 
 .catalogue-filter {
-  --gy: 12px;
   --gx: 12px;
+  --gy: 12px;
   &__box {
     &:not(:last-child) {
       margin-bottom: 40px;
     }
   }
   &__category-head {
-    display: flex;
-    align-items: flex-start;
-  }
-
-  &__category-title {
-    padding: var(--gy) 0 var(--gy) var(--gx);
+    display: block;
+    padding: var(--gy) var(--gx);
     position: relative;
     font-size: 16px;
     line-height: 20px;
     user-select: none;
-    hyphens: auto;
-    flex: 1 1 auto;
     transition: color $trs1;
-    &[data-touch], &[data-hover] {
-      color: var(--color-accent-1);
-    }
-  }
-
-  &__category-toggle {
-    flex: 0 0 auto;
-    padding: var(--gy) var(--gx);
-    position: relative;
-    display: flex;
     .icon {
-      margin: auto;
-      width: 14px;
-      height: 14px;
+      --height: 44px;
+      --size: 14px;
+      position: absolute;
+      width: calc(var(--size) + var(--gx) * 2);
+      height: var(--height);
+      right: 0;
+      top: 0;
+      padding: calc((var(--height) - var(--size)) / 2) var(--gx);
       transform: rotate(-90deg);
       color: var(--color-accent-1);
-      margin: 3px 0;
-      transition: transform $trs1;
-    }
-    &.is-active {
-      .icon {
-        transform: rotate(0) !important;
-      }
     }
     &[data-touch], &[data-hover] {
+      color: var(--color-accent-1);
+    }
+    &.is-active {
+      font-weight: 700;
+      color: var(--color-accent-1);
       .icon {
         transform: rotate(0);
       }
     }
   }
-
-
-
   &__category {
     &:not(:last-child) {
       border-bottom: 1px solid var(--color-borders);
     }
   }
-
-
-
   &__category-content {
     &[data-toggle="content"] {
       display: none;
@@ -1366,17 +1347,12 @@
     }
   }
   @include media-breakpoint-down(sm) {
-    --gx: var(--container-gutter-x);
+    --gx: var(--grid-gutter-x);
     &__container {
       padding: 40px 0;
     }
     &__category {
       margin: 0 calc(var(--grid-gutter-x) * -1);
-    }
-    &__category-head {
-      .icon {
-        right: calc(var(--grid-gutter-x) + 6px);
-      }
     }
   }
 }
