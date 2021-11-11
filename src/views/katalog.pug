@@ -21,33 +21,45 @@ block content
             .catalogue-filter__head 
               .container
                 button(aria-label='filter close').close-button.catalogue-filter-close
+            
+            
             form(action="").catalogue-filter__container(data-scroll-lock-scrollable)
               .container
-                .catalogue-filter__box
+                .catalogue-filter__box(data-toggle="group")
                   //category
-                  .catalogue-filter__category.is-active
-                    a(href="#").catalogue-filter__category-head.is-active
+                  .catalogue-filter__category(data-toggle="parent")
+                    a(href="javascript:void(0);" data-toggle="trigger").catalogue-filter__category-head
                       span Орехи
                       svg.icon
                         use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+                    .catalogue-filter__category-content(data-toggle="content")
+
+                      .catalogue-filter__category-element 
+                        a(href="#") Дочерняя ссылка 1 
+                      .catalogue-filter__category-element
+                        a(href="#") Дочерняя ссылка 2
+
+                  //category
+                  .catalogue-filter__category(data-toggle="parent")
+                    a(href="javascript:void(0);" data-toggle="trigger").catalogue-filter__category-head
+                      span Орехи 2
+                      svg.icon
+                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+                    .catalogue-filter__category-content(data-toggle="content")
+
+                      .catalogue-filter__category-element 
+                        a(href="#") Дочерняя ссылка 1 
+                      .catalogue-filter__category-element
+                        a(href="#") Дочерняя ссылка 2
+
                   //category
                   .catalogue-filter__category.is-active
                     a(href="#").catalogue-filter__category-head
                       span Орехи
-                      svg.icon
-                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
                   //category
                   .catalogue-filter__category.is-active
                     a(href="#").catalogue-filter__category-head
                       span Орехи
-                      svg.icon
-                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
-                  //category
-                  .catalogue-filter__category.is-active
-                    a(href="#").catalogue-filter__category-head
-                      span Орехи
-                      svg.icon
-                        use(xlink:href='./img/icons/sprite.svg#drop-arrow')
             
             //button
             button.button.button_style-1.catalogue-filter__close-button(data-filter-close)
@@ -58,15 +70,17 @@ block content
             button(aria-label='open-filter').button.button_style-1.catalogue-filter-open
               span Фильтр товаров
 
-            a.button.reset-button.catalogue__head-reset
-              svg.icon
-                use(xlink:href='./img/icons/sprite.svg#filter-reset')
-              span Сбросить фильр
-
             select.select
               option По умолчанию
               option От дешевых к дорогим
               option От дорогих к дешевым
+
+            .catalogue__status 
+              +checkbox('Aкция')
+              +checkbox('В наличии')
+              +checkbox('Новинка')
+              
+
           .catalogue__items
             include blocks/components
             +product-card(1)

@@ -2327,18 +2327,23 @@ ol:not([class]) {
 
 .catalogue__head {
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--grid-gutter-x);
   margin-bottom: 40px; }
+
+.catalogue__status {
+  grid-column: 2/5;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px var(--grid-gutter-x); }
 
 @media (min-width: 1024px) {
   .catalogue {
     overflow: visible; }
     .catalogue__wrapper {
       align-items: flex-start; }
-    .catalogue__aside {
-      position: sticky;
-      top: calc(var(--header-height) + 30px); }
     .catalogue__head-reset {
       display: none; } }
 
@@ -2352,15 +2357,23 @@ ol:not([class]) {
 
 @media (max-width: 1023.98px) {
   .catalogue__wrapper {
-    display: block; } }
+    display: block; }
+  .catalogue__status {
+    grid-column: 1/4;
+    justify-content: flex-start;
+    margin-top: 10px; } }
 
 @media (max-width: 767.98px) {
   .catalogue__items, .catalogue__head {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .catalogue__status {
+    grid-column: 1/3; } }
 
 @media (max-width: 575.98px) {
   .catalogue__head {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .catalogue__status {
+    grid-column: 1/2; } }
 
 .catalogue-filter {
   --gx: 12px;
@@ -2392,6 +2405,10 @@ ol:not([class]) {
     .catalogue-filter__category-head.is-active {
       font-weight: 700;
       color: var(--color-accent-1); }
+      .catalogue-filter__category-head.is-active .icon {
+        transform: translateY(-50%) rotate(0); }
+      .catalogue-filter__category-head.is-active:not([data-toggle]) {
+        cursor: default; }
   .catalogue-filter__category:not(:last-child) {
     border-bottom: 1px solid var(--color-borders); }
   .catalogue-filter__category-content[data-toggle="content"] {
@@ -2404,6 +2421,12 @@ ol:not([class]) {
       border-bottom: 1px solid var(--color-borders); }
     .catalogue-filter__category-element .checkbox__label[data-touch], .catalogue-filter__category-element .checkbox__label[data-hover] {
       color: var(--color-accent-1); }
+    .catalogue-filter__category-element a {
+      display: block; }
+      .catalogue-filter__category-element a[data-touch], .catalogue-filter__category-element a[data-hover] {
+        color: var(--color-accent-1); }
+      .catalogue-filter__category-element a.is-active {
+        color: var(--color-accent-1); }
   @media (min-width: 1024px) {
     .catalogue-filter-open {
       display: none; }

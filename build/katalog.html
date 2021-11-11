@@ -136,27 +136,31 @@
                   </div>
                   <form class="catalogue-filter__container" action="" data-scroll-lock-scrollable>
                     <div class="container">
-                      <div class="catalogue-filter__box">
+                      <div class="catalogue-filter__box" data-toggle="group">
                         <!--category-->
-                        <div class="catalogue-filter__category is-active"><a class="catalogue-filter__category-head is-active" href="#"><span>Орехи</span>
+                        <div class="catalogue-filter__category" data-toggle="parent"><a class="catalogue-filter__category-head" href="javascript:void(0);" data-toggle="trigger"><span>Орехи</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/sprite.svg#drop-arrow"></use>
-                            </svg></a></div>
+                            </svg></a>
+                          <div class="catalogue-filter__category-content" data-toggle="content">
+                            <div class="catalogue-filter__category-element"> <a href="#">Дочерняя ссылка 1 </a></div>
+                            <div class="catalogue-filter__category-element"><a href="#">Дочерняя ссылка 2</a></div>
+                          </div>
+                        </div>
                         <!--category-->
-                        <div class="catalogue-filter__category is-active"><a class="catalogue-filter__category-head" href="#"><span>Орехи</span>
+                        <div class="catalogue-filter__category" data-toggle="parent"><a class="catalogue-filter__category-head" href="javascript:void(0);" data-toggle="trigger"><span>Орехи 2</span>
                             <svg class="icon">
                               <use xlink:href="./img/icons/sprite.svg#drop-arrow"></use>
-                            </svg></a></div>
+                            </svg></a>
+                          <div class="catalogue-filter__category-content" data-toggle="content">
+                            <div class="catalogue-filter__category-element"> <a href="#">Дочерняя ссылка 1 </a></div>
+                            <div class="catalogue-filter__category-element"><a href="#">Дочерняя ссылка 2</a></div>
+                          </div>
+                        </div>
                         <!--category-->
-                        <div class="catalogue-filter__category is-active"><a class="catalogue-filter__category-head" href="#"><span>Орехи</span>
-                            <svg class="icon">
-                              <use xlink:href="./img/icons/sprite.svg#drop-arrow"></use>
-                            </svg></a></div>
+                        <div class="catalogue-filter__category is-active"><a class="catalogue-filter__category-head" href="#"><span>Орехи</span></a></div>
                         <!--category-->
-                        <div class="catalogue-filter__category is-active"><a class="catalogue-filter__category-head" href="#"><span>Орехи</span>
-                            <svg class="icon">
-                              <use xlink:href="./img/icons/sprite.svg#drop-arrow"></use>
-                            </svg></a></div>
+                        <div class="catalogue-filter__category is-active"><a class="catalogue-filter__category-head" href="#"><span>Орехи</span></a></div>
                       </div>
                     </div>
                   </form>
@@ -166,15 +170,26 @@
               </aside>
               <div class="catalogue__content">
                 <div class="catalogue__head">
-                  <button class="button button_style-1 catalogue-filter-open" aria-label="open-filter"><span>Фильтр товаров</span></button><a class="button reset-button catalogue__head-reset">
-                    <svg class="icon">
-                      <use xlink:href="./img/icons/sprite.svg#filter-reset"></use>
-                    </svg><span>Сбросить фильр</span></a>
+                  <button class="button button_style-1 catalogue-filter-open" aria-label="open-filter"><span>Фильтр товаров</span></button>
                   <select class="select">
                     <option>По умолчанию</option>
                     <option>От дешевых к дорогим</option>
                     <option>От дорогих к дешевым</option>
                   </select>
+                  <div class="catalogue__status">
+                            <div class="checkbox">
+                              <input class="checkbox__input" type="checkbox" id="94301">
+                              <label class="checkbox__label" for="94301">Акция</label>
+                            </div>
+                            <div class="checkbox">
+                              <input class="checkbox__input" type="checkbox" id="844294">
+                              <label class="checkbox__label" for="844294">В наличии</label>
+                            </div>
+                            <div class="checkbox">
+                              <input class="checkbox__input" type="checkbox" id="908823">
+                              <label class="checkbox__label" for="908823">Новинка</label>
+                            </div>
+                  </div>
                 </div>
                 <div class="catalogue__items">
                                     <div class="product-card" data-custom-interaction>
@@ -204,20 +219,20 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="166286" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="336012" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="166286" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="336012" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="166286" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="336012" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="166286" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="336012" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="166286"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="336012"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -262,20 +277,20 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="788851" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="755550" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="788851" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="755550" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="788851" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="755550" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="788851" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="755550" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="788851"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="755550"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -320,19 +335,19 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес одной упаковки, гр</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="321200" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="193353" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="321200" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="193353" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="321200" value="100" disabled><span data-custom-interaction>100</span>
+                                                <input type="radio" name="193353" value="100" disabled><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="321200" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="193353" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="321200" value="150"><span data-custom-interaction>200</span>
+                                                <input type="radio" name="193353" value="150"><span data-custom-interaction>200</span>
                                               </label>
                                             </div>
                                           </div>
@@ -380,20 +395,20 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="798047" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="162192" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="798047" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="162192" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="798047" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="162192" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="798047" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="162192" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="798047"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="162192"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -437,20 +452,20 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="329834" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="731526" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="329834" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="731526" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="329834" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="731526" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="329834" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="731526" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="329834"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="731526"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -495,20 +510,20 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="584866" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="659991" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="584866" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="659991" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="584866" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="659991" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="584866" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="659991" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="584866"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="659991"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -553,19 +568,19 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес одной упаковки, гр</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="53046" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="717167" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="53046" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="717167" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="53046" value="100" disabled><span data-custom-interaction>100</span>
+                                                <input type="radio" name="717167" value="100" disabled><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="53046" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="717167" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="53046" value="150"><span data-custom-interaction>200</span>
+                                                <input type="radio" name="717167" value="150"><span data-custom-interaction>200</span>
                                               </label>
                                             </div>
                                           </div>
@@ -613,20 +628,20 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="563066" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="87935" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="563066" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="87935" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="563066" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="87935" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="563066" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="87935" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="563066"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="87935"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -670,135 +685,20 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="412693" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="240527" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="412693" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="240527" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="412693" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="240527" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="412693" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="240527" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="412693"><span>15 </span>кг</span>
-                                            <div class="count-calculator" data-custom-interaction>
-                                              <button class="count-calculator__button count-calculator__button_minus"> </button>
-                                              <input class="count-calculator__input" type="number" value="1">
-                                              <button class="count-calculator__button count-calculator__button_plus"> </button>
-                                            </div><span class="product-calculator__calculator-text">шт</span>
-                                          </div>
-                                          <div class="product-card__button">
-                                            <button class="button button_style-1 button_small">
-                                              <svg class="icon">
-                                                <use xlink:href="./img/icons/sprite.svg#cart"></use>
-                                              </svg><span>Купить</span>
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="product-card" data-custom-interaction>
-                                      <div class="product-card__image"><a class="image image_contain" href="./product1.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
-                                        <div class="product-labels-list">
-                                          <div class="product-label product-label_type-1">Акция</div>
-                                        </div>
-                                        <div class="product-gradation-label product-card__gradation-label">
-                                          <svg class="icon">
-                                            <use xlink:href="./img/icons/sprite.svg#figure"></use>
-                                          </svg><span>от</span><span>1 тонны</span>
-                                        </div>
-                                      </div>
-                                      <div class="product-card__content">
-                                        <div class="product-card__top">
-                                          <div class="product-card__label-info">
-                                            <svg class="icon">
-                                              <use xlink:href="./img/icons/sprite.svg#clock"></use>
-                                            </svg>Срок хранения: 12 мес
-                                          </div><a class="product-card__title link" href="./product1.html">Арахис сушеный очищенный 38/42</a>
-                                        </div>
-                                        <div class="product-card__bottom">
-                                          <ul class="product-card__info">
-                                            <li> <span>Страна</span><span>Чили</span></li>
-                                            <li> <span>Цена за 1уп. (100 кг)</span><span>163 ₽</span></li>
-                                            <li> <span>Цена за уп (10 кг)</span><span>4 075 ₽</span></li>
-                                          </ul>
-                                          <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
-                                            <div class="packaging-list product-card__packaging-list">
-                                              <label class="packaging-list__item">
-                                                <input type="radio" name="894324" value="15" checked><span data-custom-interaction>15</span>
-                                              </label>
-                                              <label class="packaging-list__item">
-                                                <input type="radio" name="894324" value="40"><span data-custom-interaction>40</span>
-                                              </label>
-                                              <label class="packaging-list__item">
-                                                <input type="radio" name="894324" value="100"><span data-custom-interaction>100</span>
-                                              </label>
-                                              <label class="packaging-list__item">
-                                                <input type="radio" name="894324" value="150"><span data-custom-interaction>150</span>
-                                              </label>
-                                            </div>
-                                          </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="894324"><span>15 </span>кг</span>
-                                            <div class="count-calculator" data-custom-interaction>
-                                              <button class="count-calculator__button count-calculator__button_minus"> </button>
-                                              <input class="count-calculator__input" type="number" value="1">
-                                              <button class="count-calculator__button count-calculator__button_plus"> </button>
-                                            </div><span class="product-calculator__calculator-text">шт</span>
-                                          </div>
-                                          <div class="product-card__button">
-                                            <button class="button button_style-1 button_small">
-                                              <svg class="icon">
-                                                <use xlink:href="./img/icons/sprite.svg#cart"></use>
-                                              </svg><span>Купить</span>
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="product-card" data-custom-interaction>
-                                      <div class="product-card__image"><a class="image image_contain" href="./product1.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
-                                        <div class="product-labels-list">
-                                        </div>
-                                        <div class="product-gradation-label product-card__gradation-label">
-                                          <svg class="icon">
-                                            <use xlink:href="./img/icons/sprite.svg#figure"></use>
-                                          </svg><span>от</span><span>1 тонны</span>
-                                        </div>
-                                      </div>
-                                      <div class="product-card__content">
-                                        <div class="product-card__top">
-                                          <div class="product-card__label-info">
-                                            <svg class="icon">
-                                              <use xlink:href="./img/icons/sprite.svg#clock"></use>
-                                            </svg>Срок хранения: 12 мес
-                                          </div><a class="product-card__title link" href="./product1.html">Арахис сушеный очищенный 38/42</a>
-                                        </div>
-                                        <div class="product-card__bottom">
-                                          <ul class="product-card__info">
-                                            <li> <span>Страна</span><span>Чили</span></li>
-                                            <li> <span>Цена за 1уп. (100 кг)</span><span>163 ₽</span></li>
-                                            <li> <span>Цена за уп (10 кг)</span><span>4 075 ₽</span></li>
-                                          </ul>
-                                          <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
-                                            <div class="packaging-list product-card__packaging-list">
-                                              <label class="packaging-list__item">
-                                                <input type="radio" name="200809" value="15" checked><span data-custom-interaction>15</span>
-                                              </label>
-                                              <label class="packaging-list__item">
-                                                <input type="radio" name="200809" value="40"><span data-custom-interaction>40</span>
-                                              </label>
-                                              <label class="packaging-list__item">
-                                                <input type="radio" name="200809" value="100"><span data-custom-interaction>100</span>
-                                              </label>
-                                              <label class="packaging-list__item">
-                                                <input type="radio" name="200809" value="150"><span data-custom-interaction>150</span>
-                                              </label>
-                                            </div>
-                                          </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="200809"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="240527"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -843,20 +743,135 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="980237" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="784134" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="980237" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="784134" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="980237" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="784134" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="980237" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="784134" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="980237"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="784134"><span>15 </span>кг</span>
+                                            <div class="count-calculator" data-custom-interaction>
+                                              <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                              <input class="count-calculator__input" type="number" value="1">
+                                              <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                            </div><span class="product-calculator__calculator-text">шт</span>
+                                          </div>
+                                          <div class="product-card__button">
+                                            <button class="button button_style-1 button_small">
+                                              <svg class="icon">
+                                                <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                              </svg><span>Купить</span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product-card" data-custom-interaction>
+                                      <div class="product-card__image"><a class="image image_contain" href="./product1.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                        <div class="product-labels-list">
+                                        </div>
+                                        <div class="product-gradation-label product-card__gradation-label">
+                                          <svg class="icon">
+                                            <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                          </svg><span>от</span><span>1 тонны</span>
+                                        </div>
+                                      </div>
+                                      <div class="product-card__content">
+                                        <div class="product-card__top">
+                                          <div class="product-card__label-info">
+                                            <svg class="icon">
+                                              <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                            </svg>Срок хранения: 12 мес
+                                          </div><a class="product-card__title link" href="./product1.html">Арахис сушеный очищенный 38/42</a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                          <ul class="product-card__info">
+                                            <li> <span>Страна</span><span>Чили</span></li>
+                                            <li> <span>Цена за 1уп. (100 кг)</span><span>163 ₽</span></li>
+                                            <li> <span>Цена за уп (10 кг)</span><span>4 075 ₽</span></li>
+                                          </ul>
+                                          <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                            <div class="packaging-list product-card__packaging-list">
+                                              <label class="packaging-list__item">
+                                                <input type="radio" name="425731" value="15" checked><span data-custom-interaction>15</span>
+                                              </label>
+                                              <label class="packaging-list__item">
+                                                <input type="radio" name="425731" value="40"><span data-custom-interaction>40</span>
+                                              </label>
+                                              <label class="packaging-list__item">
+                                                <input type="radio" name="425731" value="100"><span data-custom-interaction>100</span>
+                                              </label>
+                                              <label class="packaging-list__item">
+                                                <input type="radio" name="425731" value="150"><span data-custom-interaction>150</span>
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="425731"><span>15 </span>кг</span>
+                                            <div class="count-calculator" data-custom-interaction>
+                                              <button class="count-calculator__button count-calculator__button_minus"> </button>
+                                              <input class="count-calculator__input" type="number" value="1">
+                                              <button class="count-calculator__button count-calculator__button_plus"> </button>
+                                            </div><span class="product-calculator__calculator-text">шт</span>
+                                          </div>
+                                          <div class="product-card__button">
+                                            <button class="button button_style-1 button_small">
+                                              <svg class="icon">
+                                                <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                                              </svg><span>Купить</span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product-card" data-custom-interaction>
+                                      <div class="product-card__image"><a class="image image_contain" href="./product1.html"> <img class="lazyload" data-src="./img/5_Box_Semushka_ok 1.png" alt="image"></a>
+                                        <div class="product-labels-list">
+                                          <div class="product-label product-label_type-1">Акция</div>
+                                        </div>
+                                        <div class="product-gradation-label product-card__gradation-label">
+                                          <svg class="icon">
+                                            <use xlink:href="./img/icons/sprite.svg#figure"></use>
+                                          </svg><span>от</span><span>1 тонны</span>
+                                        </div>
+                                      </div>
+                                      <div class="product-card__content">
+                                        <div class="product-card__top">
+                                          <div class="product-card__label-info">
+                                            <svg class="icon">
+                                              <use xlink:href="./img/icons/sprite.svg#clock"></use>
+                                            </svg>Срок хранения: 12 мес
+                                          </div><a class="product-card__title link" href="./product1.html">Арахис сушеный очищенный 38/42</a>
+                                        </div>
+                                        <div class="product-card__bottom">
+                                          <ul class="product-card__info">
+                                            <li> <span>Страна</span><span>Чили</span></li>
+                                            <li> <span>Цена за 1уп. (100 кг)</span><span>163 ₽</span></li>
+                                            <li> <span>Цена за уп (10 кг)</span><span>4 075 ₽</span></li>
+                                          </ul>
+                                          <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
+                                            <div class="packaging-list product-card__packaging-list">
+                                              <label class="packaging-list__item">
+                                                <input type="radio" name="93742" value="15" checked><span data-custom-interaction>15</span>
+                                              </label>
+                                              <label class="packaging-list__item">
+                                                <input type="radio" name="93742" value="40"><span data-custom-interaction>40</span>
+                                              </label>
+                                              <label class="packaging-list__item">
+                                                <input type="radio" name="93742" value="100"><span data-custom-interaction>100</span>
+                                              </label>
+                                              <label class="packaging-list__item">
+                                                <input type="radio" name="93742" value="150"><span data-custom-interaction>150</span>
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="93742"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -901,19 +916,19 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес одной упаковки, гр</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="240504" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="993424" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="240504" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="993424" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="240504" value="100" disabled><span data-custom-interaction>100</span>
+                                                <input type="radio" name="993424" value="100" disabled><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="240504" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="993424" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="240504" value="150"><span data-custom-interaction>200</span>
+                                                <input type="radio" name="993424" value="150"><span data-custom-interaction>200</span>
                                               </label>
                                             </div>
                                           </div>
@@ -961,20 +976,20 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="168213" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="294944" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="168213" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="294944" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="168213" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="294944" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="168213" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="294944" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="168213"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="294944"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -1018,20 +1033,20 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="257343" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="338481" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="257343" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="338481" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="257343" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="338481" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="257343" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="338481" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="257343"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="338481"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -1076,20 +1091,20 @@
                                           <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                             <div class="packaging-list product-card__packaging-list">
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="546132" value="15" checked><span data-custom-interaction>15</span>
+                                                <input type="radio" name="145030" value="15" checked><span data-custom-interaction>15</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="546132" value="40"><span data-custom-interaction>40</span>
+                                                <input type="radio" name="145030" value="40"><span data-custom-interaction>40</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="546132" value="100"><span data-custom-interaction>100</span>
+                                                <input type="radio" name="145030" value="100"><span data-custom-interaction>100</span>
                                               </label>
                                               <label class="packaging-list__item">
-                                                <input type="radio" name="546132" value="150"><span data-custom-interaction>150</span>
+                                                <input type="radio" name="145030" value="150"><span data-custom-interaction>150</span>
                                               </label>
                                             </div>
                                           </div>
-                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="546132"><span>15 </span>кг</span>
+                                          <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="145030"><span>15 </span>кг</span>
                                             <div class="count-calculator" data-custom-interaction>
                                               <button class="count-calculator__button count-calculator__button_minus"> </button>
                                               <input class="count-calculator__input" type="number" value="1">
@@ -1178,20 +1193,20 @@
                                             <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                               <div class="packaging-list product-card__packaging-list">
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="461410" value="15" checked><span data-custom-interaction>15</span>
+                                                  <input type="radio" name="746804" value="15" checked><span data-custom-interaction>15</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="461410" value="40"><span data-custom-interaction>40</span>
+                                                  <input type="radio" name="746804" value="40"><span data-custom-interaction>40</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="461410" value="100"><span data-custom-interaction>100</span>
+                                                  <input type="radio" name="746804" value="100"><span data-custom-interaction>100</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="461410" value="150"><span data-custom-interaction>150</span>
+                                                  <input type="radio" name="746804" value="150"><span data-custom-interaction>150</span>
                                                 </label>
                                               </div>
                                             </div>
-                                            <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="461410"><span>15 </span>кг</span>
+                                            <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="746804"><span>15 </span>кг</span>
                                               <div class="count-calculator" data-custom-interaction>
                                                 <button class="count-calculator__button count-calculator__button_minus"> </button>
                                                 <input class="count-calculator__input" type="number" value="1">
@@ -1238,20 +1253,20 @@
                                             <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                               <div class="packaging-list product-card__packaging-list">
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="986604" value="15" checked><span data-custom-interaction>15</span>
+                                                  <input type="radio" name="496294" value="15" checked><span data-custom-interaction>15</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="986604" value="40"><span data-custom-interaction>40</span>
+                                                  <input type="radio" name="496294" value="40"><span data-custom-interaction>40</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="986604" value="100"><span data-custom-interaction>100</span>
+                                                  <input type="radio" name="496294" value="100"><span data-custom-interaction>100</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="986604" value="150"><span data-custom-interaction>150</span>
+                                                  <input type="radio" name="496294" value="150"><span data-custom-interaction>150</span>
                                                 </label>
                                               </div>
                                             </div>
-                                            <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="986604"><span>15 </span>кг</span>
+                                            <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="496294"><span>15 </span>кг</span>
                                               <div class="count-calculator" data-custom-interaction>
                                                 <button class="count-calculator__button count-calculator__button_minus"> </button>
                                                 <input class="count-calculator__input" type="number" value="1">
@@ -1298,19 +1313,19 @@
                                             <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес одной упаковки, гр</span>
                                               <div class="packaging-list product-card__packaging-list">
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="435590" value="15" checked><span data-custom-interaction>15</span>
+                                                  <input type="radio" name="781384" value="15" checked><span data-custom-interaction>15</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="435590" value="40"><span data-custom-interaction>40</span>
+                                                  <input type="radio" name="781384" value="40"><span data-custom-interaction>40</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="435590" value="100" disabled><span data-custom-interaction>100</span>
+                                                  <input type="radio" name="781384" value="100" disabled><span data-custom-interaction>100</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="435590" value="150"><span data-custom-interaction>150</span>
+                                                  <input type="radio" name="781384" value="150"><span data-custom-interaction>150</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="435590" value="150"><span data-custom-interaction>200</span>
+                                                  <input type="radio" name="781384" value="150"><span data-custom-interaction>200</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -1360,20 +1375,20 @@
                                             <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                               <div class="packaging-list product-card__packaging-list">
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="654112" value="15" checked><span data-custom-interaction>15</span>
+                                                  <input type="radio" name="947624" value="15" checked><span data-custom-interaction>15</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="654112" value="40"><span data-custom-interaction>40</span>
+                                                  <input type="radio" name="947624" value="40"><span data-custom-interaction>40</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="654112" value="100"><span data-custom-interaction>100</span>
+                                                  <input type="radio" name="947624" value="100"><span data-custom-interaction>100</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="654112" value="150"><span data-custom-interaction>150</span>
+                                                  <input type="radio" name="947624" value="150"><span data-custom-interaction>150</span>
                                                 </label>
                                               </div>
                                             </div>
-                                            <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="654112"><span>15 </span>кг</span>
+                                            <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="947624"><span>15 </span>кг</span>
                                               <div class="count-calculator" data-custom-interaction>
                                                 <button class="count-calculator__button count-calculator__button_minus"> </button>
                                                 <input class="count-calculator__input" type="number" value="1">
@@ -1420,20 +1435,20 @@
                                             <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес товара, кг</span>
                                               <div class="packaging-list product-card__packaging-list">
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="874371" value="15" checked><span data-custom-interaction>15</span>
+                                                  <input type="radio" name="873919" value="15" checked><span data-custom-interaction>15</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="874371" value="40"><span data-custom-interaction>40</span>
+                                                  <input type="radio" name="873919" value="40"><span data-custom-interaction>40</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="874371" value="100"><span data-custom-interaction>100</span>
+                                                  <input type="radio" name="873919" value="100"><span data-custom-interaction>100</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="874371" value="150"><span data-custom-interaction>150</span>
+                                                  <input type="radio" name="873919" value="150"><span data-custom-interaction>150</span>
                                                 </label>
                                               </div>
                                             </div>
-                                            <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="874371"><span>15 </span>кг</span>
+                                            <div class="product-calculator product-card__calculator"> <span class="product-calculator__calculator-text" data-name="873919"><span>15 </span>кг</span>
                                               <div class="count-calculator" data-custom-interaction>
                                                 <button class="count-calculator__button count-calculator__button_minus"> </button>
                                                 <input class="count-calculator__input" type="number" value="1">
@@ -1480,19 +1495,19 @@
                                             <div class="product-card__packaging"><span class="product-card__packaging-title"> Вес одной упаковки, гр</span>
                                               <div class="packaging-list product-card__packaging-list">
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="383285" value="15" checked><span data-custom-interaction>15</span>
+                                                  <input type="radio" name="732137" value="15" checked><span data-custom-interaction>15</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="383285" value="40"><span data-custom-interaction>40</span>
+                                                  <input type="radio" name="732137" value="40"><span data-custom-interaction>40</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="383285" value="100" disabled><span data-custom-interaction>100</span>
+                                                  <input type="radio" name="732137" value="100" disabled><span data-custom-interaction>100</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="383285" value="150"><span data-custom-interaction>150</span>
+                                                  <input type="radio" name="732137" value="150"><span data-custom-interaction>150</span>
                                                 </label>
                                                 <label class="packaging-list__item">
-                                                  <input type="radio" name="383285" value="150"><span data-custom-interaction>200</span>
+                                                  <input type="radio" name="732137" value="150"><span data-custom-interaction>200</span>
                                                 </label>
                                               </div>
                                             </div>
@@ -1664,8 +1679,8 @@
               </div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="598388">
-                      <label class="checkbox__label" for="598388">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                      <input class="checkbox__input" type="checkbox" id="464189">
+                      <label class="checkbox__label" for="464189">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
                     </div>
               </div>
               <div class="form__submit">
@@ -1724,8 +1739,8 @@
               </div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="168778">
-                      <label class="checkbox__label" for="168778">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                      <input class="checkbox__input" type="checkbox" id="167057">
+                      <label class="checkbox__label" for="167057">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
                     </div>
               </div>
               <div class="form__submit">
@@ -1756,8 +1771,8 @@
               <div class="form__element"><span class="form__required-message">*поле обязательно для заполнения</span></div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="323885">
-                      <label class="checkbox__label" for="323885">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
+                      <input class="checkbox__input" type="checkbox" id="917503">
+                      <label class="checkbox__label" for="917503">Я прочитал и принимаю <a class="link-dashed">политику конфинденциальности</a> согласен на сбор и обработку моих персональных данных</label>
                     </div>
               </div>
               <div class="form__submit">
@@ -1787,8 +1802,8 @@
               </label>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="462750">
-                      <label class="checkbox__label" for="462750">Запомнить логин и пароль</label>
+                      <input class="checkbox__input" type="checkbox" id="76686">
+                      <label class="checkbox__label" for="76686">Запомнить логин и пароль</label>
                     </div>
               </div>
               <div class="form__submit form__buttons">
@@ -1840,8 +1855,8 @@
               <div class="form__element"><span class="form__required-message">*поле обязательно для заполнения</span></div>
               <div class="form__checkbox">
                     <div class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="246123">
-                      <label class="checkbox__label" for="246123">Запомнить логин и пароль</label>
+                      <input class="checkbox__input" type="checkbox" id="921474">
+                      <label class="checkbox__label" for="921474">Запомнить логин и пароль</label>
                     </div>
               </div>
               <div class="form__submit">

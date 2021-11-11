@@ -11,25 +11,24 @@ const $wrapper = document.querySelector('.wrapper');
 document.addEventListener("DOMContentLoaded", function() {
   //set scrollbar width
   document.documentElement.style.setProperty('--scrollbar-width', `${scrollLock.getPageScrollBarWidth()}px`);
-  
-  //Product sliders
-  document.querySelectorAll('.items-slider').forEach($this => {
-    new ItemsSlider($this).init();
-  })
 
   CustomInteractionEvents.init();
   Header.init();
   Modal.init();
   Nav.init();
 
-  calculator();
+  //calculator();
   change_package();
   input_file();
   header_search();
 
-  //Filter
+   //Filter
   document.querySelectorAll('.catalogue-filter').forEach($this => {
     new Filter($this).init();
+  })
+  //Product sliders
+  document.querySelectorAll('.items-slider').forEach($this => {
+    new ItemsSlider($this).init();
   })
   //Image sliders
   document.querySelectorAll('.image-slider').forEach($this => {
@@ -47,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
       showContent: 'down'
     })
   })
+
   //tabs
   document.querySelectorAll('[data-tabs="parent"]').forEach($this => {
     new TabsElement($this).init();
@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
     showMaskOnHover: false,
     clearIncomplete: false
   }).mask('[data-phone]'); //validation events
+
 });
 
 const CustomInteractionEvents = Object.create({
@@ -151,43 +152,23 @@ function header_search() {
   })
 }
 
-function calculator() {
-
-  let events = (event) => {
-    let $target = event.target.closest('.count-calculator__button');
-
-    if($target) {
-      let $input = $target.parentNode.querySelector('input');
-
-      if($target.classList.contains('count-calculator__button_minus')) {
-        $input.value = Math.max(+$input.value - 1, 1)
-      } else {
-        $input.value = +$input.value + 1
-      }
-    }
-  }
-
-  let input = (event) => {
-    let $target = event.target.closest('.count-calculator__input');
-
-    if($target) {
-      $target.value = Math.max(+$target.value, 1)
-    }
-  }
-
-  document.addEventListener('click', events);
-  document.addEventListener('input', input);
-}
 
 function change_package() {
   let events = (event) => {
     let $target = event.target.closest('.packaging-list__item input');
 
     if($target) {
-      let name = $target.getAttribute('name'),
-          $value = document.querySelector(`[data-name='${name}'] span`);
-
+		let cost = $target.getAttribute('data-price')
+		document.getElementById("co").innerHTML=cost;
+		let idd = $target.getAttribute('data-id')
+		document.getElementById("ids").value=idd;
+		//let id = $target.getAttribute('data-price')
+		//document.getElementById("co").innerHTML=cost;
+	let name = $target.getAttribute('name'),
+	  $value = document.querySelector(`[data-name='${name}'] span`);
+		$value2 = document.querySelector(`#up`);
       if($value) $value.innerHTML = $target.value;
+	if($value2) $value2.innerHTML = $target.value;
     }
   }
 
@@ -313,6 +294,27 @@ class ToggleElement {
     for(let $el of [this.$parent, this.$trigger, this.$block]) {
       $el.classList.add('is-active')
     }
+
+    //if group
+    let $group = this.$parent.closest('[data-toggle="group"]');
+    if ($group) {
+      let $childrens = $group.querySelectorAll('[data-toggle="parent"]');
+
+      for (let $parent of $childrens) {
+        if ($parent !== this.$parent) {
+          let $trigger = $parent.querySelector('[data-toggle="trigger"]');
+          let $block = $parent.querySelector('[data-toggle="content"]');
+
+          for(let $el of [$parent, $trigger, $block]) {
+            $el.classList.remove('is-active');
+          }
+
+          break;
+        }
+      }
+
+
+    }
   }
 
   close() {
@@ -359,6 +361,48 @@ class TabsElement {
   }
 }
 
+class Filter {
+  constructor($element) {
+    this.$element = $element;
+  }
+  init() {
+    this.$open = document.querySelector('.catalogue-filter-open');
+    this.$close = document.querySelectorAll('.catalogue-filter-close, [data-filter-close]');
+
+    this.state = () => {
+      return this.$element.classList.contains('is-active');
+    }
+
+    this.open = () => {
+      this.$element.classList.add('is-active');
+      scrollLock.disablePageScroll();
+
+    }
+
+    this.close = () => {
+      this.$element.classList.remove('is-active');
+      scrollLock.enablePageScroll();
+    }
+
+    window.addEventListener('resize', () => {
+      if( this.state() && window.innerWidth >= breakpoints.lg ) {
+        this.close();
+      }
+    })
+
+    this.$open.addEventListener('click', () => {
+      if( !this.state() ) this.open();
+    })
+    
+    this.$close.forEach($this => {
+      $this.addEventListener('click', () => {
+        if( this.state() ) this.close();
+      })
+    })
+
+  }
+}
+
 class ProductPreviewSlider {
   constructor($parent) {
     this.$parent = $parent;
@@ -371,9 +415,9 @@ class ProductPreviewSlider {
     this.slider = new Swiper(this.$slider, {
       touchStartPreventDefault: false,
       slidesPerView: 1,
+      speed: 500,
       observer: true,
       observeParents: true,
-      speed: 500,
       lazy: {
         loadOnTransitionStart: true,
         loadPrevNext: true
@@ -493,47 +537,7 @@ const Modal = {
   }
 }
 
-class Filter {
-  constructor($element) {
-    this.$element = $element;
-  }
-  init() {
-    this.$open = document.querySelector('.catalogue-filter-open');
-    this.$close = document.querySelectorAll('.catalogue-filter-close, [data-filter-close]');
 
-    this.state = () => {
-      return this.$element.classList.contains('is-active');
-    }
-
-    this.open = () => {
-      this.$element.classList.add('is-active');
-      scrollLock.disablePageScroll();
-
-    }
-
-    this.close = () => {
-      this.$element.classList.remove('is-active');
-      scrollLock.enablePageScroll();
-    }
-
-    window.addEventListener('resize', () => {
-      if( this.state() && window.innerWidth >= breakpoints.lg ) {
-        this.close();
-      }
-    })
-
-    this.$open.addEventListener('click', () => {
-      if( !this.state() ) this.open();
-    })
-    
-    this.$close.forEach($this => {
-      $this.addEventListener('click', () => {
-        if( this.state() ) this.close();
-      })
-    })
-
-  }
-}
 
 const Nav = {
   init: function() {
@@ -572,3 +576,63 @@ const Nav = {
 
   }
 }
+
+function sort(id) {
+	var url = window.location.href.split("?")[0];
+	var count = 0;
+	var name = "";
+	$(".kombox-checked").find("input").each(function (index) {
+			
+           
+				if (count < 1 ) {
+					url = url + 'filter';
+				}                
+				count = count + 1;
+				if (name != $(this).attr("name")) {
+					url = url + '/';
+					url = url + $(this).attr("name") + '-' + $(this).val();
+				} else {
+					url = url + '-or-';
+					url = url + $(this).val();
+				}				
+				name = $(this).attr("name");
+				
+            
+	});
+	if (count > 0 ) {
+		url = url + '/';
+	}	
+	url = url + id;
+	window.location.href = url;
+}
+
+$(function() {
+    var load_more = false;
+
+    $(document).on("click", "#ajax_next_page", function(e) {
+        e.preventDefault();
+        if(load_more)
+            return false;
+        var ajax_url = $('.pagination__link').last().attr("href");
+		if (ajax_url) {
+			load_more = true;
+			$.ajax({
+				url: ajax_url,
+				type: "POST",
+				data: {IS_AJAX: 'Y'},
+				success: function(data) {
+					$(".pagination").remove();
+					$("#ajax_next_page").after(data);
+					$("#ajax_next_page").remove();
+					if (!$('.pagination__link').last().attr("href")) {
+						$("#ajax_next_page").remove();
+					}
+					load_more = false;
+				}
+			});
+		} else {
+			$("#ajax_next_page").remove();
+		}
+        
+    });
+});
