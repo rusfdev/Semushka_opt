@@ -14,7 +14,7 @@
     position: fixed;
   }
   &__container {
-    height: 65px;
+    height: var(--header-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -121,9 +121,6 @@
     }
     &__large-button {
       line-height: 50px;
-    }
-    &__container {
-      height: 50px;
     }
     &__small-buttons {
       margin-left: var(--spacer);

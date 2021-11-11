@@ -1183,6 +1183,14 @@
     margin-bottom: 40px;
   }
   @include media-breakpoint-up(lg) {
+    overflow: visible;
+    &__wrapper {
+      align-items: flex-start;
+    }
+    &__aside {
+      position: sticky;
+      top: calc(var(--header-height) + 30px);
+    }
     &__head-reset {
       display: none;
     }
@@ -1232,15 +1240,13 @@
     user-select: none;
     transition: color $trs1;
     .icon {
-      --height: 44px;
       --size: 14px;
       position: absolute;
-      width: calc(var(--size) + var(--gx) * 2);
-      height: var(--height);
-      right: 0;
-      top: 0;
-      padding: calc((var(--height) - var(--size)) / 2) var(--gx);
-      transform: rotate(-90deg);
+      width: var(--size);
+      height: var(--size);
+      right: var(--gx);
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
       color: var(--color-accent-1);
     }
     &[data-touch], &[data-hover] {
@@ -1249,9 +1255,6 @@
     &.is-active {
       font-weight: 700;
       color: var(--color-accent-1);
-      .icon {
-        transform: rotate(0);
-      }
     }
   }
   &__category {
