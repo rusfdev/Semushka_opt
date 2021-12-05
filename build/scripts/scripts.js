@@ -22,10 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
   input_file();
   header_search();
 
-   //Filter
-  document.querySelectorAll('.catalogue-filter').forEach($this => {
-    new Filter($this).init();
-  })
+  
   //Product sliders
   document.querySelectorAll('.items-slider').forEach($this => {
     new ItemsSlider($this).init();
@@ -613,18 +610,33 @@ $(function() {
         e.preventDefault();
         if(load_more)
             return false;
-        var ajax_url = $('.pagination__link').last().attr("href");
+        var ajax_url = $('.pagination__link').last().attr("href") != '#' ? $('.pagination__link').last().attr("href") : undefined;
+        
 		if (ajax_url) {
 			load_more = true;
+      var filter = $('#kombox-filter form').serializeArray(),
+        postData = {};
+      if(filter.length > 0 && filter.length < 2)
+        postData = {'filter': filter[0].value};
+      else if(filter.length > 1)
+        filter.forEach(function callback(element, index, array) {
+          postData['filter['+index+']'] = element.value;
+        });
+      if(filter.length > 0)
+        var isFilter = true;
+      postData['IS_AJAX'] = 'Y';
+      postData['filter_ajax'] = 'y';
+        // filter.forEach(element => postData'filter[]': element.value));/
 			$.ajax({
 				url: ajax_url,
 				type: "POST",
-				data: {IS_AJAX: 'Y'},
+				data: postData,
 				success: function(data) {
-					$(".pagination").remove();
-					$("#ajax_next_page").after(data);
-					$("#ajax_next_page").remove();
-					if (!$('.pagination__link').last().attr("href")) {
+					$(".pagination").hide();
+          $(".pagination")[0].innerHTML = $(data)[2].innerHTML;
+					$(".news-grid").append($(data)[0].innerHTML);
+					// $("#ajax_next_page").remove();
+					if (!$('.pagination__link').last().attr("href") || $('.pagination__link').last().attr("href") == '#') {
 						$("#ajax_next_page").remove();
 					}
 					load_more = false;
