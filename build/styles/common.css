@@ -2543,6 +2543,37 @@ ol:not([class]) {
       .catalogue-filter__category {
         margin: 0 calc(var(--grid-gutter-x) * -1); } }
 
+.mobile-catalogue {
+  padding-left: 15px; }
+  .mobile-catalogue__category-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    font-size: 18px; }
+    .mobile-catalogue__category-parent .icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      transform: rotate(-90deg); }
+    .mobile-catalogue__category-parent.is-active {
+      color: var(--color-accent-1);
+      font-weight: 700; }
+      .mobile-catalogue__category-parent.is-active .icon {
+        transform: rotate(0); }
+  .mobile-catalogue__category-list {
+    display: none;
+    padding: 0 0 10px 15px; }
+    .mobile-catalogue__category-list.is-active {
+      display: block; }
+  .mobile-catalogue__category-link {
+    display: block;
+    padding: 8px 0;
+    font-size: 16px; }
+    .mobile-catalogue__category-link.is-active {
+      color: var(--color-accent-1); }
+
 .article__container {
   border-radius: 4px;
   box-shadow: var(--block-shadow);

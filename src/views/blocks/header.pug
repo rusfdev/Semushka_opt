@@ -71,6 +71,34 @@ nav.mobile-navigation
       ul.mobile-nav-list
         li.mobile-nav-list__item 
           a(href="./produkcziya.html").mobile-nav-list__link.link Продукция
+          //категории каталога начало 
+          ul.mobile-catalogue(data-toggle="group")
+            li.mobile-catalogue__item.is-active(data-toggle="parent") 
+              a(href="javascript:void(0);" data-toggle="trigger").mobile-catalogue__category-parent.link.is-active
+                span Орехи
+                svg.icon
+                  use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+              ul(data-toggle="content").mobile-catalogue__category-list.is-active
+                li.mobile-catalogue__category-item
+                  a(href="#").mobile-catalogue__category-link.link Арахис
+                li.mobile-catalogue__category-item
+                  a(href="#").mobile-catalogue__category-link.link Бразильский орех
+                li.mobile-catalogue__category-item
+                  a(href="#").mobile-catalogue__category-link.link Грецкий орех
+            li.mobile-catalogue__item(data-toggle="parent") 
+              a(href="javascript:void(0);" data-toggle="trigger").mobile-catalogue__category-parent.link
+                span Семена
+                svg.icon
+                  use(xlink:href='./img/icons/sprite.svg#drop-arrow')
+              ul(data-toggle="content").mobile-catalogue__category-list
+                li.mobile-catalogue__category-item
+                  a(href="#").mobile-catalogue__category-link.link Кунжут
+                li.mobile-catalogue__category-item
+                  a(href="#").mobile-catalogue__category-link.link Подсолнечник
+                li.mobile-catalogue__category-item
+                  a(href="#").mobile-catalogue__category-link.link Тыква
+          //категории каталога конец  
+
         li.mobile-nav-list__item  
           a(href="./novosti.html").mobile-nav-list__link.link Новости
         li.mobile-nav-list__item 
